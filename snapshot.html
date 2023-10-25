@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="nl"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<meta name="generator" content="ReSpec 34.1.1">
+<meta name="generator" content="ReSpec 34.1.4">
 <style>
 dfn{cursor:pointer}
 .dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
@@ -34,8 +34,13 @@ dfn{cursor:pointer}
   
 <title>Default</title>
   
-<link rel="shortcut icon" type="image/x-icon" href="https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/logius.ico">
+<link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico">
   
+  
+  
+<style>
+div.imageinfo.overview img {max-width: none;}
+</style>
 
 <style id="respec-mainstyle">
 @keyframes pop{
@@ -82,9 +87,8 @@ details.respec-tests-details>ul{width:100%;margin-top:-.3em}
 details.respec-tests-details>li{padding-left:1em}
 .self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
 aside.example .marker>a.self-link{color:inherit}
-.header-wrapper{display:flex;align-items:baseline}
-:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
-:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
+.header-wrapper{display:flex;align-items:baseline;position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-.7em;font-size:1rem;opacity:.5}
 :is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
 :is(h2,h3)+a.self-link{top:-.2em}
 :is(h4,h5,h6)+a.self-link::before{color:#000}
@@ -94,6 +98,9 @@ dd{margin-left:0}
 @media print{
 .removeOnSave{display:none}
 }
+</style>
+<style id="respec-nlgov">
+img.license{float:left;padding-right:5px}
 </style>
 <style>
 ul.index{columns:30ch;column-gap:1.5em}
@@ -106,9 +113,22 @@ ul.index code{color:inherit}
 #index-defined-here .print-only{display:initial}
 }
 </style>
-<meta name="description" content="Dit zijn de conceptuele modellen van het DSO.">
+<meta name="description" content="Dit document beschrijft het 'Conceptueel Informatiemodel Object Informatie'. Dit is een conceptueel model van het
+DSO. Er is een reeks van deze modellen:">
 <style>
-.sidelabel{position:fixed;-webkit-transform-origin:top right;right:100%;top:0;-webkit-transform:rotate(-90deg);padding:4px 50px 4px 10px;color:#fff;white-space:nowrap;z-index:1}
+
+  .sidelabel {
+    position: fixed;
+    -webkit-transform-origin: top right;
+    right: 100%;
+    top: 0;
+    -webkit-transform: rotate(-90deg);
+    padding: 4px 50px 4px 10px;
+    color: white;
+    white-space: nowrap;
+    z-index: 1;
+    background-color: #FF0000;
+  }
 </style>
 <script type="text/javascript">
    /* Any custom mermaid.js scripts will go here. */
@@ -133,11 +153,6 @@ ul.index code{color:inherit}
   ],
   "postProcess": [
     null
-  ],
-  "edDraftURI": [
-    "https://geonovum.github.io",
-    "/",
-    "shortName"
   ],
   "latestVersion": [
     "nl_organisationPublishURL",
@@ -186,7 +201,7 @@ ul.index code{color:inherit}
       "im": "Information model",
       "pr": "Practical guideline",
       "hr": "Guide",
-      "wa": "Werkafspraak",
+      "wa": "Work process agreement",
       "al": "General",
       "bd": "Governance documentation",
       "bp": "Best practice"
@@ -206,46 +221,6 @@ ul.index code{color:inherit}
       "al": "Algemeen",
       "bd": "Beheerdocumentatie",
       "bp": "Best practice"
-    }
-  },
-  "specTypeText": {
-    "en": {
-      "no": "Norm",
-      "st": "Standard",
-      "im": "Information model",
-      "pr": "Guideline",
-      "hr": "Guide",
-      "wa": "Werkafspraak",
-      "al": "General",
-      "bd": "Governance documentation",
-      "bp": "Best practice"
-    },
-    "nl": {
-      "no": "Norm",
-      "st": "Standaard",
-      "im": "Informatiemodel",
-      "pr": "Praktijkrichtlijn",
-      "hr": "Handreiking",
-      "wa": "Werkafspraak",
-      "al": "Algemeen",
-      "bd": "Beheerdocumentatie",
-      "bp": "Best practice"
-    }
-  },
-  "specStatusText": {
-    "en": {
-      "wv": "Editor's draft",
-      "cv": "Candidate recommendation",
-      "vv": "Proposed recommendation",
-      "def": "Recommendation",
-      "basis": "Document"
-    },
-    "nl": {
-      "wv": "Werkversie",
-      "cv": "Consultatieversie",
-      "vv": "Versie ter vaststelling",
-      "def": "Vastgestelde versie",
-      "basis": "Document"
     }
   },
   "sotdText": {
@@ -311,14 +286,14 @@ ul.index code{color:inherit}
   "shortName": "dso-cim-oi",
   "editors": [
     {
-      "name": "TPOD-Team",
+      "name": "TPOD team",
       "company": "Geonovum",
       "companyURL": "https://www.geonovum.nl"
     }
   ],
   "authors": [
     {
-      "name": "TPOD-Team",
+      "name": "TPOD team",
       "company": "Geonovum",
       "companyURL": "https://www.geonovum.nl"
     }
@@ -340,14 +315,12 @@ ul.index code{color:inherit}
     <h2>
       Geonovum Informatiemodel<br>
       Werkversie
-      <time class="dt-published" datetime="2023-05-10">10 mei 2023</time>
+      <time class="dt-published" datetime="2023-10-25">25 oktober 2023</time>
     </h2>
     <dl>
       
-      <dt>Laatst gepubliceerde versie:</dt><dd>
-              <a href="https://docs.geostandaarden.nl/dso/dso-cim-oi/">https://docs.geostandaarden.nl/dso/dso-cim-oi/</a>
-            </dd>
       
+      <dt>Laatste werkversie:</dt><dd><a href="https://geonovum.github.io/dso-cim-oi/">https://geonovum.github.io/dso-cim-oi/</a></dd>
       
       
       
@@ -355,11 +328,11 @@ ul.index code{color:inherit}
       
       <dt>Redacteur:</dt>
       <dd class="editor p-author h-card vcard">
-    <span class="p-name fn">TPOD-Team</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
+    <span class="p-name fn">TPOD team</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
   </dd>
       
       <dt>Auteur:</dt><dd class="editor p-author h-card vcard">
-    <span class="p-name fn">TPOD-Team</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
+    <span class="p-name fn">TPOD team</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
   </dd>
       <dt>Doe mee:</dt><dd>
     <a href="https://github.com/Geonovum/dso-cim-oi/">GitHub Geonovum/dso-cim-oi</a>
@@ -379,11 +352,25 @@ ul.index code{color:inherit}
         </p>
     <p class="copyright">
           Dit document valt onder de volgende licentie: 
-          <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot">Creative Commons Attribution 4.0 International Public License</a>.
+          <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot"><img class="license" src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Logo Creative Commons Attribution 4.0 International Public License"><br> Creative Commons Attribution 4.0 International Public License</a>
         </p>
     <hr title="Separator for header">
   </div>
-  <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>Dit zijn de conceptuele modellen van het DSO.</p>
+  <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>Dit document beschrijft het 'Conceptueel Informatiemodel Object Informatie'. Dit is een conceptueel model van het
+DSO. Er is een reeks van deze modellen:</p>
+<ul>
+<li><a href="https://geonovum.github.io/dso-cim-am/">CIM-AM</a>: Conceptueel Informatiemodel Aanvragen en Meldingen.</li>
+<li><a href="https://geonovum.github.io/dso-cim-bhkv/">CIM-BHKV</a>: Conceptueel Informatiemodel Bronhouderkoppelvlak.</li>
+<li><a href="https://geonovum.github.io/dso-cim-hlp/">CIM-HLP</a>: Conceptueel Informatiemodel Help en Ondersteuning.</li>
+<li><a href="https://geonovum.github.io/dso-cim-mac/">CIM-MAC</a>: Conceptueel Informatiemodel Machtigen.</li>
+<li><a href="https://geonovum.github.io/dso-cim-oi/">CIM-OI</a>: Conceptueel Informatiemodel Omgevingsinformatie.</li>
+<li><a href="https://geonovum.github.io/dso-cim-ow/">CIM-OW</a>: Conceptueel Informatiemodel Omgevingswet.</li>
+<li><a href="https://geonovum.github.io/dso-cim-op/">CIM-OP</a>: Conceptueel Informatiemodel Officiële Publicaties. </li>
+<li><a href="https://geonovum.github.io/dso-cim-org/">CIM-ORG</a>: Conceptueel Informatiemodel (Overheids-)Organisaties.</li>
+<li><a href="https://geonovum.github.io/dso-cim-pdc/">CIM-PDC</a>: Conceptueel Informatiemodel Producten- en Dienstencatalogus.</li>
+<li><a href="https://geonovum.github.io/dso-cim-swf/">CIM-SWF</a>: Conceptueel Informatiemodel Samenwerkfuctie.</li>
+<li><a href="https://geonovum.github.io/dso-cim-tr/">CIM-TR</a>: Conceptueel Informatiemodel Toepasbare Regels.</li>
+</ul>
 </section>
   <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#voorwoord"><bdi class="secno">1. </bdi>Voorwoord</a></li><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">2. </bdi>Inleiding</a></li><li class="tocline"><a class="tocxref" href="#toepassingsgebied"><bdi class="secno">3. </bdi>Toepassingsgebied</a></li><li class="tocline"><a class="tocxref" href="#overzicht"><bdi class="secno">4. </bdi>Overzicht</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normatieve-referenties"><bdi class="secno">4.1 </bdi>Normatieve referenties</a></li><li class="tocline"><a class="tocxref" href="#termen-en-definities"><bdi class="secno">4.2 </bdi>Termen en definities</a></li><li class="tocline"><a class="tocxref" href="#symbolen-en-afkortingen"><bdi class="secno">4.3 </bdi>Symbolen en afkortingen</a></li></ol></li><li class="tocline"><a class="tocxref" href="#cat"><bdi class="secno">5. </bdi>Gegevensdefinitie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#EAID_173F6D00_45A0_4ff5_9B80_0A2DA56E20E7"><bdi class="secno">5.1 </bdi>   CIM-OI Compleet -overzicht</a></li><li class="tocline"><a class="tocxref" href="#EAID_1B1E533C_EEB1_40fa_984C_9DABB713A645"><bdi class="secno">5.2 </bdi>   CIM-OI EV versimpeld -overzicht</a></li><li class="tocline"><a class="tocxref" href="#EAID_211DA8B3_6F8B_42aa_9DB4_B853EE42EF6C"><bdi class="secno">5.3 </bdi>   CIM-OI Directe relaties -overzicht</a></li><li class="tocline"><a class="tocxref" href="#EAID_5842CF10_7440_4e24_AAFB_6A935CC917DD"><bdi class="secno">5.4 </bdi>   CIM-OI Waardelijsten -overzicht</a></li><li class="tocline"><a class="tocxref" href="#EAID_5E45DD80_A386_4120_BE8E_2309011CF7DD"><bdi class="secno">5.5 </bdi>   CIM-OI generiek versimpeld -overzicht</a></li><li class="tocline"><a class="tocxref" href="#EAID_8F580A99_C3D9_4291_92D5_52060810EBE9"><bdi class="secno">5.6 </bdi>   CIM-OI Waardelijsten EV -overzicht</a></li><li class="tocline"><a class="tocxref" href="#EAID_A2D8D2A3_5D59_4afd_A235_925788DD493F"><bdi class="secno">5.7 </bdi>   CIM-OI Omgevingsaspect -overzicht</a></li><li class="tocline"><a class="tocxref" href="#EAID_B8AF5DE1_A86B_4bf5_B07D_A653E0858F8F"><bdi class="secno">5.8 </bdi>   CIM-OI EV -overzicht</a></li><li class="tocline"><a class="tocxref" href="#EAID_F2277CE8_0060_42de_B2AC_E6CC1703EC0C"><bdi class="secno">5.9 </bdi>   CIM-OI generiek -overzicht</a></li><li class="tocline"><a class="tocxref" href="#EAID_F933065B_5E51_47a1_8495_D5FD03A0D1CD"><bdi class="secno">5.10 </bdi>   CIM-OI geluid versimpeld -overzicht</a></li><li class="tocline"><a class="tocxref" href="#objecttypen"><bdi class="secno">5.11 </bdi>Objecttypen   </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Registerbevraging"><bdi class="secno">5.11.1 </bdi>   Registerbevraging</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_EvRelevanteAnnotaties"><bdi class="secno">5.11.2 </bdi>   Ev­Relevante­Annotaties</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Uitvoeringsregel"><bdi class="secno">5.11.3 </bdi>   Uitvoeringsregel</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_RelevanteAnnotaties"><bdi class="secno">5.11.4 </bdi>   Relevante­Annotaties</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Omgevingsaspect"><bdi class="secno">5.11.5 </bdi>   Omgevingsaspect</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_OptieType"><bdi class="secno">5.11.6 </bdi>   Optie­Type</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_RegisterbevragingPlaatsgebondenRisico"><bdi class="secno">5.11.7 </bdi>   Registerbevraging­Plaatsgebonden­Risico</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_GeluidsrelevanteAnnotaties"><bdi class="secno">5.11.8 </bdi>   Geluidsrelevante­Annotaties</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_RegisterbevragingAandachtsgebiedEV"><bdi class="secno">5.11.9 </bdi>   Registerbevraging­Aandachtsgebied­EV</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden"><bdi class="secno">5.11.10 </bdi>   Registerbevraging­Geluids­Aandachtsgebieden</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_ToepasbareActiviteit"><bdi class="secno">5.11.11 </bdi>   Toepasbare­Activiteit</a></li></ol></li><li class="tocline"><a class="tocxref" href="#attribuut-en-relatiesoort-details"><bdi class="secno">5.12 </bdi>Attribuut- en relatiesoort details  </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#objecttype-details"><bdi class="secno">5.12.1 </bdi>Objecttype details  </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Registerbevraging"><bdi class="secno">5.12.1.1 </bdi>   Registerbevraging</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Registerbevraging_profile"><bdi class="secno">5.12.1.1.1 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging</span> profile</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Registerbevraging_key"><bdi class="secno">5.12.1.1.2 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging</span> key</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Registerbevraging_type"><bdi class="secno">5.12.1.1.3 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging</span> type</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Registerbevraging_value"><bdi class="secno">5.12.1.1.4 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging</span> value</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_EvRelevanteAnnotaties"><bdi class="secno">5.12.1.2 </bdi>   Ev­Relevante­Annotaties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_EvRelevanteAnnotaties_identificatie"><bdi class="secno">5.12.1.2.1 </bdi>Attribuutsoort details  <span class="formerLink">Ev­Relevante­Annotaties</span> identificatie</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_EvRelevanteAnnotaties_waardelijstActiviteiten"><bdi class="secno">5.12.1.2.2 </bdi>Attribuutsoort details  <span class="formerLink">Ev­Relevante­Annotaties</span> waardelijst activiteiten</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_EvRelevanteAnnotaties_waardelijstGebiedaanwijzingtypeEV"><bdi class="secno">5.12.1.2.3 </bdi>Attribuutsoort details  <span class="formerLink">Ev­Relevante­Annotaties</span> waardelijst gebiedaanwijzingtype­EV</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_EvRelevanteAnnotaties_waardelijstThema"><bdi class="secno">5.12.1.2.4 </bdi>Attribuutsoort details  <span class="formerLink">Ev­Relevante­Annotaties</span> waardelijst Thema</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_EvRelevanteAnnotaties_bevraagt"><bdi class="secno">5.12.1.2.5 </bdi>Relatiesoort details  <span class="formerLink">Ev­Relevante­Annotaties</span> bevraagt</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_EvRelevanteAnnotaties_heeftOvereenkomstMet"><bdi class="secno">5.12.1.2.6 </bdi>Relatiesoort details  <span class="formerLink">Ev­Relevante­Annotaties</span> heeft overeenkomst met</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_EvRelevanteAnnotaties_bevraagt"><bdi class="secno">5.12.1.2.7 </bdi>Relatiesoort details  <span class="formerLink">Ev­Relevante­Annotaties</span> bevraagt</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Uitvoeringsregel"><bdi class="secno">5.12.1.3 </bdi>   Uitvoeringsregel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Uitvoeringsregel_bevraging"><bdi class="secno">5.12.1.3.1 </bdi>Relatiesoort details  <span class="formerLink">Uitvoeringsregel</span> bevraging</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Uitvoeringsregel_bevraagt"><bdi class="secno">5.12.1.3.2 </bdi>Relatiesoort details  <span class="formerLink">Uitvoeringsregel</span> bevraagt</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Uitvoeringsregel_registerbevraging"><bdi class="secno">5.12.1.3.3 </bdi>Relatiesoort details  <span class="formerLink">Uitvoeringsregel</span> registerbevraging</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_RelevanteAnnotaties"><bdi class="secno">5.12.1.4 </bdi>   Relevante­Annotaties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstActiviteiten"><bdi class="secno">5.12.1.4.1 </bdi>Attribuutsoort details  <span class="formerLink">Relevante­Annotaties</span> waardelijst activiteiten</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstThema"><bdi class="secno">5.12.1.4.2 </bdi>Attribuutsoort details  <span class="formerLink">Relevante­Annotaties</span> waardelijst Thema</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMet"><bdi class="secno">5.12.1.4.3 </bdi>Relatiesoort details  <span class="formerLink">Relevante­Annotaties</span> heeft overeenkomst met</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMet"><bdi class="secno">5.12.1.4.4 </bdi>Relatiesoort details  <span class="formerLink">Relevante­Annotaties</span> heeft overeenkomst met</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_RelevanteAnnotaties_bevraging"><bdi class="secno">5.12.1.4.5 </bdi>Relatiesoort details  <span class="formerLink">Relevante­Annotaties</span> bevraging</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMet"><bdi class="secno">5.12.1.4.6 </bdi>Relatiesoort details  <span class="formerLink">Relevante­Annotaties</span> heeft overeenkomst met</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_RelevanteAnnotaties_ev"><bdi class="secno">5.12.1.4.7 </bdi>Relatiesoort details  <span class="formerLink">Relevante­Annotaties</span> heeft overeenkomst met</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Omgevingsaspect"><bdi class="secno">5.12.1.5 </bdi>   Omgevingsaspect</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Omgevingsaspect_naam"><bdi class="secno">5.12.1.5.1 </bdi>Attribuutsoort details  <span class="formerLink">Omgevingsaspect</span> naam</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Omgevingsaspect_identificatie"><bdi class="secno">5.12.1.5.2 </bdi>Attribuutsoort details  <span class="formerLink">Omgevingsaspect</span> identificatie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_RegisterbevragingPlaatsgebondenRisico"><bdi class="secno">5.12.1.6 </bdi>   Registerbevraging­Plaatsgebonden­Risico</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_identificatie"><bdi class="secno">5.12.1.6.1 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging­Plaatsgebonden­Risico</span> identificatie</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_register"><bdi class="secno">5.12.1.6.2 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging­Plaatsgebonden­Risico</span> register</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_registergegeven"><bdi class="secno">5.12.1.6.3 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging­Plaatsgebonden­Risico</span> registergegeven</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_registerkoppelveld"><bdi class="secno">5.12.1.6.4 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging­Plaatsgebonden­Risico</span> registerkoppelveld</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_RegisterbevragingPlaatsgebondenRisico_ev"><bdi class="secno">5.12.1.6.5 </bdi>Relatiesoort details  <span class="formerLink">Registerbevraging­Plaatsgebonden­Risico</span> ev</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_GeluidsrelevanteAnnotaties"><bdi class="secno">5.12.1.7 </bdi>   Geluidsrelevante­Annotaties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_identificate"><bdi class="secno">5.12.1.7.1 </bdi>Attribuutsoort details  <span class="formerLink">Geluidsrelevante­Annotaties</span> identificate</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_waardelijstGebiedsaanwijzingtypeGeluid"><bdi class="secno">5.12.1.7.2 </bdi>Attribuutsoort details  <span class="formerLink">Geluidsrelevante­Annotaties</span> waardelijst gebiedsaanwijzingtype­Geluid</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_waardelijstActiviteiten"><bdi class="secno">5.12.1.7.3 </bdi>Attribuutsoort details  <span class="formerLink">Geluidsrelevante­Annotaties</span> waardelijst activiteiten</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_waardelijstThema"><bdi class="secno">5.12.1.7.4 </bdi>Attribuutsoort details  <span class="formerLink">Geluidsrelevante­Annotaties</span> waardelijst thema</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_GeluidsrelevanteAnnotaties_heeftOvereenkomstMet"><bdi class="secno">5.12.1.7.5 </bdi>Relatiesoort details  <span class="formerLink">Geluidsrelevante­Annotaties</span> heeft overeenkomst met</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_GeluidsrelevanteAnnotaties_heeftOvereenkomstMet"><bdi class="secno">5.12.1.7.6 </bdi>Relatiesoort details  <span class="formerLink">Geluidsrelevante­Annotaties</span> heeft overeenkomst met</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_RegisterbevragingAandachtsgebiedEV"><bdi class="secno">5.12.1.8 </bdi>   Registerbevraging­Aandachtsgebied­EV</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_identificatie"><bdi class="secno">5.12.1.8.1 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging­Aandachtsgebied­EV</span> identificatie</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_register"><bdi class="secno">5.12.1.8.2 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging­Aandachtsgebied­EV</span> register</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_registergegeven"><bdi class="secno">5.12.1.8.3 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging­Aandachtsgebied­EV</span> registergegeven</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_registerkoppelveld"><bdi class="secno">5.12.1.8.4 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging­Aandachtsgebied­EV</span> registerkoppelveld</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_RegisterbevragingAandachtsgebiedEV_ev"><bdi class="secno">5.12.1.8.5 </bdi>Relatiesoort details  <span class="formerLink">Registerbevraging­Aandachtsgebied­EV</span> heeft overeenkomst met</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden"><bdi class="secno">5.12.1.9 </bdi>   Registerbevraging­Geluids­Aandachtsgebieden</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_identificatie"><bdi class="secno">5.12.1.9.1 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging­Geluids­Aandachtsgebieden</span> identificatie</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_register"><bdi class="secno">5.12.1.9.2 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging­Geluids­Aandachtsgebieden</span> register</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_registergegeven"><bdi class="secno">5.12.1.9.3 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging­Geluids­Aandachtsgebieden</span> registergegeven</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_registerkoppelveld"><bdi class="secno">5.12.1.9.4 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging­Geluids­Aandachtsgebieden</span> registerkoppelveld</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_bevraagt"><bdi class="secno">5.12.1.9.5 </bdi>Relatiesoort details  <span class="formerLink">Registerbevraging­Geluids­Aandachtsgebieden</span> bevraagt</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_ToepasbareActiviteit"><bdi class="secno">5.12.1.10 </bdi>   Toepasbare­Activiteit</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_ToepasbareActiviteit_bevat"><bdi class="secno">5.12.1.10.1 </bdi>Relatiesoort details  <span class="formerLink">Toepasbare­Activiteit</span> bevat</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_ToepasbareActiviteit_heeftRelatieMet"><bdi class="secno">5.12.1.10.2 </bdi>Relatiesoort details  <span class="formerLink">Toepasbare­Activiteit</span> heeft relatie met</a></li></ol></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#bibliografie"><bdi class="secno">6. </bdi>Bibliografie</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">7. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">8. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li></ol></nav>
 
@@ -395,7 +382,7 @@ ul.index code{color:inherit}
 <p>TODO</p>
 </section>
   <section id="toepassingsgebied"><div class="header-wrapper"><h2 id="x3-toepassingsgebied"><bdi class="secno">3. </bdi>Toepassingsgebied</h2><a class="self-link" href="#toepassingsgebied" aria-label="Permalink for Section 3."></a></div>
-<p>TODO</p>
+<p>Het toepassingsdomein van deze standaard is het DSO van de omgevingswet.</p>
 </section>
   <section id="overzicht"><div class="header-wrapper"><h2 id="x4-overzicht"><bdi class="secno">4. </bdi>Overzicht</h2><a class="self-link" href="#overzicht" aria-label="Permalink for Section 4."></a></div>
 <p>TODO</p>
@@ -416,77 +403,88 @@ dataspecificatie.</p>
    
    <section id="EAID_173F6D00_45A0_4ff5_9B80_0A2DA56E20E7">
       <div class="header-wrapper"><h3 id="x5-1-cim-oi-compleet-overzicht"><bdi class="secno">5.1 </bdi>   CIM-OI Compleet -overzicht</h3><a class="self-link" href="#EAID_173F6D00_45A0_4ff5_9B80_0A2DA56E20E7" aria-label="Permalink for Section 5.1"></a></div>
-      <div class="imageinfo overview"><figure id="fig-generatedID"><img src="data/Images/EAID_173F6D00_45A0_4ff5_9B80_0A2DA56E20E7.png" usemap="#imagemap-EAID_173F6D00_45A0_4ff5_9B80_0A2DA56E20E7" alt="Diagram 
+      <div class="imageinfo overview">
+         <figure id="fig-cim-oi-compleet-overzicht"><img src="data/Images/EAID_173F6D00_45A0_4ff5_9B80_0A2DA56E20E7.png" usemap="#imagemap-EAID_173F6D00_45A0_4ff5_9B80_0A2DA56E20E7" alt="Diagram 
                         
-                     "><figcaption><a class="self-link" href="#fig-generatedID">Figuur <bdi class="figno">1</bdi></a> <span class="fig-title"></span></figcaption></figure><map name="imagemap-EAID_173F6D00_45A0_4ff5_9B80_0A2DA56E20E7"><area shape="rect" alt="RegisterbevragingPlaatsgebondenRisico" coords="1399,723,1674,857" href="#graph_EAID_76BD9702_3572_4785_AF25_0E93426692C8"><area shape="rect" alt="RegisterbevragingAandachtsgebiedEV" coords="1405,504,1692,638" href="#graph_EAID_C92D5BEA_03D7_4547_866E_7E46D4395F69"><area shape="rect" alt="EvRelevanteAnnotaties" coords="920,482,1316,616" href="#graph_EAID_21438E9B_592C_4f00_948E_071B0AD845D9"><area shape="rect" alt="RegisterbevragingGeluidsAandachtsgebieden" coords="1395,297,1656,431" href="#graph_EAID_EA3BFC5D_BBFA_453b_8D39_690865ED689E"><area shape="rect" alt="Uitvoeringsregel" coords="1395,83,1551,182" href="#graph_EAID_455F1E93_9CDD_4ec1_95FB_266E5B9206FA"><area shape="rect" alt="ToepasbareActiviteit" coords="1054,83,1184,182" href="#graph_EAID_F93FD1C3_5762_4879_9FC2_10C2C84444E8"><area shape="rect" alt="GeluidsrelevanteAnnotaties" coords="924,297,1286,431" href="#graph_EAID_B260A475_C1DB_4e6b_A026_9965811FD7D9"></map><p><b>CIM-OI Compleet -overzicht</b></p>
-      </div>
+                     "><figcaption><a class="self-link" href="#fig-cim-oi-compleet-overzicht">Figuur <bdi class="figno">1</bdi></a> <span class="fig-title">CIM-OI Compleet -overzicht</span></figcaption>
+         </figure><map name="imagemap-EAID_173F6D00_45A0_4ff5_9B80_0A2DA56E20E7"><area shape="rect" alt="RegisterbevragingPlaatsgebondenRisico" coords="1399,720,1674,854" href="#global_class_CIMOI_RegisterbevragingPlaatsgebondenRisico"><area shape="rect" alt="RegisterbevragingAandachtsgebiedEV" coords="1405,502,1692,636" href="#global_class_CIMOI_RegisterbevragingAandachtsgebiedEV"><area shape="rect" alt="EvRelevanteAnnotaties" coords="920,480,1316,614" href="#global_class_CIMOI_EvRelevanteAnnotaties"><area shape="rect" alt="RegisterbevragingGeluidsAandachtsgebieden" coords="1395,294,1656,428" href="#global_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden"><area shape="rect" alt="Uitvoeringsregel" coords="1395,81,1551,179" href="#global_class_CIMOI_Uitvoeringsregel"><area shape="rect" alt="ToepasbareActiviteit" coords="1054,81,1184,179" href="#global_class_CIMOI_ToepasbareActiviteit"><area shape="rect" alt="GeluidsrelevanteAnnotaties" coords="924,294,1286,428" href="#global_class_CIMOI_GeluidsrelevanteAnnotaties"></map></div>
    </section>
    <section id="EAID_1B1E533C_EEB1_40fa_984C_9DABB713A645">
       <div class="header-wrapper"><h3 id="x5-2-cim-oi-ev-versimpeld-overzicht"><bdi class="secno">5.2 </bdi>   CIM-OI EV versimpeld -overzicht</h3><a class="self-link" href="#EAID_1B1E533C_EEB1_40fa_984C_9DABB713A645" aria-label="Permalink for Section 5.2"></a></div>
-      <div class="imageinfo overview"><figure id="fig-generatedID-0"><img src="data/Images/EAID_1B1E533C_EEB1_40fa_984C_9DABB713A645.png" usemap="#imagemap-EAID_1B1E533C_EEB1_40fa_984C_9DABB713A645" alt="Diagram 
+      <div class="imageinfo overview">
+         <figure id="fig-cim-oi-ev-versimpeld-overzicht"><img src="data/Images/EAID_1B1E533C_EEB1_40fa_984C_9DABB713A645.png" usemap="#imagemap-EAID_1B1E533C_EEB1_40fa_984C_9DABB713A645" alt="Diagram 
                         
-                     "><figcaption><a class="self-link" href="#fig-generatedID-0">Figuur <bdi class="figno">2</bdi></a> <span class="fig-title"></span></figcaption></figure><map name="imagemap-EAID_1B1E533C_EEB1_40fa_984C_9DABB713A645"><area shape="rect" alt="Uitvoeringsregel" coords="1551,183,1674,279" href="#graph_EAID_455F1E93_9CDD_4ec1_95FB_266E5B9206FA"><area shape="rect" alt="Omgevingsaspect" coords="727,14,850,109" href="#graph_EAID_6394B42E_0D75_42a8_A9F2_3CBC852D8718"><area shape="rect" alt="Registerbevraging" coords="1214,150,1389,310" href="#graph_EAID_0025EAA7_567E_4f80_AAC2_4F9440D6219C"><area shape="rect" alt="RelevanteAnnotaties" coords="562,156,1015,305" href="#graph_EAID_5428C87D_586B_45fc_8FBF_C2798F9BDABC"></map><p><b>CIM-OI EV versimpeld -overzicht</b></p>
-      </div>
+                     "><figcaption><a class="self-link" href="#fig-cim-oi-ev-versimpeld-overzicht">Figuur <bdi class="figno">2</bdi></a> <span class="fig-title">CIM-OI EV versimpeld -overzicht</span></figcaption>
+         </figure><map name="imagemap-EAID_1B1E533C_EEB1_40fa_984C_9DABB713A645"><area shape="rect" alt="Uitvoeringsregel" coords="1551,183,1674,279" href="#global_class_CIMOI_Uitvoeringsregel"><area shape="rect" alt="Omgevingsaspect" coords="727,14,850,109" href="#global_class_CIMOI_Omgevingsaspect"><area shape="rect" alt="Registerbevraging" coords="1214,150,1389,310" href="#global_class_CIMOI_Registerbevraging"><area shape="rect" alt="RelevanteAnnotaties" coords="562,156,1015,305" href="#global_class_CIMOI_RelevanteAnnotaties"></map></div>
    </section>
    <section id="EAID_211DA8B3_6F8B_42aa_9DB4_B853EE42EF6C">
       <div class="header-wrapper"><h3 id="x5-3-cim-oi-directe-relaties-overzicht"><bdi class="secno">5.3 </bdi>   CIM-OI Directe relaties -overzicht</h3><a class="self-link" href="#EAID_211DA8B3_6F8B_42aa_9DB4_B853EE42EF6C" aria-label="Permalink for Section 5.3"></a></div>
-      <div class="imageinfo overview"><figure id="fig-generatedID-1"><img src="data/Images/EAID_211DA8B3_6F8B_42aa_9DB4_B853EE42EF6C.png" usemap="#imagemap-EAID_211DA8B3_6F8B_42aa_9DB4_B853EE42EF6C" alt="Diagram 
+      <div class="imageinfo overview">
+         <figure id="fig-cim-oi-directe-relaties-overzicht"><img src="data/Images/EAID_211DA8B3_6F8B_42aa_9DB4_B853EE42EF6C.png" usemap="#imagemap-EAID_211DA8B3_6F8B_42aa_9DB4_B853EE42EF6C" alt="Diagram 
                         
-                     "><figcaption><a class="self-link" href="#fig-generatedID-1">Figuur <bdi class="figno">3</bdi></a> <span class="fig-title"></span></figcaption></figure><map name="imagemap-EAID_211DA8B3_6F8B_42aa_9DB4_B853EE42EF6C"><area shape="rect" alt="RegisterbevragingPlaatsgebondenRisico" coords="1059,651,1334,784" href="#graph_EAID_76BD9702_3572_4785_AF25_0E93426692C8"><area shape="rect" alt="RegisterbevragingAandachtsgebiedEV" coords="932,436,1219,570" href="#graph_EAID_C92D5BEA_03D7_4547_866E_7E46D4395F69"><area shape="rect" alt="EvRelevanteAnnotaties" coords="1432,436,1829,570" href="#graph_EAID_21438E9B_592C_4f00_948E_071B0AD845D9"><area shape="rect" alt="RegisterbevragingGeluidsAandachtsgebieden" coords="1255,236,1516,370" href="#graph_EAID_EA3BFC5D_BBFA_453b_8D39_690865ED689E"><area shape="rect" alt="GeluidsrelevanteAnnotaties" coords="697,236,1059,370" href="#graph_EAID_B260A475_C1DB_4e6b_A026_9965811FD7D9"></map><p><b>CIM-OI Directe relaties -overzicht</b></p>
-      </div>
+                     "><figcaption><a class="self-link" href="#fig-cim-oi-directe-relaties-overzicht">Figuur <bdi class="figno">3</bdi></a> <span class="fig-title">CIM-OI Directe relaties -overzicht</span></figcaption>
+         </figure><map name="imagemap-EAID_211DA8B3_6F8B_42aa_9DB4_B853EE42EF6C"><area shape="rect" alt="RegisterbevragingPlaatsgebondenRisico" coords="992,651,1267,784" href="#global_class_CIMOI_RegisterbevragingPlaatsgebondenRisico"><area shape="rect" alt="RegisterbevragingAandachtsgebiedEV" coords="865,436,1152,570" href="#global_class_CIMOI_RegisterbevragingAandachtsgebiedEV"><area shape="rect" alt="EvRelevanteAnnotaties" coords="1365,436,1762,570" href="#global_class_CIMOI_EvRelevanteAnnotaties"><area shape="rect" alt="RegisterbevragingGeluidsAandachtsgebieden" coords="1188,236,1449,370" href="#global_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden"><area shape="rect" alt="GeluidsrelevanteAnnotaties" coords="630,236,992,370" href="#global_class_CIMOI_GeluidsrelevanteAnnotaties"></map></div>
    </section>
    <section id="EAID_5842CF10_7440_4e24_AAFB_6A935CC917DD">
       <div class="header-wrapper"><h3 id="x5-4-cim-oi-waardelijsten-overzicht"><bdi class="secno">5.4 </bdi>   CIM-OI Waardelijsten -overzicht</h3><a class="self-link" href="#EAID_5842CF10_7440_4e24_AAFB_6A935CC917DD" aria-label="Permalink for Section 5.4"></a></div>
-      <div class="imageinfo overview"><figure id="fig-generatedID-2"><img src="data/Images/EAID_5842CF10_7440_4e24_AAFB_6A935CC917DD.png" usemap="#imagemap-EAID_5842CF10_7440_4e24_AAFB_6A935CC917DD" alt="Diagram 
+      <div class="imageinfo overview">
+         <figure id="fig-cim-oi-waardelijsten-overzicht"><img src="data/Images/EAID_5842CF10_7440_4e24_AAFB_6A935CC917DD.png" usemap="#imagemap-EAID_5842CF10_7440_4e24_AAFB_6A935CC917DD" alt="Diagram 
                         
-                     "><figcaption><a class="self-link" href="#fig-generatedID-2">Figuur <bdi class="figno">4</bdi></a> <span class="fig-title"></span></figcaption></figure><map name="imagemap-EAID_5842CF10_7440_4e24_AAFB_6A935CC917DD"></map><p><b>CIM-OI Waardelijsten -overzicht</b></p>
-      </div>
+                     "><figcaption><a class="self-link" href="#fig-cim-oi-waardelijsten-overzicht">Figuur <bdi class="figno">4</bdi></a> <span class="fig-title">CIM-OI Waardelijsten -overzicht</span></figcaption>
+         </figure><map name="imagemap-EAID_5842CF10_7440_4e24_AAFB_6A935CC917DD"></map></div>
    </section>
    <section id="EAID_5E45DD80_A386_4120_BE8E_2309011CF7DD">
       <div class="header-wrapper"><h3 id="x5-5-cim-oi-generiek-versimpeld-overzicht"><bdi class="secno">5.5 </bdi>   CIM-OI generiek versimpeld -overzicht</h3><a class="self-link" href="#EAID_5E45DD80_A386_4120_BE8E_2309011CF7DD" aria-label="Permalink for Section 5.5"></a></div>
-      <div class="imageinfo overview"><figure id="fig-generatedID-3"><img src="data/Images/EAID_5E45DD80_A386_4120_BE8E_2309011CF7DD.png" usemap="#imagemap-EAID_5E45DD80_A386_4120_BE8E_2309011CF7DD" alt="Diagram 
+      <div class="imageinfo overview">
+         <figure id="fig-cim-oi-generiek-versimpeld-overzicht"><img src="data/Images/EAID_5E45DD80_A386_4120_BE8E_2309011CF7DD.png" usemap="#imagemap-EAID_5E45DD80_A386_4120_BE8E_2309011CF7DD" alt="Diagram 
                         
-                     "><figcaption><a class="self-link" href="#fig-generatedID-3">Figuur <bdi class="figno">5</bdi></a> <span class="fig-title"></span></figcaption></figure><map name="imagemap-EAID_5E45DD80_A386_4120_BE8E_2309011CF7DD"><area shape="rect" alt="Omgevingsaspect" coords="560,14,682,79" href="#graph_EAID_6394B42E_0D75_42a8_A9F2_3CBC852D8718"><area shape="rect" alt="Registerbevraging" coords="992,148,1167,217" href="#graph_EAID_0025EAA7_567E_4f80_AAC2_4F9440D6219C"><area shape="rect" alt="RelevanteAnnotaties" coords="394,149,847,217" href="#graph_EAID_5428C87D_586B_45fc_8FBF_C2798F9BDABC"><area shape="rect" alt="Uitvoeringsregel" coords="1436,148,1559,217" href="#graph_EAID_455F1E93_9CDD_4ec1_95FB_266E5B9206FA"></map><p><b>CIM-OI generiek versimpeld -overzicht</b></p>
-      </div>
+                     "><figcaption><a class="self-link" href="#fig-cim-oi-generiek-versimpeld-overzicht">Figuur <bdi class="figno">5</bdi></a> <span class="fig-title">CIM-OI generiek versimpeld -overzicht</span></figcaption>
+         </figure><map name="imagemap-EAID_5E45DD80_A386_4120_BE8E_2309011CF7DD"><area shape="rect" alt="Omgevingsaspect" coords="560,14,682,79" href="#global_class_CIMOI_Omgevingsaspect"><area shape="rect" alt="Registerbevraging" coords="992,148,1167,217" href="#global_class_CIMOI_Registerbevraging"><area shape="rect" alt="RelevanteAnnotaties" coords="394,149,847,217" href="#global_class_CIMOI_RelevanteAnnotaties"><area shape="rect" alt="Uitvoeringsregel" coords="1436,148,1559,217" href="#global_class_CIMOI_Uitvoeringsregel"></map></div>
    </section>
    <section id="EAID_8F580A99_C3D9_4291_92D5_52060810EBE9">
       <div class="header-wrapper"><h3 id="x5-6-cim-oi-waardelijsten-ev-overzicht"><bdi class="secno">5.6 </bdi>   CIM-OI Waardelijsten EV -overzicht</h3><a class="self-link" href="#EAID_8F580A99_C3D9_4291_92D5_52060810EBE9" aria-label="Permalink for Section 5.6"></a></div>
-      <div class="imageinfo overview"><figure id="fig-generatedID-4"><img src="data/Images/EAID_8F580A99_C3D9_4291_92D5_52060810EBE9.png" usemap="#imagemap-EAID_8F580A99_C3D9_4291_92D5_52060810EBE9" alt="Diagram 
+      <div class="imageinfo overview">
+         <figure id="fig-cim-oi-waardelijsten-ev-overzicht"><img src="data/Images/EAID_8F580A99_C3D9_4291_92D5_52060810EBE9.png" usemap="#imagemap-EAID_8F580A99_C3D9_4291_92D5_52060810EBE9" alt="Diagram 
                         
-                     "><figcaption><a class="self-link" href="#fig-generatedID-4">Figuur <bdi class="figno">6</bdi></a> <span class="fig-title"></span></figcaption></figure><map name="imagemap-EAID_8F580A99_C3D9_4291_92D5_52060810EBE9"></map><p><b>CIM-OI Waardelijsten EV -overzicht</b></p>
-      </div>
+                     "><figcaption><a class="self-link" href="#fig-cim-oi-waardelijsten-ev-overzicht">Figuur <bdi class="figno">6</bdi></a> <span class="fig-title">CIM-OI Waardelijsten EV -overzicht</span></figcaption>
+         </figure><map name="imagemap-EAID_8F580A99_C3D9_4291_92D5_52060810EBE9"></map></div>
    </section>
    <section id="EAID_A2D8D2A3_5D59_4afd_A235_925788DD493F">
       <div class="header-wrapper"><h3 id="x5-7-cim-oi-omgevingsaspect-overzicht"><bdi class="secno">5.7 </bdi>   CIM-OI Omgevingsaspect -overzicht</h3><a class="self-link" href="#EAID_A2D8D2A3_5D59_4afd_A235_925788DD493F" aria-label="Permalink for Section 5.7"></a></div>
-      <div class="imageinfo overview"><figure id="fig-generatedID-5"><img src="data/Images/EAID_A2D8D2A3_5D59_4afd_A235_925788DD493F.png" usemap="#imagemap-EAID_A2D8D2A3_5D59_4afd_A235_925788DD493F" alt="Diagram 
+      <div class="imageinfo overview">
+         <figure id="fig-cim-oi-omgevingsaspect-overzicht"><img src="data/Images/EAID_A2D8D2A3_5D59_4afd_A235_925788DD493F.png" usemap="#imagemap-EAID_A2D8D2A3_5D59_4afd_A235_925788DD493F" alt="Diagram 
                         
-                     "><figcaption><a class="self-link" href="#fig-generatedID-5">Figuur <bdi class="figno">7</bdi></a> <span class="fig-title"></span></figcaption></figure><map name="imagemap-EAID_A2D8D2A3_5D59_4afd_A235_925788DD493F"><area shape="rect" alt="Omgevingsaspect" coords="409,14,567,109" href="#graph_EAID_6394B42E_0D75_42a8_A9F2_3CBC852D8718"><area shape="rect" alt="Registerbevraging" coords="616,219,791,376" href="#graph_EAID_0025EAA7_567E_4f80_AAC2_4F9440D6219C"><area shape="rect" alt="RelevanteAnnotaties" coords="133,213,424,335" href="#graph_EAID_5428C87D_586B_45fc_8FBF_C2798F9BDABC"></map><p><b>CIM-OI Omgevingsaspect -overzicht</b></p>
-      </div>
+                     "><figcaption><a class="self-link" href="#fig-cim-oi-omgevingsaspect-overzicht">Figuur <bdi class="figno">7</bdi></a> <span class="fig-title">CIM-OI Omgevingsaspect -overzicht</span></figcaption>
+         </figure><map name="imagemap-EAID_A2D8D2A3_5D59_4afd_A235_925788DD493F"><area shape="rect" alt="Omgevingsaspect" coords="409,14,567,109" href="#global_class_CIMOI_Omgevingsaspect"><area shape="rect" alt="Registerbevraging" coords="616,219,791,376" href="#global_class_CIMOI_Registerbevraging"><area shape="rect" alt="RelevanteAnnotaties" coords="133,213,424,335" href="#global_class_CIMOI_RelevanteAnnotaties"></map></div>
    </section>
    <section id="EAID_B8AF5DE1_A86B_4bf5_B07D_A653E0858F8F">
       <div class="header-wrapper"><h3 id="x5-8-cim-oi-ev-overzicht"><bdi class="secno">5.8 </bdi>   CIM-OI EV -overzicht</h3><a class="self-link" href="#EAID_B8AF5DE1_A86B_4bf5_B07D_A653E0858F8F" aria-label="Permalink for Section 5.8"></a></div>
-      <div class="imageinfo overview"><figure id="fig-generatedID-6"><img src="data/Images/EAID_B8AF5DE1_A86B_4bf5_B07D_A653E0858F8F.png" usemap="#imagemap-EAID_B8AF5DE1_A86B_4bf5_B07D_A653E0858F8F" alt="Diagram 
+      <div class="imageinfo overview">
+         <figure id="fig-cim-oi-ev-overzicht"><img src="data/Images/EAID_B8AF5DE1_A86B_4bf5_B07D_A653E0858F8F.png" usemap="#imagemap-EAID_B8AF5DE1_A86B_4bf5_B07D_A653E0858F8F" alt="Diagram 
                         
-                     "><figcaption><a class="self-link" href="#fig-generatedID-6">Figuur <bdi class="figno">8</bdi></a> <span class="fig-title"></span></figcaption></figure><map name="imagemap-EAID_B8AF5DE1_A86B_4bf5_B07D_A653E0858F8F"><area shape="rect" alt="Uitvoeringsregel" coords="1550,183,1673,279" href="#graph_EAID_455F1E93_9CDD_4ec1_95FB_266E5B9206FA"><area shape="rect" alt="Omgevingsaspect" coords="622,14,780,109" href="#graph_EAID_6394B42E_0D75_42a8_A9F2_3CBC852D8718"><area shape="rect" alt="Registerbevraging" coords="1108,150,1283,310" href="#graph_EAID_0025EAA7_567E_4f80_AAC2_4F9440D6219C"><area shape="rect" alt="RelevanteAnnotaties" coords="495,176,802,283" href="#graph_EAID_5428C87D_586B_45fc_8FBF_C2798F9BDABC"></map><p><b>CIM-OI EV -overzicht</b></p>
-      </div>
+                     "><figcaption><a class="self-link" href="#fig-cim-oi-ev-overzicht">Figuur <bdi class="figno">8</bdi></a> <span class="fig-title">CIM-OI EV -overzicht</span></figcaption>
+         </figure><map name="imagemap-EAID_B8AF5DE1_A86B_4bf5_B07D_A653E0858F8F"><area shape="rect" alt="Uitvoeringsregel" coords="1550,183,1673,279" href="#global_class_CIMOI_Uitvoeringsregel"><area shape="rect" alt="Omgevingsaspect" coords="622,14,780,109" href="#global_class_CIMOI_Omgevingsaspect"><area shape="rect" alt="Registerbevraging" coords="1108,150,1283,310" href="#global_class_CIMOI_Registerbevraging"><area shape="rect" alt="RelevanteAnnotaties" coords="495,176,802,283" href="#global_class_CIMOI_RelevanteAnnotaties"></map></div>
    </section>
    <section id="EAID_F2277CE8_0060_42de_B2AC_E6CC1703EC0C">
       <div class="header-wrapper"><h3 id="x5-9-cim-oi-generiek-overzicht"><bdi class="secno">5.9 </bdi>   CIM-OI generiek -overzicht</h3><a class="self-link" href="#EAID_F2277CE8_0060_42de_B2AC_E6CC1703EC0C" aria-label="Permalink for Section 5.9"></a></div>
-      <div class="imageinfo overview"><figure id="fig-generatedID-7"><img src="data/Images/EAID_F2277CE8_0060_42de_B2AC_E6CC1703EC0C.png" usemap="#imagemap-EAID_F2277CE8_0060_42de_B2AC_E6CC1703EC0C" alt="Diagram 
+      <div class="imageinfo overview">
+         <figure id="fig-cim-oi-generiek-overzicht"><img src="data/Images/EAID_F2277CE8_0060_42de_B2AC_E6CC1703EC0C.png" usemap="#imagemap-EAID_F2277CE8_0060_42de_B2AC_E6CC1703EC0C" alt="Diagram 
                         
-                     "><figcaption><a class="self-link" href="#fig-generatedID-7">Figuur <bdi class="figno">9</bdi></a> <span class="fig-title"></span></figcaption></figure><map name="imagemap-EAID_F2277CE8_0060_42de_B2AC_E6CC1703EC0C"><area shape="rect" alt="Omgevingsaspect" coords="640,14,798,120" href="#graph_EAID_6394B42E_0D75_42a8_A9F2_3CBC852D8718"><area shape="rect" alt="Registerbevraging" coords="1071,161,1246,321" href="#graph_EAID_0025EAA7_567E_4f80_AAC2_4F9440D6219C"><area shape="rect" alt="RelevanteAnnotaties" coords="463,167,917,316" href="#graph_EAID_5428C87D_586B_45fc_8FBF_C2798F9BDABC"><area shape="rect" alt="Uitvoeringsregel" coords="1401,186,1524,282" href="#graph_EAID_455F1E93_9CDD_4ec1_95FB_266E5B9206FA"></map><p><b>CIM-OI generiek -overzicht</b></p>
-      </div>
+                     "><figcaption><a class="self-link" href="#fig-cim-oi-generiek-overzicht">Figuur <bdi class="figno">9</bdi></a> <span class="fig-title">CIM-OI generiek -overzicht</span></figcaption>
+         </figure><map name="imagemap-EAID_F2277CE8_0060_42de_B2AC_E6CC1703EC0C"><area shape="rect" alt="Omgevingsaspect" coords="640,14,798,120" href="#global_class_CIMOI_Omgevingsaspect"><area shape="rect" alt="Registerbevraging" coords="1071,161,1246,321" href="#global_class_CIMOI_Registerbevraging"><area shape="rect" alt="RelevanteAnnotaties" coords="463,167,917,316" href="#global_class_CIMOI_RelevanteAnnotaties"><area shape="rect" alt="Uitvoeringsregel" coords="1401,186,1524,282" href="#global_class_CIMOI_Uitvoeringsregel"></map></div>
    </section>
    <section id="EAID_F933065B_5E51_47a1_8495_D5FD03A0D1CD">
       <div class="header-wrapper"><h3 id="x5-10-cim-oi-geluid-versimpeld-overzicht"><bdi class="secno">5.10 </bdi>   CIM-OI geluid versimpeld -overzicht</h3><a class="self-link" href="#EAID_F933065B_5E51_47a1_8495_D5FD03A0D1CD" aria-label="Permalink for Section 5.10"></a></div>
-      <div class="imageinfo overview"><figure id="fig-generatedID-8"><img src="data/Images/EAID_F933065B_5E51_47a1_8495_D5FD03A0D1CD.png" usemap="#imagemap-EAID_F933065B_5E51_47a1_8495_D5FD03A0D1CD" alt="Diagram 
+      <div class="imageinfo overview">
+         <figure id="fig-cim-oi-geluid-versimpeld-overzicht"><img src="data/Images/EAID_F933065B_5E51_47a1_8495_D5FD03A0D1CD.png" usemap="#imagemap-EAID_F933065B_5E51_47a1_8495_D5FD03A0D1CD" alt="Diagram 
                         
-                     "><figcaption><a class="self-link" href="#fig-generatedID-8">Figuur <bdi class="figno">10</bdi></a> <span class="fig-title"></span></figcaption></figure><map name="imagemap-EAID_F933065B_5E51_47a1_8495_D5FD03A0D1CD"><area shape="rect" alt="RegisterbevragingGeluidsAandachtsgebieden" coords="1225,251,1486,385" href="#graph_EAID_EA3BFC5D_BBFA_453b_8D39_690865ED689E"><area shape="rect" alt="Uitvoeringsregel" coords="1245,41,1401,139" href="#graph_EAID_455F1E93_9CDD_4ec1_95FB_266E5B9206FA"><area shape="rect" alt="ToepasbareActiviteit" coords="906,41,1036,139" href="#graph_EAID_F93FD1C3_5762_4879_9FC2_10C2C84444E8"><area shape="rect" alt="GeluidsrelevanteAnnotaties" coords="746,251,1076,385" href="#graph_EAID_B260A475_C1DB_4e6b_A026_9965811FD7D9"></map><p><b>CIM-OI geluid versimpeld -overzicht</b></p>
-      </div>
+                     "><figcaption><a class="self-link" href="#fig-cim-oi-geluid-versimpeld-overzicht">Figuur <bdi class="figno">10</bdi></a> <span class="fig-title">CIM-OI geluid versimpeld -overzicht</span></figcaption>
+         </figure><map name="imagemap-EAID_F933065B_5E51_47a1_8495_D5FD03A0D1CD"><area shape="rect" alt="RegisterbevragingGeluidsAandachtsgebieden" coords="1158,249,1419,383" href="#global_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden"><area shape="rect" alt="Uitvoeringsregel" coords="1178,38,1334,137" href="#global_class_CIMOI_Uitvoeringsregel"><area shape="rect" alt="ToepasbareActiviteit" coords="839,38,969,137" href="#global_class_CIMOI_ToepasbareActiviteit"><area shape="rect" alt="GeluidsrelevanteAnnotaties" coords="679,249,1009,383" href="#global_class_CIMOI_GeluidsrelevanteAnnotaties"></map></div>
    </section>
    <section id="objecttypen">
       <div class="header-wrapper"><h3 id="x5-11-objecttypen"><bdi class="secno">5.11 </bdi>Objecttypen   </h3><a class="self-link" href="#objecttypen" aria-label="Permalink for Section 5.11"></a></div>
-      <a class="anchor respec-offending-element" id="graph_EAID_0025EAA7_567E_4f80_AAC2_4F9440D6219C" title="Linking error: not matching `<dfn>`"></a><a class="anchor respec-offending-element" id="global_class_CIMOI_Registerbevraging" title="Linking error: not matching `<dfn>`"></a><section id="global_class_CIMOI_Registerbevraging">
+      
+      <section id="global_class_CIMOI_Registerbevraging">
          <div class="header-wrapper"><h4 id="x5-11-1-registerbevraging"><bdi class="secno">5.11.1 </bdi>   Registerbevraging</h4><a class="self-link" href="#global_class_CIMOI_Registerbevraging" aria-label="Permalink for Section 5.11.1"></a></div>
          
          <table style="width: 100%;" class="simple">
@@ -545,7 +543,7 @@ dataspecificatie.</p>
                      </td>
                   <td></td>
                   <td>
-                     Integer
+                     INTEGER
                      </td>
                   <td>1</td>
                </tr>
@@ -639,16 +637,9 @@ dataspecificatie.</p>
             </tbody>
          </table>
          
-         
-         <section id="" class="notoc">
-            <div class="header-wrapper"><h5 id="toelichting">Toelichting  </h5><a class="self-link" href="#toelichting" aria-label="Permalink for this Section"></a></div>
-            
-            <p>Registerbevraging middels een API . Hierbij worden de parameters opgeslagen die nodig
-               zijn om omgevingsinformatie door te leveren aan de DSO viewer of, indien nodig, een
-               toepasbare regel.</p>
-            </section>
          </section>
-      <a class="anchor respec-offending-element" id="graph_EAID_21438E9B_592C_4f00_948E_071B0AD845D9" title="Linking error: not matching `<dfn>`"></a><a class="anchor respec-offending-element" id="global_class_CIMOI_EvRelevanteAnnotaties" title="Linking error: not matching `<dfn>`"></a><section id="global_class_CIMOI_EvRelevanteAnnotaties">
+      
+      <section id="global_class_CIMOI_EvRelevanteAnnotaties">
          <div class="header-wrapper"><h4 id="x5-11-2-ev-relevante-annotaties"><bdi class="secno">5.11.2 </bdi>   Ev­Relevante­Annotaties</h4><a class="self-link" href="#global_class_CIMOI_EvRelevanteAnnotaties" aria-label="Permalink for Section 5.11.2"></a></div>
          
          <table style="width: 100%;" class="simple">
@@ -794,11 +785,9 @@ dataspecificatie.</p>
             </tbody>
          </table>
          
-         
-         <section id="" class="notoc">
-            <div class="header-wrapper"><h5 id="toelichting-0">Toelichting  </h5><a class="self-link" href="#toelichting-0" aria-label="Permalink for this Section"></a></div>Een inhoudelijke toelichting op de toepassing van het informatie-element.</section>
          </section>
-      <a class="anchor respec-offending-element" id="graph_EAID_455F1E93_9CDD_4ec1_95FB_266E5B9206FA" title="Linking error: not matching `<dfn>`"></a><a class="anchor respec-offending-element" id="global_class_CIMOI_Uitvoeringsregel" title="Linking error: not matching `<dfn>`"></a><section id="global_class_CIMOI_Uitvoeringsregel">
+      
+      <section id="global_class_CIMOI_Uitvoeringsregel">
          <div class="header-wrapper"><h4 id="x5-11-3-uitvoeringsregel"><bdi class="secno">5.11.3 </bdi>   Uitvoeringsregel</h4><a class="self-link" href="#global_class_CIMOI_Uitvoeringsregel" aria-label="Permalink for Section 5.11.3"></a></div>
          
          <table style="width: 100%;" class="simple">
@@ -913,21 +902,9 @@ dataspecificatie.</p>
             </tbody>
          </table>
          
-         
-         <section id="" class="notoc">
-            <div class="header-wrapper"><h5 id="toelichting-1">Toelichting  </h5><a class="self-link" href="#toelichting-1" aria-label="Permalink for this Section"></a></div>
-            
-            <p>Bij het doen van een melding of aanvraag kan het voorkomen dat gegevens uit een extern
-               register meegenomen moeten worden voor de beoordeling. Om de juiste gegevens in het
-               juiste formaat aan te bieden kan middels een registerbevraging exact aangegeven worden
-               welke gegevens van belang zijn. Deze gegevens kunnen opgenomen worden in de vragenlijst
-               door middels van de registervelden en hierbij geldende definities die in het bijbehorend
-               metadatadomein opgeslagen zijn. Bijvoorbeeld; “volgens onze gegevens bevindt u zich
-               in een aandachtsgebied, om de specifieke bijbehorende vragen te beantwoorden kies
-               ‘ja’”.</p>
-            </section>
          </section>
-      <a class="anchor respec-offending-element" id="graph_EAID_5428C87D_586B_45fc_8FBF_C2798F9BDABC" title="Linking error: not matching `<dfn>`"></a><a class="anchor respec-offending-element" id="global_class_CIMOI_RelevanteAnnotaties" title="Linking error: not matching `<dfn>`"></a><section id="global_class_CIMOI_RelevanteAnnotaties">
+      
+      <section id="global_class_CIMOI_RelevanteAnnotaties">
          <div class="header-wrapper"><h4 id="x5-11-4-relevante-annotaties"><bdi class="secno">5.11.4 </bdi>   Relevante­Annotaties</h4><a class="self-link" href="#global_class_CIMOI_RelevanteAnnotaties" aria-label="Permalink for Section 5.11.4"></a></div>
          
          <table style="width: 100%;" class="simple">
@@ -1102,16 +1079,9 @@ dataspecificatie.</p>
             </tbody>
          </table>
          
-         
-         <section id="" class="notoc">
-            <div class="header-wrapper"><h5 id="toelichting-2">Toelichting  </h5><a class="self-link" href="#toelichting-2" aria-label="Permalink for this Section"></a></div>
-            
-            <p>Object waarin alle IMOW annotaties die een relevante relatie hebben tot het informatieproduct
-               vastgelegd worden zodat de DSO viewer deze informatie kan relateren en ophalen bij
-               een zoekopdracht. </p>
-            </section>
          </section>
-      <a class="anchor respec-offending-element" id="graph_EAID_6394B42E_0D75_42a8_A9F2_3CBC852D8718" title="Linking error: not matching `<dfn>`"></a><a class="anchor respec-offending-element" id="global_class_CIMOI_Omgevingsaspect" title="Linking error: not matching `<dfn>`"></a><section id="global_class_CIMOI_Omgevingsaspect">
+      
+      <section id="global_class_CIMOI_Omgevingsaspect">
          <div class="header-wrapper"><h4 id="x5-11-5-omgevingsaspect"><bdi class="secno">5.11.5 </bdi>   Omgevingsaspect</h4><a class="self-link" href="#global_class_CIMOI_Omgevingsaspect" aria-label="Permalink for Section 5.11.5"></a></div>
          
          <table style="width: 100%;" class="simple">
@@ -1186,15 +1156,9 @@ dataspecificatie.</p>
             </tbody>
          </table>
          
-         
-         <section id="" class="notoc">
-            <div class="header-wrapper"><h5 id="toelichting-3">Toelichting  </h5><a class="self-link" href="#toelichting-3" aria-label="Permalink for this Section"></a></div>
-            
-            <p>Alle informatie die van belang is voor het semantisch koppelen van informatie uit
-               omgevingswetbesluiten met informatie uit omgevingsproducten. </p>
-            </section>
          </section>
-      <a class="anchor respec-offending-element" id="graph_EAID_6A18DC6F_481F_4b16_B269_25A422073F79" title="Linking error: not matching `<dfn>`"></a><a class="anchor respec-offending-element" id="global_class_CIMOI_OptieType" title="Linking error: not matching `<dfn>`"></a><section id="global_class_CIMOI_OptieType">
+      
+      <section id="global_class_CIMOI_OptieType">
          <div class="header-wrapper"><h4 id="x5-11-6-optie-type"><bdi class="secno">5.11.6 </bdi>   Optie­Type</h4><a class="self-link" href="#global_class_CIMOI_OptieType" aria-label="Permalink for Section 5.11.6"></a></div>
          
          <table style="width: 100%;" class="simple">
@@ -1234,11 +1198,9 @@ dataspecificatie.</p>
                </tr>
             </tbody>
          </table>
-         
-         <section id="" class="notoc">
-            <div class="header-wrapper"><h5 id="toelichting-4">Toelichting  </h5><a class="self-link" href="#toelichting-4" aria-label="Permalink for this Section"></a></div>Een inhoudelijke toelichting op de toepassing van het informatie-element.</section>
          </section>
-      <a class="anchor respec-offending-element" id="graph_EAID_76BD9702_3572_4785_AF25_0E93426692C8" title="Linking error: not matching `<dfn>`"></a><a class="anchor respec-offending-element" id="global_class_CIMOI_RegisterbevragingPlaatsgebondenRisico" title="Linking error: not matching `<dfn>`"></a><section id="global_class_CIMOI_RegisterbevragingPlaatsgebondenRisico">
+      
+      <section id="global_class_CIMOI_RegisterbevragingPlaatsgebondenRisico">
          <div class="header-wrapper"><h4 id="x5-11-7-registerbevraging-plaatsgebonden-risico"><bdi class="secno">5.11.7 </bdi>   Registerbevraging­Plaatsgebonden­Risico</h4><a class="self-link" href="#global_class_CIMOI_RegisterbevragingPlaatsgebondenRisico" aria-label="Permalink for Section 5.11.7"></a></div>
          
          <table style="width: 100%;" class="simple">
@@ -1371,7 +1333,8 @@ dataspecificatie.</p>
          </table>
          
          </section>
-      <a class="anchor respec-offending-element" id="graph_EAID_B260A475_C1DB_4e6b_A026_9965811FD7D9" title="Linking error: not matching `<dfn>`"></a><a class="anchor respec-offending-element" id="global_class_CIMOI_GeluidsrelevanteAnnotaties" title="Linking error: not matching `<dfn>`"></a><section id="global_class_CIMOI_GeluidsrelevanteAnnotaties">
+      
+      <section id="global_class_CIMOI_GeluidsrelevanteAnnotaties">
          <div class="header-wrapper"><h4 id="x5-11-8-geluidsrelevante-annotaties"><bdi class="secno">5.11.8 </bdi>   Geluidsrelevante­Annotaties</h4><a class="self-link" href="#global_class_CIMOI_GeluidsrelevanteAnnotaties" aria-label="Permalink for Section 5.11.8"></a></div>
          
          <table style="width: 100%;" class="simple">
@@ -1517,11 +1480,9 @@ dataspecificatie.</p>
             </tbody>
          </table>
          
-         
-         <section id="" class="notoc">
-            <div class="header-wrapper"><h5 id="toelichting-5">Toelichting  </h5><a class="self-link" href="#toelichting-5" aria-label="Permalink for this Section"></a></div>Een inhoudelijke toelichting op de toepassing van het informatie-element.</section>
          </section>
-      <a class="anchor respec-offending-element" id="graph_EAID_C92D5BEA_03D7_4547_866E_7E46D4395F69" title="Linking error: not matching `<dfn>`"></a><a class="anchor respec-offending-element" id="global_class_CIMOI_RegisterbevragingAandachtsgebiedEV" title="Linking error: not matching `<dfn>`"></a><section id="global_class_CIMOI_RegisterbevragingAandachtsgebiedEV">
+      
+      <section id="global_class_CIMOI_RegisterbevragingAandachtsgebiedEV">
          <div class="header-wrapper"><h4 id="x5-11-9-registerbevraging-aandachtsgebied-ev"><bdi class="secno">5.11.9 </bdi>   Registerbevraging­Aandachtsgebied­EV</h4><a class="self-link" href="#global_class_CIMOI_RegisterbevragingAandachtsgebiedEV" aria-label="Permalink for Section 5.11.9"></a></div>
          
          <table style="width: 100%;" class="simple">
@@ -1654,7 +1615,8 @@ dataspecificatie.</p>
          </table>
          
          </section>
-      <a class="anchor respec-offending-element" id="graph_EAID_EA3BFC5D_BBFA_453b_8D39_690865ED689E" title="Linking error: not matching `<dfn>`"></a><a class="anchor respec-offending-element" id="global_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden" title="Linking error: not matching `<dfn>`"></a><section id="global_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden">
+      
+      <section id="global_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden">
          <div class="header-wrapper"><h4 id="x5-11-10-registerbevraging-geluids-aandachtsgebieden"><bdi class="secno">5.11.10 </bdi>   Registerbevraging­Geluids­Aandachtsgebieden</h4><a class="self-link" href="#global_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden" aria-label="Permalink for Section 5.11.10"></a></div>
          
          <table style="width: 100%;" class="simple">
@@ -1759,7 +1721,8 @@ dataspecificatie.</p>
          </table>
          
          </section>
-      <a class="anchor respec-offending-element" id="graph_EAID_F93FD1C3_5762_4879_9FC2_10C2C84444E8" title="Linking error: not matching `<dfn>`"></a><a class="anchor respec-offending-element" id="global_class_CIMOI_ToepasbareActiviteit" title="Linking error: not matching `<dfn>`"></a><section id="global_class_CIMOI_ToepasbareActiviteit">
+      
+      <section id="global_class_CIMOI_ToepasbareActiviteit">
          <div class="header-wrapper"><h4 id="x5-11-11-toepasbare-activiteit"><bdi class="secno">5.11.11 </bdi>   Toepasbare­Activiteit</h4><a class="self-link" href="#global_class_CIMOI_ToepasbareActiviteit" aria-label="Permalink for Section 5.11.11"></a></div>
          
          <table style="width: 100%;" class="simple">
@@ -1833,9 +1796,6 @@ dataspecificatie.</p>
             </tbody>
          </table>
          
-         
-         <section id="" class="notoc">
-            <div class="header-wrapper"><h5 id="toelichting-6">Toelichting  </h5><a class="self-link" href="#toelichting-6" aria-label="Permalink for this Section"></a></div>Een inhoudelijke toelichting op de toepassing van het informatie-element.</section>
          </section>
       </section>
    <section id="attribuut-en-relatiesoort-details">
@@ -1843,9 +1803,11 @@ dataspecificatie.</p>
       
       <section id="objecttype-details">
          <div class="header-wrapper"><h4 id="x5-12-1-objecttype-details"><bdi class="secno">5.12.1 </bdi>Objecttype details  </h4><a class="self-link" href="#objecttype-details" aria-label="Permalink for Section 5.12.1"></a></div>
-         <a class="anchor respec-offending-element" id="detail_class_CIMOI_Registerbevraging" title="Linking error: not matching `<dfn>`"></a><section id="detail_class_CIMOI_Registerbevraging">
+         
+         <section id="detail_class_CIMOI_Registerbevraging">
             <div class="header-wrapper"><h5 id="x5-12-1-1-registerbevraging"><bdi class="secno">5.12.1.1 </bdi>   Registerbevraging</h5><a class="self-link" href="#detail_class_CIMOI_Registerbevraging" aria-label="Permalink for Section 5.12.1.1"></a></div>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_Registerbevraging_profile" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_Registerbevraging_profile">
+            
+            <section id="detail_attribute_CIMOI_Registerbevraging_profile">
                <div class="header-wrapper"><h6 id="x5-12-1-1-1-attribuutsoort-details-registerbevraging-profile"><bdi class="secno">5.12.1.1.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a> profile</h6><a class="self-link" href="#detail_attribute_CIMOI_Registerbevraging_profile" aria-label="Permalink for Section 5.12.1.1.1"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -1858,7 +1820,7 @@ dataspecificatie.</p>
                      </tr>
                      <tr>
                         <th>Formaat</th>
-                        <td>Integer</td>
+                        <td>INTEGER</td>
                      </tr>
                      <tr>
                         <th>Indicatie kardinaliteit</th>
@@ -1871,7 +1833,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_Registerbevraging_key" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_Registerbevraging_key">
+            
+            <section id="detail_attribute_CIMOI_Registerbevraging_key">
                <div class="header-wrapper"><h6 id="x5-12-1-1-2-attribuutsoort-details-registerbevraging-key"><bdi class="secno">5.12.1.1.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a> key</h6><a class="self-link" href="#detail_attribute_CIMOI_Registerbevraging_key" aria-label="Permalink for Section 5.12.1.1.2"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -1897,7 +1860,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_Registerbevraging_type" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_Registerbevraging_type">
+            
+            <section id="detail_attribute_CIMOI_Registerbevraging_type">
                <div class="header-wrapper"><h6 id="x5-12-1-1-3-attribuutsoort-details-registerbevraging-type"><bdi class="secno">5.12.1.1.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a> type</h6><a class="self-link" href="#detail_attribute_CIMOI_Registerbevraging_type" aria-label="Permalink for Section 5.12.1.1.3"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -1923,7 +1887,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_Registerbevraging_value" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_Registerbevraging_value">
+            
+            <section id="detail_attribute_CIMOI_Registerbevraging_value">
                <div class="header-wrapper"><h6 id="x5-12-1-1-4-attribuutsoort-details-registerbevraging-value"><bdi class="secno">5.12.1.1.4 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a> value</h6><a class="self-link" href="#detail_attribute_CIMOI_Registerbevraging_value" aria-label="Permalink for Section 5.12.1.1.4"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -1950,9 +1915,11 @@ dataspecificatie.</p>
                </table>
                </section>
             </section>
-         <a class="anchor respec-offending-element" id="detail_class_CIMOI_EvRelevanteAnnotaties" title="Linking error: not matching `<dfn>`"></a><section id="detail_class_CIMOI_EvRelevanteAnnotaties">
+         
+         <section id="detail_class_CIMOI_EvRelevanteAnnotaties">
             <div class="header-wrapper"><h5 id="x5-12-1-2-ev-relevante-annotaties"><bdi class="secno">5.12.1.2 </bdi>   Ev­Relevante­Annotaties</h5><a class="self-link" href="#detail_class_CIMOI_EvRelevanteAnnotaties" aria-label="Permalink for Section 5.12.1.2"></a></div>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_EvRelevanteAnnotaties_identificatie" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_EvRelevanteAnnotaties_identificatie">
+            
+            <section id="detail_attribute_CIMOI_EvRelevanteAnnotaties_identificatie">
                <div class="header-wrapper"><h6 id="x5-12-1-2-1-attribuutsoort-details-ev-relevante-annotaties-identificatie"><bdi class="secno">5.12.1.2.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_EvRelevanteAnnotaties">Ev­Relevante­Annotaties</a> identificatie</h6><a class="self-link" href="#detail_attribute_CIMOI_EvRelevanteAnnotaties_identificatie" aria-label="Permalink for Section 5.12.1.2.1"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -1980,7 +1947,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_EvRelevanteAnnotaties_waardelijstActiviteiten" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_EvRelevanteAnnotaties_waardelijstActiviteiten">
+            
+            <section id="detail_attribute_CIMOI_EvRelevanteAnnotaties_waardelijstActiviteiten">
                <div class="header-wrapper"><h6 id="x5-12-1-2-2-attribuutsoort-details-ev-relevante-annotaties-waardelijst-activiteiten"><bdi class="secno">5.12.1.2.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_EvRelevanteAnnotaties">Ev­Relevante­Annotaties</a> waardelijst activiteiten</h6><a class="self-link" href="#detail_attribute_CIMOI_EvRelevanteAnnotaties_waardelijstActiviteiten" aria-label="Permalink for Section 5.12.1.2.2"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2008,7 +1976,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_EvRelevanteAnnotaties_waardelijstGebiedaanwijzingtypeEV" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_EvRelevanteAnnotaties_waardelijstGebiedaanwijzingtypeEV">
+            
+            <section id="detail_attribute_CIMOI_EvRelevanteAnnotaties_waardelijstGebiedaanwijzingtypeEV">
                <div class="header-wrapper"><h6 id="x5-12-1-2-3-attribuutsoort-details-ev-relevante-annotaties-waardelijst-gebiedaanwijzingtype-ev"><bdi class="secno">5.12.1.2.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_EvRelevanteAnnotaties">Ev­Relevante­Annotaties</a> waardelijst gebiedaanwijzingtype­EV</h6><a class="self-link" href="#detail_attribute_CIMOI_EvRelevanteAnnotaties_waardelijstGebiedaanwijzingtypeEV" aria-label="Permalink for Section 5.12.1.2.3"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2036,7 +2005,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_EvRelevanteAnnotaties_waardelijstThema" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_EvRelevanteAnnotaties_waardelijstThema">
+            
+            <section id="detail_attribute_CIMOI_EvRelevanteAnnotaties_waardelijstThema">
                <div class="header-wrapper"><h6 id="x5-12-1-2-4-attribuutsoort-details-ev-relevante-annotaties-waardelijst-thema"><bdi class="secno">5.12.1.2.4 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_EvRelevanteAnnotaties">Ev­Relevante­Annotaties</a> waardelijst Thema</h6><a class="self-link" href="#detail_attribute_CIMOI_EvRelevanteAnnotaties_waardelijstThema" aria-label="Permalink for Section 5.12.1.2.4"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2064,7 +2034,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_EvRelevanteAnnotaties_bevraagt" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_EvRelevanteAnnotaties_bevraagt">
+            
+            <section id="detail_association_CIMOI_EvRelevanteAnnotaties_bevraagt">
                <div class="header-wrapper"><h6 id="x5-12-1-2-5-relatiesoort-details-ev-relevante-annotaties-bevraagt"><bdi class="secno">5.12.1.2.5 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_EvRelevanteAnnotaties">Ev­Relevante­Annotaties</a> bevraagt</h6><a class="self-link" href="#detail_association_CIMOI_EvRelevanteAnnotaties_bevraagt" aria-label="Permalink for Section 5.12.1.2.5"></a></div>
                
                
@@ -2088,11 +2059,9 @@ dataspecificatie.</p>
                      </tr>
                   </tbody>
                </table>
-               
-               <div class="notoc" id="">
-                  <h7>Toelichting  </h7>Een inhoudelijke toelichting op de toepassing van het informatie-element.</div>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_EvRelevanteAnnotaties_heeftOvereenkomstMet" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_EvRelevanteAnnotaties_heeftOvereenkomstMet">
+            
+            <section id="detail_association_CIMOI_EvRelevanteAnnotaties_heeftOvereenkomstMet">
                <div class="header-wrapper"><h6 id="x5-12-1-2-6-relatiesoort-details-ev-relevante-annotaties-heeft-overeenkomst-met"><bdi class="secno">5.12.1.2.6 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_EvRelevanteAnnotaties">Ev­Relevante­Annotaties</a> heeft overeenkomst met</h6><a class="self-link" href="#detail_association_CIMOI_EvRelevanteAnnotaties_heeftOvereenkomstMet" aria-label="Permalink for Section 5.12.1.2.6"></a></div>
                
                
@@ -2116,11 +2085,9 @@ dataspecificatie.</p>
                      </tr>
                   </tbody>
                </table>
-               
-               <div class="notoc" id="">
-                  <h7>Toelichting  </h7>Een inhoudelijke toelichting op de toepassing van het informatie-element.</div>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_EvRelevanteAnnotaties_bevraagt" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_EvRelevanteAnnotaties_bevraagt">
+            
+            <section id="detail_association_CIMOI_EvRelevanteAnnotaties_bevraagt">
                <div class="header-wrapper"><h6 id="x5-12-1-2-7-relatiesoort-details-ev-relevante-annotaties-bevraagt"><bdi class="secno">5.12.1.2.7 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_EvRelevanteAnnotaties">Ev­Relevante­Annotaties</a> bevraagt</h6><a class="self-link" href="#detail_association_CIMOI_EvRelevanteAnnotaties_bevraagt" aria-label="Permalink for Section 5.12.1.2.7"></a></div>
                
                
@@ -2144,14 +2111,13 @@ dataspecificatie.</p>
                      </tr>
                   </tbody>
                </table>
-               
-               <div class="notoc" id="">
-                  <h7>Toelichting  </h7>Een inhoudelijke toelichting op de toepassing van het informatie-element.</div>
                </section>
             </section>
-         <a class="anchor respec-offending-element" id="detail_class_CIMOI_Uitvoeringsregel" title="Linking error: not matching `<dfn>`"></a><section id="detail_class_CIMOI_Uitvoeringsregel">
+         
+         <section id="detail_class_CIMOI_Uitvoeringsregel">
             <div class="header-wrapper"><h5 id="x5-12-1-3-uitvoeringsregel"><bdi class="secno">5.12.1.3 </bdi>   Uitvoeringsregel</h5><a class="self-link" href="#detail_class_CIMOI_Uitvoeringsregel" aria-label="Permalink for Section 5.12.1.3"></a></div>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_Uitvoeringsregel_bevraging" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_Uitvoeringsregel_bevraging">
+            
+            <section id="detail_association_CIMOI_Uitvoeringsregel_bevraging">
                <div class="header-wrapper"><h6 id="x5-12-1-3-1-relatiesoort-details-uitvoeringsregel-bevraging"><bdi class="secno">5.12.1.3.1 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Uitvoeringsregel">Uitvoeringsregel</a> bevraging</h6><a class="self-link" href="#detail_association_CIMOI_Uitvoeringsregel_bevraging" aria-label="Permalink for Section 5.12.1.3.1"></a></div>
                
                
@@ -2176,7 +2142,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_Uitvoeringsregel_bevraagt" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_Uitvoeringsregel_bevraagt">
+            
+            <section id="detail_association_CIMOI_Uitvoeringsregel_bevraagt">
                <div class="header-wrapper"><h6 id="x5-12-1-3-2-relatiesoort-details-uitvoeringsregel-bevraagt"><bdi class="secno">5.12.1.3.2 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Uitvoeringsregel">Uitvoeringsregel</a> bevraagt</h6><a class="self-link" href="#detail_association_CIMOI_Uitvoeringsregel_bevraagt" aria-label="Permalink for Section 5.12.1.3.2"></a></div>
                
                
@@ -2201,7 +2168,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_Uitvoeringsregel_registerbevraging" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_Uitvoeringsregel_registerbevraging">
+            
+            <section id="detail_association_CIMOI_Uitvoeringsregel_registerbevraging">
                <div class="header-wrapper"><h6 id="x5-12-1-3-3-relatiesoort-details-uitvoeringsregel-registerbevraging"><bdi class="secno">5.12.1.3.3 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Uitvoeringsregel">Uitvoeringsregel</a> registerbevraging</h6><a class="self-link" href="#detail_association_CIMOI_Uitvoeringsregel_registerbevraging" aria-label="Permalink for Section 5.12.1.3.3"></a></div>
                
                
@@ -2227,9 +2195,11 @@ dataspecificatie.</p>
                </table>
                </section>
             </section>
-         <a class="anchor respec-offending-element" id="detail_class_CIMOI_RelevanteAnnotaties" title="Linking error: not matching `<dfn>`"></a><section id="detail_class_CIMOI_RelevanteAnnotaties">
+         
+         <section id="detail_class_CIMOI_RelevanteAnnotaties">
             <div class="header-wrapper"><h5 id="x5-12-1-4-relevante-annotaties"><bdi class="secno">5.12.1.4 </bdi>   Relevante­Annotaties</h5><a class="self-link" href="#detail_class_CIMOI_RelevanteAnnotaties" aria-label="Permalink for Section 5.12.1.4"></a></div>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstActiviteiten" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstActiviteiten">
+            
+            <section id="detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstActiviteiten">
                <div class="header-wrapper"><h6 id="x5-12-1-4-1-attribuutsoort-details-relevante-annotaties-waardelijst-activiteiten"><bdi class="secno">5.12.1.4.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> waardelijst activiteiten</h6><a class="self-link" href="#detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstActiviteiten" aria-label="Permalink for Section 5.12.1.4.1"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2257,7 +2227,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstThema" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstThema">
+            
+            <section id="detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstThema">
                <div class="header-wrapper"><h6 id="x5-12-1-4-2-attribuutsoort-details-relevante-annotaties-waardelijst-thema"><bdi class="secno">5.12.1.4.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> waardelijst Thema</h6><a class="self-link" href="#detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstThema" aria-label="Permalink for Section 5.12.1.4.2"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2285,7 +2256,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMet" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMet">
+            
+            <section id="detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMet">
                <div class="header-wrapper"><h6 id="x5-12-1-4-3-relatiesoort-details-relevante-annotaties-heeft-overeenkomst-met"><bdi class="secno">5.12.1.4.3 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> heeft overeenkomst met</h6><a class="self-link" href="#detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMet" aria-label="Permalink for Section 5.12.1.4.3"></a></div>
                
                
@@ -2309,11 +2281,9 @@ dataspecificatie.</p>
                      </tr>
                   </tbody>
                </table>
-               
-               <div class="notoc" id="">
-                  <h7>Toelichting  </h7>Een inhoudelijke toelichting op de toepassing van het informatie-element.</div>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMet" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMet">
+            
+            <section id="detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMet">
                <div class="header-wrapper"><h6 id="x5-12-1-4-4-relatiesoort-details-relevante-annotaties-heeft-overeenkomst-met"><bdi class="secno">5.12.1.4.4 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> heeft overeenkomst met</h6><a class="self-link" href="#detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMet" aria-label="Permalink for Section 5.12.1.4.4"></a></div>
                
                
@@ -2337,11 +2307,9 @@ dataspecificatie.</p>
                      </tr>
                   </tbody>
                </table>
-               
-               <div class="notoc" id="">
-                  <h7>Toelichting  </h7>Een inhoudelijke toelichting op de toepassing van het informatie-element.</div>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_RelevanteAnnotaties_bevraging" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_RelevanteAnnotaties_bevraging">
+            
+            <section id="detail_association_CIMOI_RelevanteAnnotaties_bevraging">
                <div class="header-wrapper"><h6 id="x5-12-1-4-5-relatiesoort-details-relevante-annotaties-bevraging"><bdi class="secno">5.12.1.4.5 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> bevraging</h6><a class="self-link" href="#detail_association_CIMOI_RelevanteAnnotaties_bevraging" aria-label="Permalink for Section 5.12.1.4.5"></a></div>
                
                
@@ -2365,11 +2333,9 @@ dataspecificatie.</p>
                      </tr>
                   </tbody>
                </table>
-               
-               <div class="notoc" id="">
-                  <h7>Toelichting  </h7>Een inhoudelijke toelichting op de toepassing van het informatie-element.</div>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMet" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMet">
+            
+            <section id="detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMet">
                <div class="header-wrapper"><h6 id="x5-12-1-4-6-relatiesoort-details-relevante-annotaties-heeft-overeenkomst-met"><bdi class="secno">5.12.1.4.6 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> heeft overeenkomst met</h6><a class="self-link" href="#detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMet" aria-label="Permalink for Section 5.12.1.4.6"></a></div>
                
                
@@ -2393,11 +2359,9 @@ dataspecificatie.</p>
                      </tr>
                   </tbody>
                </table>
-               
-               <div class="notoc" id="">
-                  <h7>Toelichting  </h7>Een inhoudelijke toelichting op de toepassing van het informatie-element.</div>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_RelevanteAnnotaties_ev" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_RelevanteAnnotaties_ev">
+            
+            <section id="detail_association_CIMOI_RelevanteAnnotaties_ev">
                <div class="header-wrapper"><h6 id="x5-12-1-4-7-relatiesoort-details-relevante-annotaties-heeft-overeenkomst-met"><bdi class="secno">5.12.1.4.7 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> heeft overeenkomst met</h6><a class="self-link" href="#detail_association_CIMOI_RelevanteAnnotaties_ev" aria-label="Permalink for Section 5.12.1.4.7"></a></div>
                
                
@@ -2421,14 +2385,13 @@ dataspecificatie.</p>
                      </tr>
                   </tbody>
                </table>
-               
-               <div class="notoc" id="">
-                  <h7>Toelichting  </h7>Een inhoudelijke toelichting op de toepassing van het informatie-element.</div>
                </section>
             </section>
-         <a class="anchor respec-offending-element" id="detail_class_CIMOI_Omgevingsaspect" title="Linking error: not matching `<dfn>`"></a><section id="detail_class_CIMOI_Omgevingsaspect">
+         
+         <section id="detail_class_CIMOI_Omgevingsaspect">
             <div class="header-wrapper"><h5 id="x5-12-1-5-omgevingsaspect"><bdi class="secno">5.12.1.5 </bdi>   Omgevingsaspect</h5><a class="self-link" href="#detail_class_CIMOI_Omgevingsaspect" aria-label="Permalink for Section 5.12.1.5"></a></div>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_Omgevingsaspect_naam" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_Omgevingsaspect_naam">
+            
+            <section id="detail_attribute_CIMOI_Omgevingsaspect_naam">
                <div class="header-wrapper"><h6 id="x5-12-1-5-1-attribuutsoort-details-omgevingsaspect-naam"><bdi class="secno">5.12.1.5.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Omgevingsaspect">Omgevingsaspect</a> naam</h6><a class="self-link" href="#detail_attribute_CIMOI_Omgevingsaspect_naam" aria-label="Permalink for Section 5.12.1.5.1"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2454,7 +2417,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_Omgevingsaspect_identificatie" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_Omgevingsaspect_identificatie">
+            
+            <section id="detail_attribute_CIMOI_Omgevingsaspect_identificatie">
                <div class="header-wrapper"><h6 id="x5-12-1-5-2-attribuutsoort-details-omgevingsaspect-identificatie"><bdi class="secno">5.12.1.5.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Omgevingsaspect">Omgevingsaspect</a> identificatie</h6><a class="self-link" href="#detail_attribute_CIMOI_Omgevingsaspect_identificatie" aria-label="Permalink for Section 5.12.1.5.2"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2484,9 +2448,11 @@ dataspecificatie.</p>
                </section>
             </section>
          
-         <a class="anchor respec-offending-element" id="detail_class_CIMOI_RegisterbevragingPlaatsgebondenRisico" title="Linking error: not matching `<dfn>`"></a><section id="detail_class_CIMOI_RegisterbevragingPlaatsgebondenRisico">
+         
+         <section id="detail_class_CIMOI_RegisterbevragingPlaatsgebondenRisico">
             <div class="header-wrapper"><h5 id="x5-12-1-6-registerbevraging-plaatsgebonden-risico"><bdi class="secno">5.12.1.6 </bdi>   Registerbevraging­Plaatsgebonden­Risico</h5><a class="self-link" href="#detail_class_CIMOI_RegisterbevragingPlaatsgebondenRisico" aria-label="Permalink for Section 5.12.1.6"></a></div>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_identificatie" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_identificatie">
+            
+            <section id="detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_identificatie">
                <div class="header-wrapper"><h6 id="x5-12-1-6-1-attribuutsoort-details-registerbevraging-plaatsgebonden-risico-identificatie"><bdi class="secno">5.12.1.6.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RegisterbevragingPlaatsgebondenRisico">Registerbevraging­Plaatsgebonden­Risico</a> identificatie</h6><a class="self-link" href="#detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_identificatie" aria-label="Permalink for Section 5.12.1.6.1"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2514,7 +2480,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_register" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_register">
+            
+            <section id="detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_register">
                <div class="header-wrapper"><h6 id="x5-12-1-6-2-attribuutsoort-details-registerbevraging-plaatsgebonden-risico-register"><bdi class="secno">5.12.1.6.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RegisterbevragingPlaatsgebondenRisico">Registerbevraging­Plaatsgebonden­Risico</a> register</h6><a class="self-link" href="#detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_register" aria-label="Permalink for Section 5.12.1.6.2"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2540,7 +2507,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_registergegeven" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_registergegeven">
+            
+            <section id="detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_registergegeven">
                <div class="header-wrapper"><h6 id="x5-12-1-6-3-attribuutsoort-details-registerbevraging-plaatsgebonden-risico-registergegeven"><bdi class="secno">5.12.1.6.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RegisterbevragingPlaatsgebondenRisico">Registerbevraging­Plaatsgebonden­Risico</a> registergegeven</h6><a class="self-link" href="#detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_registergegeven" aria-label="Permalink for Section 5.12.1.6.3"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2566,7 +2534,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_registerkoppelveld" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_registerkoppelveld">
+            
+            <section id="detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_registerkoppelveld">
                <div class="header-wrapper"><h6 id="x5-12-1-6-4-attribuutsoort-details-registerbevraging-plaatsgebonden-risico-registerkoppelveld"><bdi class="secno">5.12.1.6.4 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RegisterbevragingPlaatsgebondenRisico">Registerbevraging­Plaatsgebonden­Risico</a> registerkoppelveld</h6><a class="self-link" href="#detail_attribute_CIMOI_RegisterbevragingPlaatsgebondenRisico_registerkoppelveld" aria-label="Permalink for Section 5.12.1.6.4"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2592,7 +2561,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_RegisterbevragingPlaatsgebondenRisico_ev" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_RegisterbevragingPlaatsgebondenRisico_ev">
+            
+            <section id="detail_association_CIMOI_RegisterbevragingPlaatsgebondenRisico_ev">
                <div class="header-wrapper"><h6 id="x5-12-1-6-5-relatiesoort-details-registerbevraging-plaatsgebonden-risico-ev"><bdi class="secno">5.12.1.6.5 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RegisterbevragingPlaatsgebondenRisico">Registerbevraging­Plaatsgebonden­Risico</a> ev</h6><a class="self-link" href="#detail_association_CIMOI_RegisterbevragingPlaatsgebondenRisico_ev" aria-label="Permalink for Section 5.12.1.6.5"></a></div>
                
                
@@ -2618,9 +2588,11 @@ dataspecificatie.</p>
                </table>
                </section>
             </section>
-         <a class="anchor respec-offending-element" id="detail_class_CIMOI_GeluidsrelevanteAnnotaties" title="Linking error: not matching `<dfn>`"></a><section id="detail_class_CIMOI_GeluidsrelevanteAnnotaties">
+         
+         <section id="detail_class_CIMOI_GeluidsrelevanteAnnotaties">
             <div class="header-wrapper"><h5 id="x5-12-1-7-geluidsrelevante-annotaties"><bdi class="secno">5.12.1.7 </bdi>   Geluidsrelevante­Annotaties</h5><a class="self-link" href="#detail_class_CIMOI_GeluidsrelevanteAnnotaties" aria-label="Permalink for Section 5.12.1.7"></a></div>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_identificate" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_identificate">
+            
+            <section id="detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_identificate">
                <div class="header-wrapper"><h6 id="x5-12-1-7-1-attribuutsoort-details-geluidsrelevante-annotaties-identificate"><bdi class="secno">5.12.1.7.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_GeluidsrelevanteAnnotaties">Geluidsrelevante­Annotaties</a> identificate</h6><a class="self-link" href="#detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_identificate" aria-label="Permalink for Section 5.12.1.7.1"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2648,7 +2620,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_waardelijstGebiedsaanwijzingtypeGeluid" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_waardelijstGebiedsaanwijzingtypeGeluid">
+            
+            <section id="detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_waardelijstGebiedsaanwijzingtypeGeluid">
                <div class="header-wrapper"><h6 id="x5-12-1-7-2-attribuutsoort-details-geluidsrelevante-annotaties-waardelijst-gebiedsaanwijzingtype-geluid"><bdi class="secno">5.12.1.7.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_GeluidsrelevanteAnnotaties">Geluidsrelevante­Annotaties</a> waardelijst gebiedsaanwijzingtype­Geluid</h6><a class="self-link" href="#detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_waardelijstGebiedsaanwijzingtypeGeluid" aria-label="Permalink for Section 5.12.1.7.2"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2676,7 +2649,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_waardelijstActiviteiten" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_waardelijstActiviteiten">
+            
+            <section id="detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_waardelijstActiviteiten">
                <div class="header-wrapper"><h6 id="x5-12-1-7-3-attribuutsoort-details-geluidsrelevante-annotaties-waardelijst-activiteiten"><bdi class="secno">5.12.1.7.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_GeluidsrelevanteAnnotaties">Geluidsrelevante­Annotaties</a> waardelijst activiteiten</h6><a class="self-link" href="#detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_waardelijstActiviteiten" aria-label="Permalink for Section 5.12.1.7.3"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2704,7 +2678,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_waardelijstThema" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_waardelijstThema">
+            
+            <section id="detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_waardelijstThema">
                <div class="header-wrapper"><h6 id="x5-12-1-7-4-attribuutsoort-details-geluidsrelevante-annotaties-waardelijst-thema"><bdi class="secno">5.12.1.7.4 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_GeluidsrelevanteAnnotaties">Geluidsrelevante­Annotaties</a> waardelijst thema</h6><a class="self-link" href="#detail_attribute_CIMOI_GeluidsrelevanteAnnotaties_waardelijstThema" aria-label="Permalink for Section 5.12.1.7.4"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2732,7 +2707,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_GeluidsrelevanteAnnotaties_heeftOvereenkomstMet" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_GeluidsrelevanteAnnotaties_heeftOvereenkomstMet">
+            
+            <section id="detail_association_CIMOI_GeluidsrelevanteAnnotaties_heeftOvereenkomstMet">
                <div class="header-wrapper"><h6 id="x5-12-1-7-5-relatiesoort-details-geluidsrelevante-annotaties-heeft-overeenkomst-met"><bdi class="secno">5.12.1.7.5 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_GeluidsrelevanteAnnotaties">Geluidsrelevante­Annotaties</a> heeft overeenkomst met</h6><a class="self-link" href="#detail_association_CIMOI_GeluidsrelevanteAnnotaties_heeftOvereenkomstMet" aria-label="Permalink for Section 5.12.1.7.5"></a></div>
                
                
@@ -2757,7 +2733,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_GeluidsrelevanteAnnotaties_heeftOvereenkomstMet" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_GeluidsrelevanteAnnotaties_heeftOvereenkomstMet">
+            
+            <section id="detail_association_CIMOI_GeluidsrelevanteAnnotaties_heeftOvereenkomstMet">
                <div class="header-wrapper"><h6 id="x5-12-1-7-6-relatiesoort-details-geluidsrelevante-annotaties-heeft-overeenkomst-met"><bdi class="secno">5.12.1.7.6 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_GeluidsrelevanteAnnotaties">Geluidsrelevante­Annotaties</a> heeft overeenkomst met</h6><a class="self-link" href="#detail_association_CIMOI_GeluidsrelevanteAnnotaties_heeftOvereenkomstMet" aria-label="Permalink for Section 5.12.1.7.6"></a></div>
                
                
@@ -2781,14 +2758,13 @@ dataspecificatie.</p>
                      </tr>
                   </tbody>
                </table>
-               
-               <div class="notoc" id="">
-                  <h7>Toelichting  </h7>Een inhoudelijke toelichting op de toepassing van het informatie-element.</div>
                </section>
             </section>
-         <a class="anchor respec-offending-element" id="detail_class_CIMOI_RegisterbevragingAandachtsgebiedEV" title="Linking error: not matching `<dfn>`"></a><section id="detail_class_CIMOI_RegisterbevragingAandachtsgebiedEV">
+         
+         <section id="detail_class_CIMOI_RegisterbevragingAandachtsgebiedEV">
             <div class="header-wrapper"><h5 id="x5-12-1-8-registerbevraging-aandachtsgebied-ev"><bdi class="secno">5.12.1.8 </bdi>   Registerbevraging­Aandachtsgebied­EV</h5><a class="self-link" href="#detail_class_CIMOI_RegisterbevragingAandachtsgebiedEV" aria-label="Permalink for Section 5.12.1.8"></a></div>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_identificatie" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_identificatie">
+            
+            <section id="detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_identificatie">
                <div class="header-wrapper"><h6 id="x5-12-1-8-1-attribuutsoort-details-registerbevraging-aandachtsgebied-ev-identificatie"><bdi class="secno">5.12.1.8.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RegisterbevragingAandachtsgebiedEV">Registerbevraging­Aandachtsgebied­EV</a> identificatie</h6><a class="self-link" href="#detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_identificatie" aria-label="Permalink for Section 5.12.1.8.1"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2816,7 +2792,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_register" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_register">
+            
+            <section id="detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_register">
                <div class="header-wrapper"><h6 id="x5-12-1-8-2-attribuutsoort-details-registerbevraging-aandachtsgebied-ev-register"><bdi class="secno">5.12.1.8.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RegisterbevragingAandachtsgebiedEV">Registerbevraging­Aandachtsgebied­EV</a> register</h6><a class="self-link" href="#detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_register" aria-label="Permalink for Section 5.12.1.8.2"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2842,7 +2819,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_registergegeven" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_registergegeven">
+            
+            <section id="detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_registergegeven">
                <div class="header-wrapper"><h6 id="x5-12-1-8-3-attribuutsoort-details-registerbevraging-aandachtsgebied-ev-registergegeven"><bdi class="secno">5.12.1.8.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RegisterbevragingAandachtsgebiedEV">Registerbevraging­Aandachtsgebied­EV</a> registergegeven</h6><a class="self-link" href="#detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_registergegeven" aria-label="Permalink for Section 5.12.1.8.3"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2868,7 +2846,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_registerkoppelveld" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_registerkoppelveld">
+            
+            <section id="detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_registerkoppelveld">
                <div class="header-wrapper"><h6 id="x5-12-1-8-4-attribuutsoort-details-registerbevraging-aandachtsgebied-ev-registerkoppelveld"><bdi class="secno">5.12.1.8.4 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RegisterbevragingAandachtsgebiedEV">Registerbevraging­Aandachtsgebied­EV</a> registerkoppelveld</h6><a class="self-link" href="#detail_attribute_CIMOI_RegisterbevragingAandachtsgebiedEV_registerkoppelveld" aria-label="Permalink for Section 5.12.1.8.4"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2894,7 +2873,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_RegisterbevragingAandachtsgebiedEV_ev" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_RegisterbevragingAandachtsgebiedEV_ev">
+            
+            <section id="detail_association_CIMOI_RegisterbevragingAandachtsgebiedEV_ev">
                <div class="header-wrapper"><h6 id="x5-12-1-8-5-relatiesoort-details-registerbevraging-aandachtsgebied-ev-heeft-overeenkomst-met"><bdi class="secno">5.12.1.8.5 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RegisterbevragingAandachtsgebiedEV">Registerbevraging­Aandachtsgebied­EV</a> heeft overeenkomst met</h6><a class="self-link" href="#detail_association_CIMOI_RegisterbevragingAandachtsgebiedEV_ev" aria-label="Permalink for Section 5.12.1.8.5"></a></div>
                
                
@@ -2918,14 +2898,13 @@ dataspecificatie.</p>
                      </tr>
                   </tbody>
                </table>
-               
-               <div class="notoc" id="">
-                  <h7>Toelichting  </h7>Een inhoudelijke toelichting op de toepassing van het informatie-element.</div>
                </section>
             </section>
-         <a class="anchor respec-offending-element" id="detail_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden" title="Linking error: not matching `<dfn>`"></a><section id="detail_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden">
+         
+         <section id="detail_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden">
             <div class="header-wrapper"><h5 id="x5-12-1-9-registerbevraging-geluids-aandachtsgebieden"><bdi class="secno">5.12.1.9 </bdi>   Registerbevraging­Geluids­Aandachtsgebieden</h5><a class="self-link" href="#detail_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden" aria-label="Permalink for Section 5.12.1.9"></a></div>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_identificatie" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_identificatie">
+            
+            <section id="detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_identificatie">
                <div class="header-wrapper"><h6 id="x5-12-1-9-1-attribuutsoort-details-registerbevraging-geluids-aandachtsgebieden-identificatie"><bdi class="secno">5.12.1.9.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden">Registerbevraging­Geluids­Aandachtsgebieden</a> identificatie</h6><a class="self-link" href="#detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_identificatie" aria-label="Permalink for Section 5.12.1.9.1"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2953,7 +2932,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_register" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_register">
+            
+            <section id="detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_register">
                <div class="header-wrapper"><h6 id="x5-12-1-9-2-attribuutsoort-details-registerbevraging-geluids-aandachtsgebieden-register"><bdi class="secno">5.12.1.9.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden">Registerbevraging­Geluids­Aandachtsgebieden</a> register</h6><a class="self-link" href="#detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_register" aria-label="Permalink for Section 5.12.1.9.2"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -2979,7 +2959,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_registergegeven" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_registergegeven">
+            
+            <section id="detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_registergegeven">
                <div class="header-wrapper"><h6 id="x5-12-1-9-3-attribuutsoort-details-registerbevraging-geluids-aandachtsgebieden-registergegeven"><bdi class="secno">5.12.1.9.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden">Registerbevraging­Geluids­Aandachtsgebieden</a> registergegeven</h6><a class="self-link" href="#detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_registergegeven" aria-label="Permalink for Section 5.12.1.9.3"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -3005,7 +2986,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_registerkoppelveld" title="Linking error: not matching `<dfn>`"></a><section id="detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_registerkoppelveld">
+            
+            <section id="detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_registerkoppelveld">
                <div class="header-wrapper"><h6 id="x5-12-1-9-4-attribuutsoort-details-registerbevraging-geluids-aandachtsgebieden-registerkoppelveld"><bdi class="secno">5.12.1.9.4 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden">Registerbevraging­Geluids­Aandachtsgebieden</a> registerkoppelveld</h6><a class="self-link" href="#detail_attribute_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_registerkoppelveld" aria-label="Permalink for Section 5.12.1.9.4"></a></div>
                
                <table style="width: 100%;" class="simple">
@@ -3031,7 +3013,8 @@ dataspecificatie.</p>
                   </tbody>
                </table>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_bevraagt" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_bevraagt">
+            
+            <section id="detail_association_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_bevraagt">
                <div class="header-wrapper"><h6 id="x5-12-1-9-5-relatiesoort-details-registerbevraging-geluids-aandachtsgebieden-bevraagt"><bdi class="secno">5.12.1.9.5 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RegisterbevragingGeluidsAandachtsgebieden">Registerbevraging­Geluids­Aandachtsgebieden</a> bevraagt</h6><a class="self-link" href="#detail_association_CIMOI_RegisterbevragingGeluidsAandachtsgebieden_bevraagt" aria-label="Permalink for Section 5.12.1.9.5"></a></div>
                
                
@@ -3057,9 +3040,11 @@ dataspecificatie.</p>
                </table>
                </section>
             </section>
-         <a class="anchor respec-offending-element" id="detail_class_CIMOI_ToepasbareActiviteit" title="Linking error: not matching `<dfn>`"></a><section id="detail_class_CIMOI_ToepasbareActiviteit">
+         
+         <section id="detail_class_CIMOI_ToepasbareActiviteit">
             <div class="header-wrapper"><h5 id="x5-12-1-10-toepasbare-activiteit"><bdi class="secno">5.12.1.10 </bdi>   Toepasbare­Activiteit</h5><a class="self-link" href="#detail_class_CIMOI_ToepasbareActiviteit" aria-label="Permalink for Section 5.12.1.10"></a></div>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_ToepasbareActiviteit_bevat" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_ToepasbareActiviteit_bevat">
+            
+            <section id="detail_association_CIMOI_ToepasbareActiviteit_bevat">
                <div class="header-wrapper"><h6 id="x5-12-1-10-1-relatiesoort-details-toepasbare-activiteit-bevat"><bdi class="secno">5.12.1.10.1 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_ToepasbareActiviteit">Toepasbare­Activiteit</a> bevat</h6><a class="self-link" href="#detail_association_CIMOI_ToepasbareActiviteit_bevat" aria-label="Permalink for Section 5.12.1.10.1"></a></div>
                
                
@@ -3083,11 +3068,9 @@ dataspecificatie.</p>
                      </tr>
                   </tbody>
                </table>
-               
-               <div class="notoc" id="">
-                  <h7>Toelichting  </h7>Een inhoudelijke toelichting op de toepassing van het informatie-element.</div>
                </section>
-            <a class="anchor respec-offending-element" id="detail_association_CIMOI_ToepasbareActiviteit_heeftRelatieMet" title="Linking error: not matching `<dfn>`"></a><section id="detail_association_CIMOI_ToepasbareActiviteit_heeftRelatieMet">
+            
+            <section id="detail_association_CIMOI_ToepasbareActiviteit_heeftRelatieMet">
                <div class="header-wrapper"><h6 id="x5-12-1-10-2-relatiesoort-details-toepasbare-activiteit-heeft-relatie-met"><bdi class="secno">5.12.1.10.2 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_ToepasbareActiviteit">Toepasbare­Activiteit</a> heeft relatie met</h6><a class="self-link" href="#detail_association_CIMOI_ToepasbareActiviteit_heeftRelatieMet" aria-label="Permalink for Section 5.12.1.10.2"></a></div>
                
                
@@ -3126,29 +3109,29 @@ dataspecificatie.</p>
   <section id="bibliografie"><div class="header-wrapper"><h2 id="x6-bibliografie"><bdi class="secno">6. </bdi>Bibliografie</h2><a class="self-link" href="#bibliografie" aria-label="Permalink for Section 6."></a></div>
 <p>TODO</p>
 </section>
- 
+
   <section id="conformance"><div class="header-wrapper"><h2 id="x7-conformiteit"><bdi class="secno">7. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 7."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p></section>
   <section id="tof"><div class="header-wrapper"><h2 id="x8-lijst-met-figuren"><bdi class="secno">8. </bdi>Lijst met figuren</h2><a class="self-link" href="#tof" aria-label="Permalink for Section 8."></a></div><ul class="tof">
         <li class="tofline">
-    <a class="tocxref" href="#fig-generatedID"><span class="self-link">Figuur <bdi class="figno">1</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#fig-cim-oi-compleet-overzicht"><span class="self-link">Figuur <bdi class="figno">1</bdi></span> <span class="fig-title">CIM-OI Compleet -overzicht</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-generatedID-0"><span class="self-link">Figuur <bdi class="figno">2</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#fig-cim-oi-ev-versimpeld-overzicht"><span class="self-link">Figuur <bdi class="figno">2</bdi></span> <span class="fig-title">CIM-OI EV versimpeld -overzicht</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-generatedID-1"><span class="self-link">Figuur <bdi class="figno">3</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#fig-cim-oi-directe-relaties-overzicht"><span class="self-link">Figuur <bdi class="figno">3</bdi></span> <span class="fig-title">CIM-OI Directe relaties -overzicht</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-generatedID-2"><span class="self-link">Figuur <bdi class="figno">4</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#fig-cim-oi-waardelijsten-overzicht"><span class="self-link">Figuur <bdi class="figno">4</bdi></span> <span class="fig-title">CIM-OI Waardelijsten -overzicht</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-generatedID-3"><span class="self-link">Figuur <bdi class="figno">5</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#fig-cim-oi-generiek-versimpeld-overzicht"><span class="self-link">Figuur <bdi class="figno">5</bdi></span> <span class="fig-title">CIM-OI generiek versimpeld -overzicht</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-generatedID-4"><span class="self-link">Figuur <bdi class="figno">6</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#fig-cim-oi-waardelijsten-ev-overzicht"><span class="self-link">Figuur <bdi class="figno">6</bdi></span> <span class="fig-title">CIM-OI Waardelijsten EV -overzicht</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-generatedID-5"><span class="self-link">Figuur <bdi class="figno">7</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#fig-cim-oi-omgevingsaspect-overzicht"><span class="self-link">Figuur <bdi class="figno">7</bdi></span> <span class="fig-title">CIM-OI Omgevingsaspect -overzicht</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-generatedID-6"><span class="self-link">Figuur <bdi class="figno">8</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#fig-cim-oi-ev-overzicht"><span class="self-link">Figuur <bdi class="figno">8</bdi></span> <span class="fig-title">CIM-OI EV -overzicht</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-generatedID-7"><span class="self-link">Figuur <bdi class="figno">9</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#fig-cim-oi-generiek-overzicht"><span class="self-link">Figuur <bdi class="figno">9</bdi></span> <span class="fig-title">CIM-OI generiek -overzicht</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-generatedID-8"><span class="self-link">Figuur <bdi class="figno">10</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#fig-cim-oi-geluid-versimpeld-overzicht"><span class="self-link">Figuur <bdi class="figno">10</bdi></span> <span class="fig-title">CIM-OI geluid versimpeld -overzicht</span></a>
   </li>
       </ul></section>
   <section id="index" class="appendix"><div class="header-wrapper"><h2 id="a-index"><bdi class="secno">A. </bdi>Index</h2><a class="self-link" href="#index" aria-label="Permalink for Appendix A."></a></div><section id="index-defined-here">
@@ -3389,4 +3372,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><div class="sidelabel" style="background-color: #FF0000;">Geonovum Informatiemodel - Werkversie</div><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
+})()</script><div class="sidelabel">Geonovum Informatiemodel - Werkversie</div><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
