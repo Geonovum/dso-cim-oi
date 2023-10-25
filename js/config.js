@@ -2,7 +2,7 @@ let respecConfig = {
   useLogo: true,
   useLabel: true,
   // title is verplicht! Neem hier de titel van het document op ----------------------
-  title: "Conceptueel Informatiemodel Omgevingsinformatie",
+  title: "Conceptueel Informatiemodel Object Informatie",
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
   specStatus: "wv",                   // Werkversie
   //specStatus: "cv",               // Consultatieversie
@@ -11,6 +11,7 @@ let respecConfig = {
   //specStatus: "basis",            // Basis Document
   //-- specType is verplicht bij alle andere dan BASIS ---------------------------------
   specType: "IM",                 // Informatie Model
+
   //-- pubDomain is verplicht! (komt in de URL) -------------------------------------
   pubDomain: "dso",
   //-- license: voor de geldende gebruiksvoorwaarden. Default is cc-by.
@@ -33,7 +34,7 @@ let respecConfig = {
   editors:
     [
       {
-        name: "TPOD-Team",
+        name: "TPOD team",
         company: "Geonovum",
         companyURL: "https://www.geonovum.nl",
       }
@@ -43,7 +44,7 @@ let respecConfig = {
   authors:
     [
       {
-        name: "TPOD-Team",
+        name: "TPOD team",
         company: "Geonovum",
         companyURL: "https://www.geonovum.nl",
       }

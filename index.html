@@ -10,8 +10,11 @@
   <script class="remove"> respecConfig = {...organisationConfig, ...respecConfig}</script>
   <script>document.title = respecConfig.title</script>
   <title>Default</title>
-  <link rel="shortcut icon" type="image/x-icon" href="https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/logius.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico" />
   <script src="https://gitdocumentatie.logius.nl/publicatie/respec/builds/respec-nlgov.js" class="remove" async></script>
+  <!-- De volgende regel zorgt ervoor dat plaatjes uit Imvertor niet geschaald
+       worden, zodat de imagemap die op deze plaatjes zit werkt. -->
+  <style>div.imageinfo.overview img {max-width: none;}</style>
 </head>
 
 <body>
@@ -20,14 +23,14 @@
 
   <section data-include-format="markdown" data-include="01-Voorwoord.md"></section>
   <section data-include-format="markdown" data-include="02-Inleiding.md"></section>
-  <section data-include-format="markdown" data-include="03-Toepassinsggebied.md"></section>
+  <section data-include-format="markdown" data-include="03-Toepassingsgebied.md"></section>
   <section data-include-format="markdown" data-include="04-Overzicht.md"></section>
 
-  <!-- importeer door imvertor gegenereerde deel-->
+  <!-- importeer door Imvertor gegenereerde deel-->
   <div id="catalogus" data-include="data/dso-cim-oi-cat.respec.html" data-include-replace=true></div>
 
   <section data-include-format="markdown" data-include="13-Bibliografie.md"></section>
- 
+
   <section id='conformance'></section>
   <section id='tof'></section>
   <section id="index"></section>
