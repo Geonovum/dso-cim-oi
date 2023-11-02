@@ -1,4 +1,4 @@
-# Conceptueel Informatiemodel Object Informatie
+# Conceptueel Informatiemodel Omgevingsinformatie
 
 Dit is het readme bestand van het GIT repository waarin het CIM-OI wordt beheerd. Dit is één van de conceptuele informatiemodellen van het [DSO](https://aandeslagmetdeomgevingswet.nl/implementatie/digitaal-stelsel/).
 
