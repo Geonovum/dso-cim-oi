@@ -72,3 +72,13 @@ ontwikkelt, teneinde de semantische interoperabiliteit in en met het DSO te
 kunnen waarborgen.
 
 Dit document bevat de vastlegging en beschrijving van het Conceptueel Informatiemodel Omgevingsinformatie.
+
+## CIM-OI
+
+In dit document wordt specifiek gekeken naar hoe volgens het IMOW  opgestelde en gepubliceerde documenten kunnen worden verrijkt met informatie uit externe bronnen. 
+
+Hierbij wordt uitgegaan dat de informatie reeds ontsloten en gevisualiseerd kan worden in het DSO-LV conform de stelselafspraken  waarbij middels een API, de API oriënteren, informatie rechtstreeks bij de bronhouder opgevraagd kan worden door het DSO-LV en als filter laag getoond kan worden. 
+
+Een ander onderdeel van het DSO-stelsel, de toepasbare regels, maakt ook gebruik van informatie uit externe bronnen maar doen dit middels een ander API. Meer informatie over de ‘API voorinvullen’ of de algehele API strategie  kan gevonden worden op de website van het IPLO.  Meer info over de werking van Toepasbare regels en de manier hoe informatie voor-ingevuld kan worden staat in het CIM-TR . 
+
+CIM-OI volgt de regels voor opstellen van een informatiemodel zoals vastgelegd in de MIM standaard en wordt uitgedrukt in UML.
