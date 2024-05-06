@@ -78,6 +78,14 @@ let respecConfig = {
       publisher: "Geonovum",
       date: "2022-02-17"
     },
+    CIMTR: {
+      id: "CIMTR",
+      title: "Conceptueel Informatiemodel Toepasbare Regels (CIM-TR)",
+      href: "https://geonovum.github.io/dso-cim-tr",
+      status: "Definitief",
+      publisher: "Geonovum",
+      date: "2022-01-07"
+    },
     CIMOW: {
       id: "CIMOW",
       title: "Conceptueel Informatiemodel Omgevingswet (CIMOW)",

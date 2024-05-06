@@ -75,10 +75,17 @@ Dit document bevat de vastlegging en beschrijving van het Conceptueel Informatie
 
 ## CIM-OI
 
-In dit document wordt specifiek gekeken naar hoe volgens het IMOW  opgestelde en gepubliceerde documenten kunnen worden verrijkt met informatie uit externe bronnen. 
+In dit document wordt specifiek gekeken naar hoe volgens het [[IMOW]]  opgestelde en gepubliceerde documenten kunnen worden verrijkt met informatie uit externe bronnen. 
 
-Hierbij wordt uitgegaan dat de informatie reeds ontsloten en gevisualiseerd kan worden in het DSO-LV conform de stelselafspraken  waarbij middels een API, de API oriënteren, informatie rechtstreeks bij de bronhouder opgevraagd kan worden door het DSO-LV en als filter laag getoond kan worden. 
+Hierbij wordt uitgegaan dat de informatie reeds ontsloten en gevisualiseerd kan worden in het DSO-LV conform de stelselafspraken <https://iplo.nl/digitaal-stelsel/documenten/architectuurdocumenten/> waarbij middels een API, de API oriënteren, informatie rechtstreeks bij de bronhouder opgevraagd kan worden door het DSO-LV en als filter laag getoond kan worden. 
 
-Een ander onderdeel van het DSO-stelsel, de toepasbare regels, maakt ook gebruik van informatie uit externe bronnen maar doen dit middels een ander API. Meer informatie over de ‘API voorinvullen’ of de algehele API strategie  kan gevonden worden op de website van het IPLO.  Meer info over de werking van Toepasbare regels en de manier hoe informatie voor-ingevuld kan worden staat in het CIM-TR . 
+Een ander onderdeel van het DSO-stelsel, de toepasbare regels, maakt ook gebruik van informatie uit externe bronnen maar doen dit middels een ander API. Meer informatie over de ‘API voorinvullen’ of de algehele API strategie <https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/api-en-uri-strategie/>  kan gevonden worden op de website van het IPLO.  Meer info over de werking van Toepasbare regels en de manier hoe informatie voor-ingevuld kan worden staat in het [[CIMTR]].
+
+De informatie in het DSO betreft o.a. juridische regels en de gebieden waar deze regels van toepassing zijn,
+evenals gegevens die hierbij van belang kunnen zijn. Het conceptuele informatiemodel (CIM) in dit document
+beschrijft welke gegevens en gegevensbronnen voor externe informatie, op welke manier gebruikt kunnen
+worden in het DSO en dan met name de ontsluiting via de viewer. Deze informatie noemen we
+Omgevingsinformatie. Dit maakt de volledige naam ‘Conceptueel Informatiemodel voor de
+OmgevingsInformatie’ afgekort ‘CIM-OI’
 
 CIM-OI volgt de regels voor opstellen van een informatiemodel zoals vastgelegd in de MIM standaard en wordt uitgedrukt in UML.
