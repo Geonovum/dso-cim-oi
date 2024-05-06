@@ -102,17 +102,6 @@ dd{margin-left:0}
 <style id="respec-nlgov">
 img.license{float:left;padding-right:5px}
 </style>
-<style>
-ul.index{columns:30ch;column-gap:1.5em}
-ul.index li{list-style:inherit}
-ul.index li span{color:inherit;cursor:pointer;white-space:normal}
-#index-defined-here ul.index li{font-size:.9rem}
-ul.index code{color:inherit}
-#index-defined-here .print-only{display:none}
-@media print{
-#index-defined-here .print-only{display:initial}
-}
-</style>
 <meta name="description" content="Dit document beschrijft het 'Conceptueel Informatiemodel Omgevingsinformatie'. Dit is een conceptueel model van het
 DSO.">
 <style>
@@ -290,6 +279,14 @@ DSO.">
       "publisher": "Geonovum",
       "date": "2022-02-17"
     },
+    "CIMTR": {
+      "id": "CIMTR",
+      "title": "Conceptueel Informatiemodel Toepasbare Regels (CIM-TR)",
+      "href": "https://geonovum.github.io/dso-cim-tr",
+      "status": "Definitief",
+      "publisher": "Geonovum",
+      "date": "2022-01-07"
+    },
     "CIMOW": {
       "id": "CIMOW",
       "title": "Conceptueel Informatiemodel Omgevingswet (CIMOW)",
@@ -396,7 +393,7 @@ DSO.">
   <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>Dit document beschrijft het 'Conceptueel Informatiemodel Omgevingsinformatie'. Dit is een conceptueel model van het
 DSO.</p>
 </section>
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#voorwoord"><bdi class="secno">1. </bdi>Voorwoord</a></li><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">2. </bdi>Inleiding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#cim-oi"><bdi class="secno">2.1 </bdi>CIM-OI</a></li></ol></li><li class="tocline"><a class="tocxref" href="#toepassingsgebied"><bdi class="secno">3. </bdi>Toepassingsgebied</a></li><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">4. </bdi>Scope</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#toelichting-bij-informatiekundig-perspectief"><bdi class="secno">4.1 </bdi>Toelichting bij informatiekundig perspectief</a></li></ol></li><li class="tocline"><a class="tocxref" href="#werking-cim-oi"><bdi class="secno">5. </bdi>Werking CIM-OI</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#semantische-relaties"><bdi class="secno">5.1 </bdi>Semantische relaties</a></li><li class="tocline"><a class="tocxref" href="#directe-relaties"><bdi class="secno">5.2 </bdi>Directe relaties</a></li></ol></li><li class="tocline"><a class="tocxref" href="#cat"><bdi class="secno">6. </bdi>Gegevensdefinitie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#EAID_EEE748DF_A348_4975_A5DA_5A17E7A071F9"><bdi class="secno">6.1 </bdi>   CIM-OI (tbv API-profiel Orienteren) - overzicht</a></li><li class="tocline"><a class="tocxref" href="#EAID_FF142FC0_A513_4c5d_837B_2B93FD770138"><bdi class="secno">6.2 </bdi>   CIM-OI - overzicht</a></li><li class="tocline"><a class="tocxref" href="#objecttypen"><bdi class="secno">6.3 </bdi>Objecttypen   </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Kwaliteiteigenschap"><bdi class="secno">6.3.1 </bdi>   Kwaliteiteigenschap</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Verstrekker"><bdi class="secno">6.3.2 </bdi>   Verstrekker</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Gegevensklasse"><bdi class="secno">6.3.3 </bdi>   Gegevensklasse</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Dataset"><bdi class="secno">6.3.4 </bdi>   Dataset</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Ontologie"><bdi class="secno">6.3.5 </bdi>   Ontologie</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Serviceprofiel"><bdi class="secno">6.3.6 </bdi>   Serviceprofiel</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Dekkingsgebied"><bdi class="secno">6.3.7 </bdi>   Dekkingsgebied</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_DCATConcept"><bdi class="secno">6.3.8 </bdi>   DCAT-Concept</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Waarde"><bdi class="secno">6.3.9 </bdi>   Waarde</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Distributie"><bdi class="secno">6.3.10 </bdi>   Distributie</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Catalogus"><bdi class="secno">6.3.11 </bdi>   Catalogus</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Eigenschap"><bdi class="secno">6.3.12 </bdi>   Eigenschap</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Subject"><bdi class="secno">6.3.13 </bdi>   Subject</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Waardebereik"><bdi class="secno">6.3.14 </bdi>   Waardebereik</a></li></ol></li><li class="tocline"><a class="tocxref" href="#primitieve-datatypen"><bdi class="secno">6.4 </bdi>Primitieve datatypen   </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Waardetype"><bdi class="secno">6.4.1 </bdi>Primitief datatype   Waardetype</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Doelgroep"><bdi class="secno">6.4.2 </bdi>Primitief datatype   Doelgroep</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Identificatie"><bdi class="secno">6.4.3 </bdi>Primitief datatype   Identificatie</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Toepassingsbereik"><bdi class="secno">6.4.4 </bdi>Primitief datatype   Toepassingsbereik</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Waardegroep"><bdi class="secno">6.4.5 </bdi>Primitief datatype   Waardegroep</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Nauwkeurigheidsklasse"><bdi class="secno">6.4.6 </bdi>Primitief datatype   Nauwkeurigheidsklasse</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Norm"><bdi class="secno">6.4.7 </bdi>Primitief datatype   Norm</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Grootheid"><bdi class="secno">6.4.8 </bdi>Primitief datatype   Grootheid</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Eenheid"><bdi class="secno">6.4.9 </bdi>Primitief datatype   Eenheid</a></li></ol></li><li class="tocline"><a class="tocxref" href="#attribuut-en-relatiesoort-details"><bdi class="secno">6.5 </bdi>Attribuut- en relatiesoort details  </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#objecttype-details"><bdi class="secno">6.5.1 </bdi>Objecttype details  </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Verstrekker"><bdi class="secno">6.5.1.1 </bdi>   Verstrekker</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Verstrekker_publiceert"><bdi class="secno">6.5.1.1.1 </bdi>Relatiesoort details  <span class="formerLink">Verstrekker</span> publiceert</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Gegevensklasse"><bdi class="secno">6.5.1.2 </bdi>   Gegevensklasse</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Gegevensklasse_id"><bdi class="secno">6.5.1.2.1 </bdi>Attribuutsoort details  <span class="formerLink">Gegevensklasse</span> id</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Gegevensklasse_betreft"><bdi class="secno">6.5.1.2.2 </bdi>Relatiesoort details  <span class="formerLink">Gegevensklasse</span> betreft</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Gegevensklasse_heeft"><bdi class="secno">6.5.1.2.3 </bdi>Relatiesoort details  <span class="formerLink">Gegevensklasse</span> heeft</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Dataset"><bdi class="secno">6.5.1.3 </bdi>   Dataset</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Dataset_definieert"><bdi class="secno">6.5.1.3.1 </bdi>Relatiesoort details  <span class="formerLink">Dataset</span> definieert</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Dataset_wordtVerstrektDoor"><bdi class="secno">6.5.1.3.2 </bdi>Relatiesoort details  <span class="formerLink">Dataset</span> wordt verstrekt door</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Dataset_heeft"><bdi class="secno">6.5.1.3.3 </bdi>Relatiesoort details  <span class="formerLink">Dataset</span> heeft</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Dataset_bestrijkt"><bdi class="secno">6.5.1.3.4 </bdi>Relatiesoort details  <span class="formerLink">Dataset</span> bestrijkt</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Ontologie"><bdi class="secno">6.5.1.4 </bdi>   Ontologie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Ontologie_beschrijftSamenhang"><bdi class="secno">6.5.1.4.1 </bdi>Relatiesoort details  <span class="formerLink">Ontologie</span> beschrijft samenhang</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Ontologie_betreft"><bdi class="secno">6.5.1.4.2 </bdi>Relatiesoort details  <span class="formerLink">Ontologie</span> betreft</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Serviceprofiel"><bdi class="secno">6.5.1.5 </bdi>   Serviceprofiel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Serviceprofiel_definieertProjectie"><bdi class="secno">6.5.1.5.1 </bdi>Relatiesoort details  <span class="formerLink">Serviceprofiel</span> definieert projectie</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Serviceprofiel_definieertZoekingang"><bdi class="secno">6.5.1.5.2 </bdi>Relatiesoort details  <span class="formerLink">Serviceprofiel</span> definieert zoekingang</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_DCATConcept"><bdi class="secno">6.5.1.6 </bdi>   DCAT-Concept</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_DCATConcept_definitie"><bdi class="secno">6.5.1.6.1 </bdi>Attribuutsoort details  <span class="formerLink">DCAT-Concept</span> definitie</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_DCATConcept_term"><bdi class="secno">6.5.1.6.2 </bdi>Attribuutsoort details  <span class="formerLink">DCAT-Concept</span> term</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_DCATConcept_type"><bdi class="secno">6.5.1.6.3 </bdi>Attribuutsoort details  <span class="formerLink">DCAT-Concept</span> type</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Waarde"><bdi class="secno">6.5.1.7 </bdi>   Waarde</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Waarde_isEen"><bdi class="secno">6.5.1.7.1 </bdi>Externe koppeling details  <span class="formerLink">Waarde</span> is een</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Distributie"><bdi class="secno">6.5.1.8 </bdi>   Distributie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Distributie_wordtUitgedruktIn"><bdi class="secno">6.5.1.8.1 </bdi>Relatiesoort details  <span class="formerLink">Distributie</span> wordt uitgedrukt in</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Catalogus"><bdi class="secno">6.5.1.9 </bdi>   Catalogus</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Catalogus_bestrijkt"><bdi class="secno">6.5.1.9.1 </bdi>Relatiesoort details  <span class="formerLink">Catalogus</span> bestrijkt</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Catalogus_vermeldt"><bdi class="secno">6.5.1.9.2 </bdi>Relatiesoort details  <span class="formerLink">Catalogus</span> vermeldt</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Eigenschap"><bdi class="secno">6.5.1.10 </bdi>   Eigenschap</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Eigenschap_id"><bdi class="secno">6.5.1.10.1 </bdi>Attribuutsoort details  <span class="formerLink">Eigenschap</span> id</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Eigenschap_waardetype"><bdi class="secno">6.5.1.10.2 </bdi>Attribuutsoort details  <span class="formerLink">Eigenschap</span> waardetype</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Eigenschap_waardegroep"><bdi class="secno">6.5.1.10.3 </bdi>Attribuutsoort details  <span class="formerLink">Eigenschap</span> waardegroep</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Eigenschap_nauwkeurigheid"><bdi class="secno">6.5.1.10.4 </bdi>Attribuutsoort details  <span class="formerLink">Eigenschap</span> nauwkeurigheid</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Eigenschap_eenheid"><bdi class="secno">6.5.1.10.5 </bdi>Attribuutsoort details  <span class="formerLink">Eigenschap</span> eenheid</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Eigenschap_grootheid"><bdi class="secno">6.5.1.10.6 </bdi>Attribuutsoort details  <span class="formerLink">Eigenschap</span> grootheid</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Eigenschap_norm"><bdi class="secno">6.5.1.10.7 </bdi>Attribuutsoort details  <span class="formerLink">Eigenschap</span> norm</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Eigenschap_doelgroep"><bdi class="secno">6.5.1.10.8 </bdi>Attribuutsoort details  <span class="formerLink">Eigenschap</span> doelgroep</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Eigenschap_toepassingsbereik"><bdi class="secno">6.5.1.10.9 </bdi>Attribuutsoort details  <span class="formerLink">Eigenschap</span> toepassingsbereik</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Eigenschap_bron"><bdi class="secno">6.5.1.10.10 </bdi>Attribuutsoort details  <span class="formerLink">Eigenschap</span> bron</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Eigenschap_betreft"><bdi class="secno">6.5.1.10.11 </bdi>Relatiesoort details  <span class="formerLink">Eigenschap</span> betreft</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Eigenschap_heeft"><bdi class="secno">6.5.1.10.12 </bdi>Relatiesoort details  <span class="formerLink">Eigenschap</span> heeft</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Eigenschap_wordtBegrenstDoor"><bdi class="secno">6.5.1.10.13 </bdi>Relatiesoort details  <span class="formerLink">Eigenschap</span> wordt begrenst door</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Subject"><bdi class="secno">6.5.1.11 </bdi>   Subject</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Subject_verwijstNaar"><bdi class="secno">6.5.1.11.1 </bdi>Relatiesoort details  <span class="formerLink">Subject</span> verwijst naar</a></li></ol></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#aanvullende-informatie"><bdi class="secno">7. </bdi>Aanvullende informatie</a></li><li class="tocline"><a class="tocxref" href="#visualisatie"><bdi class="secno">8. </bdi>Visualisatie</a></li><li class="tocline"><a class="tocxref" href="#versieoverzicht"><bdi class="secno">9. </bdi>Versieoverzicht</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li></ol></nav>
+  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#voorwoord"><bdi class="secno">1. </bdi>Voorwoord</a></li><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">2. </bdi>Inleiding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#cim-oi"><bdi class="secno">2.1 </bdi>CIM-OI</a></li></ol></li><li class="tocline"><a class="tocxref" href="#toepassingsgebied"><bdi class="secno">3. </bdi>Toepassingsgebied</a></li><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">4. </bdi>Scope</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#toelichting-bij-informatiekundig-perspectief"><bdi class="secno">4.1 </bdi>Toelichting bij informatiekundig perspectief</a></li></ol></li><li class="tocline"><a class="tocxref" href="#werking-cim-oi"><bdi class="secno">5. </bdi>Werking CIM-OI</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#semantische-relaties"><bdi class="secno">5.1 </bdi>Semantische relaties</a></li><li class="tocline"><a class="tocxref" href="#directe-relaties"><bdi class="secno">5.2 </bdi>Directe relaties</a></li></ol></li><li class="tocline"><a class="tocxref" href="#cat"><bdi class="secno">6. </bdi>Gegevensdefinitie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#EAID_5E45DD80_A386_4120_BE8E_2309011CF7DD"><bdi class="secno">6.1 </bdi>   CIM-OI generiek versimpeld - overzicht</a></li><li class="tocline"><a class="tocxref" href="#EAID_F2277CE8_0060_42de_B2AC_E6CC1703EC0C"><bdi class="secno">6.2 </bdi>   CIM-OI generiek -overzicht</a></li><li class="tocline"><a class="tocxref" href="#objecttypen"><bdi class="secno">6.3 </bdi>Objecttypen   </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Registerbevraging"><bdi class="secno">6.3.1 </bdi>   Registerbevraging</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Uitvoeringsregel"><bdi class="secno">6.3.2 </bdi>   Uitvoeringsregel</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_RelevanteAnnotaties"><bdi class="secno">6.3.3 </bdi>   Relevante­Annotaties</a></li><li class="tocline"><a class="tocxref" href="#global_class_CIMOI_Omgevingsaspect"><bdi class="secno">6.3.4 </bdi>   Omgevingsaspect</a></li></ol></li><li class="tocline"><a class="tocxref" href="#attribuut-en-relatiesoort-details"><bdi class="secno">6.4 </bdi>Attribuut- en relatiesoort details  </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#objecttype-details"><bdi class="secno">6.4.1 </bdi>Objecttype details  </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Registerbevraging"><bdi class="secno">6.4.1.1 </bdi>   Registerbevraging</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Registerbevraging_profile"><bdi class="secno">6.4.1.1.1 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging</span> profile</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Registerbevraging_key"><bdi class="secno">6.4.1.1.2 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging</span> key</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Registerbevraging_type"><bdi class="secno">6.4.1.1.3 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging</span> type</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Registerbevraging_value"><bdi class="secno">6.4.1.1.4 </bdi>Attribuutsoort details  <span class="formerLink">Registerbevraging</span> value</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Uitvoeringsregel"><bdi class="secno">6.4.1.2 </bdi>   Uitvoeringsregel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Uitvoeringsregel_bevraging"><bdi class="secno">6.4.1.2.1 </bdi>Relatiesoort details  <span class="formerLink">Uitvoeringsregel</span> bevraging</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Uitvoeringsregel_bevraagt"><bdi class="secno">6.4.1.2.2 </bdi>Relatiesoort details  <span class="formerLink">Uitvoeringsregel</span> bevraagt</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_Uitvoeringsregel_registerbevraging"><bdi class="secno">6.4.1.2.3 </bdi>Relatiesoort details  <span class="formerLink">Uitvoeringsregel</span> registerbevraging</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_RelevanteAnnotaties"><bdi class="secno">6.4.1.3 </bdi>   Relevante­Annotaties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstActiviteiten"><bdi class="secno">6.4.1.3.1 </bdi>Attribuutsoort details  <span class="formerLink">Relevante­Annotaties</span> waardelijst activiteiten</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstThema"><bdi class="secno">6.4.1.3.2 </bdi>Attribuutsoort details  <span class="formerLink">Relevante­Annotaties</span> waardelijst Thema</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_RelevanteAnnotaties_overeenkomendeActiviteit"><bdi class="secno">6.4.1.3.3 </bdi>Relatiesoort details  <span class="formerLink">Relevante­Annotaties</span> overeenkomende activiteit</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMetGeluid"><bdi class="secno">6.4.1.3.4 </bdi>Relatiesoort details  <span class="formerLink">Relevante­Annotaties</span> heeft overeenkomst met Geluid</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_RelevanteAnnotaties_bevraging"><bdi class="secno">6.4.1.3.5 </bdi>Relatiesoort details  <span class="formerLink">Relevante­Annotaties</span> bevraagt</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMetGebiedsaanwijzing"><bdi class="secno">6.4.1.3.6 </bdi>Relatiesoort details  <span class="formerLink">Relevante­Annotaties</span> heeft overeenkomst met gebiedsaanwijzing</a></li><li class="tocline"><a class="tocxref" href="#detail_association_CIMOI_RelevanteAnnotaties_ev"><bdi class="secno">6.4.1.3.7 </bdi>Relatiesoort details  <span class="formerLink">Relevante­Annotaties</span> heeft overeenkomst met EV</a></li></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_CIMOI_Omgevingsaspect"><bdi class="secno">6.4.1.4 </bdi>   Omgevingsaspect</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Omgevingsaspect_naam"><bdi class="secno">6.4.1.4.1 </bdi>Attribuutsoort details  <span class="formerLink">Omgevingsaspect</span> naam</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_CIMOI_Omgevingsaspect_identificatie"><bdi class="secno">6.4.1.4.2 </bdi>Attribuutsoort details  <span class="formerLink">Omgevingsaspect</span> identificatie</a></li></ol></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#aanvullende-informatie"><bdi class="secno">7. </bdi>Aanvullende informatie</a></li><li class="tocline"><a class="tocxref" href="#visualisatie"><bdi class="secno">8. </bdi>Visualisatie</a></li><li class="tocline"><a class="tocxref" href="#versieoverzicht"><bdi class="secno">9. </bdi>Versieoverzicht</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">A.1 </bdi>Informatieve referenties</a></li></ol></li></ol></nav>
 
   <section id="voorwoord"><div class="header-wrapper"><h2 id="x1-voorwoord"><bdi class="secno">1. </bdi>Voorwoord</h2><a class="self-link" href="#voorwoord" aria-label="Permalink for Section 1."></a></div>
 <p>Dit document is tot stand gekomen binnen het programma  DSO-Omgegevingswet. Het bevat de formele vastlegging en beschrijving van het Conceptuele Informatiemodel.</p>
@@ -469,20 +466,26 @@ ontwikkelt, teneinde de semantische interoperabiliteit in en met het DSO te
 kunnen waarborgen.</p>
 <p>Dit document bevat de vastlegging en beschrijving van het Conceptueel Informatiemodel Omgevingsinformatie.</p>
 <section id="cim-oi"><div class="header-wrapper"><h3 id="x2-1-cim-oi"><bdi class="secno">2.1 </bdi>CIM-OI</h3><a class="self-link" href="#cim-oi" aria-label="Permalink for Section 2.1"></a></div>
-<p>In dit document wordt specifiek gekeken naar hoe volgens het IMOW  opgestelde en gepubliceerde documenten kunnen worden verrijkt met informatie uit externe bronnen. </p>
-<p>Hierbij wordt uitgegaan dat de informatie reeds ontsloten en gevisualiseerd kan worden in het DSO-LV conform de stelselafspraken  waarbij middels een API, de API oriënteren, informatie rechtstreeks bij de bronhouder opgevraagd kan worden door het DSO-LV en als filter laag getoond kan worden. </p>
-<p>Een ander onderdeel van het DSO-stelsel, de toepasbare regels, maakt ook gebruik van informatie uit externe bronnen maar doen dit middels een ander API. Meer informatie over de ‘API voorinvullen’ of de algehele API strategie  kan gevonden worden op de website van het IPLO.  Meer info over de werking van Toepasbare regels en de manier hoe informatie voor-ingevuld kan worden staat in het CIM-TR . </p>
+<p>In dit document wordt specifiek gekeken naar hoe volgens het [<cite><a class="bibref" data-link-type="biblio" href="#bib-imow" title="Informatiemodel Omgevingswet (IMOW)">IMOW</a></cite>]  opgestelde en gepubliceerde documenten kunnen worden verrijkt met informatie uit externe bronnen. </p>
+<p>Hierbij wordt uitgegaan dat de informatie reeds ontsloten en gevisualiseerd kan worden in het DSO-LV conform de stelselafspraken <a href="https://iplo.nl/digitaal-stelsel/documenten/architectuurdocumenten/">https://iplo.nl/digitaal-stelsel/documenten/architectuurdocumenten/</a> waarbij middels een API, de API oriënteren, informatie rechtstreeks bij de bronhouder opgevraagd kan worden door het DSO-LV en als filter laag getoond kan worden. </p>
+<p>Een ander onderdeel van het DSO-stelsel, de toepasbare regels, maakt ook gebruik van informatie uit externe bronnen maar doen dit middels een ander API. Meer informatie over de ‘API voorinvullen’ of de algehele API strategie <a href="https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/api-en-uri-strategie/">https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/api-en-uri-strategie/</a>  kan gevonden worden op de website van het IPLO.  Meer info over de werking van Toepasbare regels en de manier hoe informatie voor-ingevuld kan worden staat in het [<cite><a class="bibref" data-link-type="biblio" href="#bib-cimtr" title="Conceptueel Informatiemodel Toepasbare Regels (CIM-TR)">CIMTR</a></cite>].</p>
+<p>De informatie in het DSO betreft o.a. juridische regels en de gebieden waar deze regels van toepassing zijn,
+evenals gegevens die hierbij van belang kunnen zijn. Het conceptuele informatiemodel (CIM) in dit document
+beschrijft welke gegevens en gegevensbronnen voor externe informatie, op welke manier gebruikt kunnen
+worden in het DSO en dan met name de ontsluiting via de viewer. Deze informatie noemen we
+Omgevingsinformatie. Dit maakt de volledige naam ‘Conceptueel Informatiemodel voor de
+OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
 <p>CIM-OI volgt de regels voor opstellen van een informatiemodel zoals vastgelegd in de MIM standaard en wordt uitgedrukt in UML.</p>
 </section></section>
   <section id="toepassingsgebied"><div class="header-wrapper"><h2 id="x3-toepassingsgebied"><bdi class="secno">3. </bdi>Toepassingsgebied</h2><a class="self-link" href="#toepassingsgebied" aria-label="Permalink for Section 3."></a></div>
 <p>Het Conceptueel Informatiemodel voor de OmgevingsInformatie (CIM-OI) beschrijft het domein waar Omgevingswet en bronnen van externe informatie samenkomen. Dit beperkt zich tot de informatie die in dit domein wordt vastgelegd en vastgesteld en in ketens wordt uitgewisseld ten behoeve van het DSO.</p>
-<p>Het CIMOI maakt gebruik van parallellen tussen de besluiten in het DSO en (externe) informatieproducten en legt vast op welke manier deze elkaar verrijken. </p>
+<p>Het CIM-OI maakt gebruik van parallellen tussen de besluiten in het DSO en (externe) informatieproducten en legt vast op welke manier deze elkaar verrijken.</p>
 <p>In de context van Omgevingswet zijn, naast het CIM-OI, ook de volgende informatiedomeinen aan de orde: </p>
 <ul>
 <li>standaard toepasbare regels (STTR) maakt eveneens gebruik van een registerbevraging om vragen uit de vragenboom vooraf in te vullen. CIM-OI is qua methodiek op één lijn gebracht met deze oplossing zodat de mogelijkheid bestaat zowel bij het oriënteren als het aanvragen dezelfde informatiebronnen in te zetten. Kanttekening hierbij is dat toepasbare regels op basis van specifieke vragen de context kunnen duiden, , de gestelde vraag kan immers afgestemd worden op het soort informatie dat opgehaald wordt en omdat niet aangenomen kan worden dat alle gepubliceerde besluiten de juiste context bevatten is het mogelijk dat niet alle databronnen die ingezet worden bij toepasbare regels ook ingezet kunnen worden bij het oriënteren op de kaart. </li>
 <li>informatiemodel Omgevingswet (IMOW) beschrijft objecten en definities die in omgevingswetbesluiten vastgelegd kunnen worden. Hierin zijn paralellen gezocht zodat informatie passend bij bepaalde juridische teksten getoond kan worden en initiatiefnemers deze relaties niet zelf hoeven te interpreteren.</li>
 </ul>
-<p>Daarnaast kennen veel leveranciers van informatie eigen data- of productmodellen. De modellen die betrokken zijn geweest bij de totstandkoming van dit document zijn: </p>
+<p>Daarnaast kennen veel leveranciers van informatie eigen data- of productmodellen. De modellen die betrokken zijn geweest bij de totstandkoming van dit document zijn:</p>
 <ul>
 <li>informatiemodel Externe Veiligheid</li>
 <li>informatiemodel Geluid (IMGeluid)</li>
@@ -497,14 +500,14 @@ kunnen waarborgen.</p>
 </ul>
 <p>Buiten scope:</p>
 <ul>
-<li>CIM-OI beschrijft niet het domein van de Omgevingswet of externe registers zelf. Concepten zoals activiteit of een gebiedsaanwijzingstype  staan in de verschillende eerder genoemde standaarden gedefinieerd en niet in CIM-OI. In het kader van zelfstandige leesbaarheid van dit document worden gegevens overgenomen uit andere standaarden. </li>
+<li>CIM-OI beschrijft niet het domein van de Omgevingswet of externe registers zelf. Concepten zoals <em>activiteit</em> of een <em>gebiedsaanwijzingstype</em> staan in de verschillende eerder genoemde standaarden gedefinieerd en niet in CIM-OI. In het kader van zelfstandige leesbaarheid van dit document worden gegevens overgenomen uit andere standaarden.</li>
 <li>Uniformering van definities die in de verschillende modellen gehanteerd worden. Het is mogelijk dat een bepaalde definitie of bepaald kenmerk in verschillende modellen voorkomt maar qua betekenis van elkaar afwijken. Bij het zoeken naar paralellen tussen de systemen is getracht dit zoveel mogelijk af te dekken, maar omdat niet alle definities voor handen waren is er geen garantie dat de definities die uiteindelijk ingeladen zullen worden één op één gelijk zijn of dat in de toekomst blijven.</li>
 <li>CIM-OI is uitgegaan van gegevensverzamelingen uit een register of soortgelijke bron waarbij de data vanuit één bron voor landelijk gebruik beschikbaar gesteld wordt. Federatieve stelsels kunnen dus alleen bevraagd worden wanneer hier een zogenaamd ‘hub and spoke’ distributie inrichting voor bestaat waarbij een API met een enkele bron communiceert. Andere varianten worden niet ondersteund. </li>
 <li>De presentatiestandaard waar alle patronen voor verbeelding binnen de DSO-viewer opgeslagen zijn zullen aangevuld moeten worden zodat informatie uit externe registers indien nodig afwijkend gevisualiseerd kan worden.</li>
 </ul>
 <section id="toelichting-bij-informatiekundig-perspectief"><div class="header-wrapper"><h3 id="x4-1-toelichting-bij-informatiekundig-perspectief"><bdi class="secno">4.1 </bdi>Toelichting bij informatiekundig perspectief</h3><a class="self-link" href="#toelichting-bij-informatiekundig-perspectief" aria-label="Permalink for Section 4.1"></a></div>
 <p>De Omgevingswet is een domein waarin juridische teksten, regels, en hun werkingsgebieden centraal staan. Deze informatie wordt vanuit verschillende bronnen ontsloten. De gebruikelijke ingang van initiatiefnemers die op zoek zijn naar informatie is het Omgevingsloket en daarbinnen een viewer ofwel een portaal waar via een klik op de kaart de geldende regels en eventuele andere samenhangende informatie kan worden geraadpleegd. Dit document heeft als doel verbindingen te leggen tussen regelgeving en informatieproducten zodat naast de bijv. regels rondom een geluidsaandachtsgebied ook de geluidsbronnen of specifieke metingen getoond kunnen worden zodat een zo compleet mogelijk pakket aan informatie aangeboden kan worden aan een initiatiefnemer. </p>
-<p>Om de informatie uit de verschillende bronnen te kunnen koppelen wordt gebruik gemaakt van objecten/attributen die in beide systemen voorkomen, bijvoorbeeld een aandachtsgebied, dat zowel in IMOW als subtype van een gebiedsaanwijzingstype geluid bestaat en in het IMGeluid als object voorkomt. Gezien het IMOW alleen de vaststelling van een aandachtsgebied faciliteert kan het IMGeluid, waar bijvoorbeeld ook geluidsbronnen of geluidsproductieplafonds voorkomen, een goede aanvulling zijn voor een initiatiefnemer die zich aan het oriënteren is op een bepaald gebied. </p>
+<p>Om de informatie uit de verschillende bronnen te kunnen koppelen wordt gebruik gemaakt van objecten/attributen die in beide systemen voorkomen, bijvoorbeeld een <em>aandachtsgebied</em>, dat zowel in IMOW als subtype van een gebiedsaanwijzingstype geluid bestaat en in het IMGeluid als object voorkomt. Gezien het IMOW alleen de vaststelling van een <em>aandachtsgebied</em> faciliteert kan het IMGeluid, waar bijvoorbeeld ook geluidsbronnen of geluidsproductieplafonds voorkomen, een goede aanvulling zijn voor een initiatiefnemer die zich aan het oriënteren is op een bepaald gebied. </p>
 <p>Om deze informatie samen te brengen zal via het omgevingsloket, waarin de initiatiefnemer de informatie benadert, als eerste de regels die in de besluiten vastgelegd liggen ophalen en van daaruit aanvullende gegevens via verschillende registerbevragingen. Hier zijn twee verschillende manieren voor. </p>
 <p>Allereerst bestaat de zogeheten semantische relatie. Op basis van annotaties binnen het IMOW kan mogelijk relevante informatie uit de informatieproducten gebruikt worden. Een voorbeeld hiervan is de activiteit ‘kapvergunning aanvragen’  in de activiteitgroep ‘kapactiviteit’ waarbij de informatie ‘stamdiameter bomen’ een relevante aanvulling kan zijn. Vanwege de verschillen in naamgeving zal een relatie hiertussen niet voor iedere raadpleger voor de hand liggen. CIMOI kan hierbij ondersteunen door bij bepaalde annotaties relaties te leggen naar informatieobjecten die aan een raadpleger als relevant voorgesteld worden na het kiezen van de desbetreffende annotatie. De raadpleger kan vervolgens zelf beslissen of de informatie relevant is en getoond moet worden bij de desbetreffende activiteit. Deze relaties worden via het object ‘Relevante Annotaties’ gelegd. </p>
 <p>Daarnaast bestaat ook de directe manier, waarbij een directe relatie tussen namen en/of definities bestaat. Dit komt vooralsnog alleen bij gebiedsaanwijzingen voor. Een voorbeeld hiervan is het ‘risicogebied’ wat zowel in het IMOW gebiedsaanwijzinggroep Externe Veiligheid voorkomt als in het Register Externe Veiligheid. Tijdens het ontwerpen van de IMOW standaard is voorzien dat bepaalde gebiedsaanwijzingen van belang zijn en hiervoor zijn specifieke waarden opgenomen. Deze waarden komen, qua term en definitie, overeen met informatie uit de informatieproducten waarbij deze een bijdrage kunnen geven aan het duiden van regels. Met deze manier van relateren wordt geen gebruik gemaakt van object ‘Relevante Annotaties’ maar wordt direct vanuit één specifiek waarde het uit de waardelijst van het IMOW object een registerbevraging gedaan naar aanvullende informatie bij de overeenkomstige waarde uit het informatieproduct.</p>
@@ -519,7 +522,7 @@ kunnen waarborgen.</p>
 
 <p>Het Omgevingsaspect bevat uit twee objecten, te weten de Registerbevraging waarin gegevens met betrekking op de externe gegevensbron vastgelegd worden en de RelevanteAnnotaties waarin de zogeheten semantische relaties opgeslagen liggen. </p>
 <p>De Registerbevraging bevat informatie over de plek waar data opgeslagen is, welke data binnen een databron relevant is en wat voor soort data het betreft. Daarnaast wordt een naam van het informatieproduct als geheel vastgelegd en informatie over welk profiel van de API bevraging (raadplegen) er gebruikt wordt. </p>
-<p>De RelevanteAnnotaties leggen de koppeling tussen Registerbevragingen en de in het IMOW voorkomende termen waarbij deze relevant zijn. Dit wordt zoals eerder beschreven het ‘semantisch koppelen’ genoemd en hierbij wordt gebruik gemaakt van waardelijsten Activiteitengroep en Thema die ook terugkomen in gepubliceerde omgevingswetbesluiten. Op deze manier kan bij het filteren in het omgevingsloket aanvullende informatie gegeven worden die een oriënterende initiatiefnemer relevant kan beschouwen. </p>
+<p>De RelevanteAnnotaties leggen de koppeling tussen Registerbevragingen en de in het IMOW voorkomende termen waarbij deze relevant zijn. Dit wordt zoals eerder beschreven het 'semantisch koppelen' genoemd en hierbij wordt gebruik gemaakt van waardelijsten Activiteitengroep en Thema die ook terugkomen in gepubliceerde omgevingswetbesluiten. Op deze manier kan bij het filteren in het omgevingsloket aanvullende informatie gegeven worden die een oriënterende initiatiefnemer relevant kan beschouwen. </p>
 <p>Het is aan de bronhouder van omgevingsinformatie om aan te geven welke annotaties relevant zijn. Deze verantwoordelijkheid wordt hier neergelegd omdat de bronhouder het best in kan schatten of de dataset geldig, betrouwbaar en dus bruikbaar is. Dit proces zal middels een user interface ingeregeld worden. Ook is het belangrijk om te weten dat initiatiefnemers veelal via een klik op de kaart zullen zoeken. Omgevingsinformatie zal dus over locatiegegevens moeten beschikken om hierbij gevonden te worden.</p>
 </section><section id="directe-relaties"><div class="header-wrapper"><h3 id="x5-2-directe-relaties"><bdi class="secno">5.2 </bdi>Directe relaties</h3><a class="self-link" href="#directe-relaties" aria-label="Permalink for Section 5.2"></a></div>
 <p>Naast semantische relaties zijn er ook een directe relaties mogelijk tussen IMOW objecten en CIMOI informatiebronnen. Deze optie bestaat alleen voor objecten die zowel qua naam als definitie gelijk zijn. Een voorbeeld hiervan is het ‘aandachtsgebied’ dat zowel in de waardelijst ExterneVeiligheidgroep in het IMOW als in het Register Externe Veiligheid voorkomt. Omdat op beide plekken exact hetzelfde gegeven beschreven wordt, bestaat er een hoge mate van zekerheid dat de informatie die in omgevingswetbesluiten die volgens het IMOW opgesteld worden aangevuld kunnen worden met gegevens uit het Register Externe Veiligheid.</p>
@@ -540,27 +543,45 @@ kunnen waarborgen.</p>
 <section id="cat" class="normative">
    <div class="header-wrapper"><h2 id="x6-gegevensdefinitie"><bdi class="secno">6. </bdi>Gegevensdefinitie</h2><a class="self-link" href="#cat" aria-label="Permalink for Section 6."></a></div>
    
-   <section id="EAID_EEE748DF_A348_4975_A5DA_5A17E7A071F9">
-      <div class="header-wrapper"><h3 id="x6-1-cim-oi-tbv-api-profiel-orienteren-overzicht"><bdi class="secno">6.1 </bdi>   CIM-OI (tbv API-profiel Orienteren) - overzicht</h3><a class="self-link" href="#EAID_EEE748DF_A348_4975_A5DA_5A17E7A071F9" aria-label="Permalink for Section 6.1"></a></div>
+   <section id="EAID_5E45DD80_A386_4120_BE8E_2309011CF7DD">
+      <div class="header-wrapper"><h3 id="x6-1-cim-oi-generiek-versimpeld-overzicht"><bdi class="secno">6.1 </bdi>   CIM-OI generiek versimpeld - overzicht</h3><a class="self-link" href="#EAID_5E45DD80_A386_4120_BE8E_2309011CF7DD" aria-label="Permalink for Section 6.1"></a></div>
       <div class="imageinfo overview">
-         <figure id="fig-cim-oi-tbv-api-profiel-orienteren"><img src="data/Images/EAID_EEE748DF_A348_4975_A5DA_5A17E7A071F9.png" usemap="#imagemap-EAID_EEE748DF_A348_4975_A5DA_5A17E7A071F9" alt="Diagram 
-                        
-                     "><figcaption><a class="self-link" href="#fig-cim-oi-tbv-api-profiel-orienteren">Figuur <bdi class="figno">4</bdi></a> <span class="fig-title">CIM-OI (tbv API-profiel Orienteren)</span></figcaption>
-         </figure><map name="imagemap-EAID_EEE748DF_A348_4975_A5DA_5A17E7A071F9"><area shape="rect" alt="DCAT-Concept" coords="23,567,194,707" href="#global_class_CIMOI_DCATConcept"><area shape="rect" alt="Waardetype" coords="1520,365,1681,474" href="#global_class_CIMOI_Waardetype"><area shape="rect" alt="Serviceprofiel" coords="856,249,992,358" href="#global_class_CIMOI_Serviceprofiel"><area shape="rect" alt="Norm" coords="1520,249,1681,358" href="#global_class_CIMOI_Norm"><area shape="rect" alt="Identificatie" coords="1637,597,1871,707" href="#global_class_CIMOI_Identificatie"><area shape="rect" alt="Nauwkeurigheidsklasse" coords="1093,597,1255,707" href="#global_class_CIMOI_Nauwkeurigheidsklasse"><area shape="rect" alt="Waardegroep" coords="1093,481,1255,590" href="#global_class_CIMOI_Waardegroep"><area shape="rect" alt="Grootheid" coords="1093,365,1255,474" href="#global_class_CIMOI_Grootheid"><area shape="rect" alt="Toepassingsbereik" coords="1093,249,1255,358" href="#global_class_CIMOI_Toepassingsbereik"><area shape="rect" alt="Doelgroep" coords="1093,133,1255,242" href="#global_class_CIMOI_Doelgroep"><area shape="rect" alt="Eenheid" coords="1093,16,1255,126" href="#global_class_CIMOI_Eenheid"><area shape="rect" alt="Ontologie" coords="415,18,552,127" href="#global_class_CIMOI_Ontologie"><area shape="rect" alt="Eigenschap" coords="323,463,640,727" href="#global_class_CIMOI_Eigenschap"><area shape="rect" alt="Subject" coords="23,249,160,358" href="#global_class_CIMOI_Subject"><area shape="rect" alt="Waardebereik" coords="856,541,992,651" href="#global_class_CIMOI_Waardebereik"><area shape="rect" alt="Waarde" coords="407,820,544,929" href="#global_class_CIMOI_Waarde"><area shape="rect" alt="Distributie" coords="857,18,994,127" href="#global_class_CIMOI_Distributie"><area shape="rect" alt="Gegevensklasse" coords="415,249,552,358" href="#global_class_CIMOI_Gegevensklasse"></map></div>
+         <figure id="fig-cim-oi-generiek-versimpeld"><img src="data/Images/EAID_5E45DD80_A386_4120_BE8E_2309011CF7DD.png" usemap="#imagemap-EAID_5E45DD80_A386_4120_BE8E_2309011CF7DD" alt="Diagram: Dit diagram geeft een overzicht van de samenhang tussen DSO en de registerbevraging richting het informatieproduct. De semantische relaties staan in de grijze blokken uitgebeeld, de directe in het groene. Ter illustratie is ook een link met toepasbare regels in geel gemaakt wanneer het soort informatie voor beide doeleinden geschikt is. Het groene objecttype Gebiedsaanwijzingstype) is een object vanuit de regeling die op de kaart geannoteerd is. De oranje objecten zijn omgevingsinformatie-objecten. De grijze objecten betreffen de bijbehorende waardelijsten die vanuit het IMOW gelden."><figcaption><a class="self-link" href="#fig-cim-oi-generiek-versimpeld">Figuur <bdi class="figno">4</bdi></a> <span class="fig-title">CIM-OI generiek versimpeld</span></figcaption>
+         </figure><map name="imagemap-EAID_5E45DD80_A386_4120_BE8E_2309011CF7DD"><area shape="rect" alt="Omgevingsaspect" coords="543,14,665,79" href="#global_class_CIMOI_Omgevingsaspect"><area shape="rect" alt="Registerbevraging" coords="975,148,1151,218" href="#global_class_CIMOI_Registerbevraging"><area shape="rect" alt="RelevanteAnnotaties" coords="456,148,777,216" href="#global_class_CIMOI_RelevanteAnnotaties"><area shape="rect" alt="Uitvoeringsregel" coords="1382,148,1505,218" href="#global_class_CIMOI_Uitvoeringsregel"></map><p>
+            
+            </p><p>Dit diagram geeft een overzicht van de samenhang tussen DSO en de registerbevraging
+               richting het informatieproduct. De semantische relaties staan in de grijze blokken
+               uitgebeeld, de directe in het groene. Ter illustratie is ook een link met toepasbare
+               regels in geel gemaakt wanneer het soort informatie voor beide doeleinden geschikt
+               is. </p>
+            
+            <p></p>
+            
+            <p>Het groene objecttype Gebiedsaanwijzingstype) is een object vanuit de regeling die
+               op de kaart geannoteerd is. De oranje objecten zijn omgevingsinformatie-objecten.
+               De grijze objecten betreffen de bijbehorende waardelijsten die vanuit het IMOW gelden.</p>
+            
+            <p></p>
+            
+            <p></p>
+            <p></p>
+      </div>
    </section>
-   <section id="EAID_FF142FC0_A513_4c5d_837B_2B93FD770138">
-      <div class="header-wrapper"><h3 id="x6-2-cim-oi-overzicht"><bdi class="secno">6.2 </bdi>   CIM-OI - overzicht</h3><a class="self-link" href="#EAID_FF142FC0_A513_4c5d_837B_2B93FD770138" aria-label="Permalink for Section 6.2"></a></div>
+   <section id="EAID_F2277CE8_0060_42de_B2AC_E6CC1703EC0C">
+      <div class="header-wrapper"><h3 id="x6-2-cim-oi-generiek-overzicht"><bdi class="secno">6.2 </bdi>   CIM-OI generiek -overzicht</h3><a class="self-link" href="#EAID_F2277CE8_0060_42de_B2AC_E6CC1703EC0C" aria-label="Permalink for Section 6.2"></a></div>
       <div class="imageinfo overview">
-         <figure id="fig-cim-oi"><img src="data/Images/EAID_FF142FC0_A513_4c5d_837B_2B93FD770138.png" usemap="#imagemap-EAID_FF142FC0_A513_4c5d_837B_2B93FD770138" alt="Diagram 
-                        
-                     "><figcaption><a class="self-link" href="#fig-cim-oi">Figuur <bdi class="figno">5</bdi></a> <span class="fig-title">CIM-OI</span></figcaption>
-         </figure><map name="imagemap-EAID_FF142FC0_A513_4c5d_837B_2B93FD770138"><area shape="rect" alt="Kwaliteiteigenschap" coords="83,525,220,634" href="#global_class_CIMOI_Kwaliteiteigenschap"><area shape="rect" alt="Dekkingsgebied" coords="40,48,176,157" href="#global_class_CIMOI_Dekkingsgebied"><area shape="rect" alt="Subject" coords="241,526,377,635" href="#global_class_CIMOI_Subject"><area shape="rect" alt="Verstrekker" coords="327,301,463,410" href="#global_class_CIMOI_Verstrekker"><area shape="rect" alt="Waardebereik" coords="675,979,812,1088" href="#global_class_CIMOI_Waardebereik"><area shape="rect" alt="Catalogus" coords="41,302,178,411" href="#global_class_CIMOI_Catalogus"><area shape="rect" alt="Eigenschap" coords="675,761,812,871" href="#global_class_CIMOI_Eigenschap"><area shape="rect" alt="Gegevensklasse" coords="675,529,812,638" href="#global_class_CIMOI_Gegevensklasse"><area shape="rect" alt="Ontologie" coords="675,317,812,426" href="#global_class_CIMOI_Ontologie"><area shape="rect" alt="Distributie" coords="677,48,813,157" href="#global_class_CIMOI_Distributie"><area shape="rect" alt="Dataset" coords="362,48,499,157" href="#global_class_CIMOI_Dataset"><area shape="rect" alt="Waarde" coords="241,925,377,1035" href="#global_class_CIMOI_Waarde"></map></div>
+         <figure id="fig-cim-oi-generiek-overzicht"><img src="data/Images/EAID_F2277CE8_0060_42de_B2AC_E6CC1703EC0C.png" usemap="#imagemap-EAID_F2277CE8_0060_42de_B2AC_E6CC1703EC0C" alt="Diagram: CIM-OI generiek -overzicht"><figcaption><a class="self-link" href="#fig-cim-oi-generiek-overzicht">Figuur <bdi class="figno">5</bdi></a> <span class="fig-title">CIM-OI generiek -overzicht</span></figcaption>
+         </figure><map name="imagemap-EAID_F2277CE8_0060_42de_B2AC_E6CC1703EC0C"><area shape="rect" alt="Omgevingsaspect" coords="809,14,967,135" href="#global_class_CIMOI_Omgevingsaspect"><area shape="rect" alt="Registerbevraging" coords="1008,223,1198,380" href="#global_class_CIMOI_Registerbevraging"><area shape="rect" alt="RelevanteAnnotaties" coords="483,224,817,346" href="#global_class_CIMOI_RelevanteAnnotaties"><area shape="rect" alt="Uitvoeringsregel" coords="1372,243,1495,339" href="#global_class_CIMOI_Uitvoeringsregel"></map><p>
+            
+            </p><p></p>
+            <p></p>
+      </div>
    </section>
    <section id="objecttypen">
       <div class="header-wrapper"><h3 id="x6-3-objecttypen"><bdi class="secno">6.3 </bdi>Objecttypen   </h3><a class="self-link" href="#objecttypen" aria-label="Permalink for Section 6.3"></a></div>
       
-      <section id="global_class_CIMOI_Kwaliteiteigenschap">
-         <div class="header-wrapper"><h4 id="x6-3-1-kwaliteiteigenschap"><bdi class="secno">6.3.1 </bdi>   Kwaliteiteigenschap</h4><a class="self-link" href="#global_class_CIMOI_Kwaliteiteigenschap" aria-label="Permalink for Section 6.3.1"></a></div>
+      <section id="global_class_CIMOI_Registerbevraging">
+         <div class="header-wrapper"><h4 id="x6-3-1-registerbevraging"><bdi class="secno">6.3.1 </bdi>   Registerbevraging</h4><a class="self-link" href="#global_class_CIMOI_Registerbevraging" aria-label="Permalink for Section 6.3.1"></a></div>
          
          <table style="width: 100%;" class="simple">
             <colgroup style="width: 30%;"></colgroup>
@@ -568,55 +589,28 @@ kunnen waarborgen.</p>
             <tbody>
                <tr>
                   <th>Naam</th>
-                  <td>Kwaliteiteigenschap</td>
+                  <td>Registerbevraging</td>
                </tr>
                <tr>
-                  <th>Indicatie abstract object</th>
-                  <td>Nee</td>
-               </tr>
-            </tbody>
-         </table>
-         
-         <div class="header-wrapper"><h5 id="overzicht-relaties">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Kwaliteiteigenschap" aria-label="Permalink for this Section"></a></div>
-         
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 50%;"></colgroup>
-            <colgroup style="width: 50%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Rol naam met kardinaliteiten</th>
                   <th>Definitie</th>
-               </tr>
-               <tr>
                   <td>
                      
-                     <a class="link" href="#global_class_CIMOI_Dataset">Dataset</a>
                      
-                     [ 1 ]
+                     <p>Object waar alle gegevens die van belang zijn om de een informatieproduct te bevragen
+                        opgeslagen zijn.</p>
                      
-                     <a class="link" href="#detail_association_CIMOI_Dataset_definieert">definieert</a>
-                     
-                     Kwaliteiteigenschap
-                     [ 0 .. * ]
                      </td>
-                  <td></td>
                </tr>
-            </tbody>
-         </table>
-         
-         </section>
-      
-      <section id="global_class_CIMOI_Verstrekker">
-         <div class="header-wrapper"><h4 id="x6-3-2-verstrekker"><bdi class="secno">6.3.2 </bdi>   Verstrekker</h4><a class="self-link" href="#global_class_CIMOI_Verstrekker" aria-label="Permalink for Section 6.3.2"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
                <tr>
-                  <th>Naam</th>
-                  <td>Verstrekker</td>
+                  <th>Toelichting</th>
+                  <td>
+                     
+                     
+                     <p>Registerbevraging middels een API . Hierbij worden de parameters opgeslagen die nodig
+                        zijn om omgevingsinformatie door te leveren aan de DSO viewer of, indien nodig, een
+                        toepasbare regel.</p>
+                     
+                     </td>
                </tr>
                <tr>
                   <th>Indicatie abstract object</th>
@@ -625,69 +619,7 @@ kunnen waarborgen.</p>
             </tbody>
          </table>
          
-         <div class="header-wrapper"><h5 id="overzicht-relaties-0">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Verstrekker" aria-label="Permalink for this Section"></a></div>
-         
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 50%;"></colgroup>
-            <colgroup style="width: 50%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Rol naam met kardinaliteiten</th>
-                  <th>Definitie</th>
-               </tr>
-               <tr>
-                  <td>
-                     Verstrekker
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Verstrekker_publiceert">publiceert</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_Catalogus">Catalogus</a>
-                     
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     
-                     <a class="link" href="#global_class_CIMOI_Dataset">Dataset</a>
-                     
-                     [ 0 .. * ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Dataset_wordtVerstrektDoor">wordt verstrekt door</a>
-                     
-                     Verstrekker
-                     [ 1 ]
-                     </td>
-                  <td></td>
-               </tr>
-            </tbody>
-         </table>
-         
-         </section>
-      
-      <section id="global_class_CIMOI_Gegevensklasse">
-         <div class="header-wrapper"><h4 id="x6-3-3-gegevensklasse"><bdi class="secno">6.3.3 </bdi>   Gegevensklasse</h4><a class="self-link" href="#global_class_CIMOI_Gegevensklasse" aria-label="Permalink for Section 6.3.3"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Gegevensklasse</td>
-               </tr>
-               <tr>
-                  <th>Indicatie abstract object</th>
-                  <td>Nee</td>
-               </tr>
-            </tbody>
-         </table>
-         
-         <div class="header-wrapper"><h5 id="overzicht-attributen">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMOI_Gegevensklasse" aria-label="Permalink for this Section"></a></div>
+         <div class="header-wrapper"><h5 id="overzicht-attributen">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMOI_Registerbevraging" aria-label="Permalink for this Section"></a></div>
          
          <table style="width: 100%;" class="simple">
             <colgroup style="width: 30%;"></colgroup>
@@ -703,19 +635,65 @@ kunnen waarborgen.</p>
                </tr>
                <tr>
                   <td>
-                     <a class="link" href="#detail_attribute_CIMOI_Gegevensklasse_id">id</a>
+                     <a class="link" href="#detail_attribute_CIMOI_Registerbevraging_profile">profile</a>
                      </td>
-                  <td></td>
                   <td>
-                     <a class="link" href="#global_class_CIMOI_Identificatie">Identificatie</a>
+                     
+                     <p>Legt vast welk API profiel er gebruikt wordt. Keuze uit ‘Oriënteren’ en ‘Aanvragen’.
+                        Voor IMOW relaties wordt enkel het ‘Oriënteren’ profiel gebruikt.</p>
+                     </td>
+                  <td>
+                     <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Integer</a>
                      </td>
                   <td>1</td>
                </tr>
+               <tr>
+                  <td>
+                     <a class="link" href="#detail_attribute_CIMOI_Registerbevraging_key">key</a>
+                     </td>
+                  <td>
+                     
+                     <p>Geeft aan welke waarde uit het register opgevraagd moet worden. Moet dus een gegeven
+                        bevatten dat rechtstreeks overeenkomt met een gegeven uit de informatiebron.</p>
+                     </td>
+                  <td>
+                     <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                     </td>
+                  <td>1</td>
+               </tr>
+               <tr>
+                  <td>
+                     <a class="link" href="#detail_attribute_CIMOI_Registerbevraging_type">type</a>
+                     </td>
+                  <td>
+                     
+                     <p>Legt vast wat voor soort informatie opgehaald wordt en hoe deze weergegeven dient
+                        te worden. Kan bestaan uit een Geometrie of verrijkte Geometrie met gekoppelde weer
+                        te geven waarde. </p>
+                     </td>
+                  <td>
+                     <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                     </td>
+                  <td>1</td>
+               </tr>
+               <tr>
+                  <td>
+                     <a class="link" href="#detail_attribute_CIMOI_Registerbevraging_value">value</a>
+                     </td>
+                  <td>
+                     
+                     <p>Range waarbinnen de bevraging van het register moet plaatsvinden. </p>
+                     </td>
+                  <td>
+                     <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                     </td>
+                  <td>0 .. 1</td>
+               </tr>
             </tbody>
          </table>
          
          
-         <div class="header-wrapper"><h5 id="overzicht-relaties-1">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Gegevensklasse" aria-label="Permalink for this Section"></a></div>
+         <div class="header-wrapper"><h5 id="overzicht-relaties">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Registerbevraging" aria-label="Permalink for this Section"></a></div>
          
          
          <table style="width: 100%;" class="simple">
@@ -728,319 +706,53 @@ kunnen waarborgen.</p>
                </tr>
                <tr>
                   <td>
-                     Gegevensklasse
-                     [ 0 .. * ]
                      
-                     <a class="link" href="#detail_association_CIMOI_Gegevensklasse_betreft">betreft</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_Subject">Subject</a>
-                     
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     Gegevensklasse
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Gegevensklasse_heeft">heeft</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_Eigenschap">Eigenschap</a>
-                     
-                     [ 1 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     
-                     <a class="link" href="#global_class_CIMOI_Ontologie">Ontologie</a>
-                     
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Ontologie_beschrijftSamenhang">beschrijft samenhang</a>
-                     
-                     Gegevensklasse
-                     [ 1 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     
-                     <a class="link" href="#global_class_CIMOI_Serviceprofiel">Serviceprofiel</a>
-                     
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Serviceprofiel_definieertZoekingang">definieert zoekingang</a>
-                     
-                     Gegevensklasse
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-            </tbody>
-         </table>
-         
-         </section>
-      
-      <section id="global_class_CIMOI_Dataset">
-         <div class="header-wrapper"><h4 id="x6-3-4-dataset"><bdi class="secno">6.3.4 </bdi>   Dataset</h4><a class="self-link" href="#global_class_CIMOI_Dataset" aria-label="Permalink for Section 6.3.4"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Dataset</td>
-               </tr>
-               <tr>
-                  <th>Indicatie abstract object</th>
-                  <td>Nee</td>
-               </tr>
-            </tbody>
-         </table>
-         
-         <div class="header-wrapper"><h5 id="overzicht-relaties-2">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Dataset" aria-label="Permalink for this Section"></a></div>
-         
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 50%;"></colgroup>
-            <colgroup style="width: 50%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Rol naam met kardinaliteiten</th>
-                  <th>Definitie</th>
-               </tr>
-               <tr>
-                  <td>
-                     Dataset
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Dataset_definieert">definieert</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_Kwaliteiteigenschap">Kwaliteiteigenschap</a>
-                     
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     Dataset
-                     [ 0 .. * ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Dataset_wordtVerstrektDoor">wordt verstrekt door</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_Verstrekker">Verstrekker</a>
-                     
-                     [ 1 ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     Dataset
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Dataset_heeft">heeft</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_Distributie">Distributie</a>
-                     
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     Dataset
-                     [ 0 .. * ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Dataset_bestrijkt">bestrijkt</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_Dekkingsgebied">Dekkingsgebied</a>
+                     <a class="link" href="#global_class_CIMOI_Uitvoeringsregel">Uitvoeringsregel</a>
                      
                      [ 0 .. 1 ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
                      
-                     <a class="link" href="#global_class_CIMOI_Catalogus">Catalogus</a>
+                     <a class="link" href="#detail_association_CIMOI_Uitvoeringsregel_bevraagt">bevraagt: bevraagt</a>
                      
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Catalogus_vermeldt">vermeldt</a>
-                     
-                     Dataset
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-            </tbody>
-         </table>
-         
-         </section>
-      
-      <section id="global_class_CIMOI_Ontologie">
-         <div class="header-wrapper"><h4 id="x6-3-5-ontologie"><bdi class="secno">6.3.5 </bdi>   Ontologie</h4><a class="self-link" href="#global_class_CIMOI_Ontologie" aria-label="Permalink for Section 6.3.5"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Ontologie</td>
-               </tr>
-               <tr>
-                  <th>Indicatie abstract object</th>
-                  <td>Nee</td>
-               </tr>
-            </tbody>
-         </table>
-         
-         <div class="header-wrapper"><h5 id="overzicht-relaties-3">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Ontologie" aria-label="Permalink for this Section"></a></div>
-         
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 50%;"></colgroup>
-            <colgroup style="width: 50%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Rol naam met kardinaliteiten</th>
-                  <th>Definitie</th>
-               </tr>
-               <tr>
-                  <td>
-                     Ontologie
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Ontologie_beschrijftSamenhang">beschrijft samenhang</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_Gegevensklasse">Gegevensklasse</a>
-                     
+                     Registerbevraging
                      [ 1 .. * ]
                      </td>
                   <td></td>
                </tr>
                <tr>
                   <td>
-                     Ontologie
-                     [ 0 .. * ]
                      
-                     <a class="link" href="#detail_association_CIMOI_Ontologie_betreft">betreft</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_Subject">Subject</a>
-                     
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     
-                     <a class="link" href="#global_class_CIMOI_Distributie">Distributie</a>
+                     <a class="link" href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a>
                      
                      [ 1 ]
                      
-                     <a class="link" href="#detail_association_CIMOI_Distributie_wordtUitgedruktIn">wordt uitgedrukt in</a>
+                     <a class="link" href="#detail_association_CIMOI_RelevanteAnnotaties_bevraging">bevraagt: bevraging</a>
                      
-                     Ontologie
-                     [ 0 .. 1 ]
-                     </td>
-                  <td></td>
-               </tr>
-            </tbody>
-         </table>
-         
-         </section>
-      
-      <section id="global_class_CIMOI_Serviceprofiel">
-         <div class="header-wrapper"><h4 id="x6-3-6-serviceprofiel"><bdi class="secno">6.3.6 </bdi>   Serviceprofiel</h4><a class="self-link" href="#global_class_CIMOI_Serviceprofiel" aria-label="Permalink for Section 6.3.6"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Serviceprofiel</td>
-               </tr>
-               <tr>
-                  <th>Indicatie abstract object</th>
-                  <td>Nee</td>
-               </tr>
-            </tbody>
-         </table>
-         
-         <div class="header-wrapper"><h5 id="overzicht-relaties-4">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Serviceprofiel" aria-label="Permalink for this Section"></a></div>
-         
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 50%;"></colgroup>
-            <colgroup style="width: 50%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Rol naam met kardinaliteiten</th>
-                  <th>Definitie</th>
-               </tr>
-               <tr>
-                  <td>
-                     Serviceprofiel
+                     Registerbevraging
                      [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Serviceprofiel_definieertProjectie">definieert projectie</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_Eigenschap">Eigenschap</a>
-                     
-                     [ 0 .. * ]
                      </td>
                   <td></td>
                </tr>
                <tr>
                   <td>
-                     Serviceprofiel
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Serviceprofiel_definieertZoekingang">definieert zoekingang</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_Gegevensklasse">Gegevensklasse</a>
-                     
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     Serviceprofiel
+                     Registerbevraging
                      is specialisatie van
                      
-                     <a class="link" href="#global_class_CIMOI_Distributie">Distributie</a>
+                     <a class="link" href="#global_class_CIMOI_Omgevingsaspect">Omgevingsaspect</a>
                      
                      </td>
-                  <td></td>
+                  <td>
+                     
+                     <p>Aspect van omgevingsinformatie dat de relatie vormt tussen extern- en intern opgeslagen
+                        informatie.</p>
+                     </td>
                </tr>
             </tbody>
          </table>
          
          </section>
       
-      <section id="global_class_CIMOI_Dekkingsgebied">
-         <div class="header-wrapper"><h4 id="x6-3-7-dekkingsgebied"><bdi class="secno">6.3.7 </bdi>   Dekkingsgebied</h4><a class="self-link" href="#global_class_CIMOI_Dekkingsgebied" aria-label="Permalink for Section 6.3.7"></a></div>
+      <section id="global_class_CIMOI_Uitvoeringsregel">
+         <div class="header-wrapper"><h4 id="x6-3-2-uitvoeringsregel"><bdi class="secno">6.3.2 </bdi>   Uitvoeringsregel</h4><a class="self-link" href="#global_class_CIMOI_Uitvoeringsregel" aria-label="Permalink for Section 6.3.2"></a></div>
          
          <table style="width: 100%;" class="simple">
             <colgroup style="width: 30%;"></colgroup>
@@ -1048,7 +760,44 @@ kunnen waarborgen.</p>
             <tbody>
                <tr>
                   <th>Naam</th>
-                  <td>Dekkingsgebied</td>
+                  <td>Uitvoeringsregel</td>
+               </tr>
+               <tr>
+                  <th>Definitie</th>
+                  <td>
+                     
+                     
+                     <p>De uitvoeringsregels bepalen hoe de benodigde gegevens (input data) wordt uitgevraagd.
+                        Dit kan op verschillende manieren gebeuren zoals een vraag aan een initiatiefnemer
+                        of een bevraging van een registratie</p>
+                     
+                     </td>
+               </tr>
+               <tr>
+                  <th>Herkomst definitie</th>
+                  <td>
+                     IMTR
+                     </td>
+               </tr>
+               <tr>
+                  <th>Toelichting</th>
+                  <td>
+                     
+                     
+                     <p>Bij het doen van een melding of aanvraag kan het voorkomen dat gegevens uit een extern
+                        register meegenomen moeten worden voor de beoordeling. 
+                        Om de juiste gegevens in het juiste formaat aan te bieden kan middels een registerbevraging
+                        exact aangegeven worden welke gegevens van belang zijn. Deze gegevens kunnen opgenomen
+                        worden in de vragenlijst door middels van de registervelden en hierbij geldende definities
+                        die in het bijbehorend metadatadomein opgeslagen zijn. </p>
+                     
+                     <p>Bijvoorbeeld; “volgens onze gegevens bevindt u zich in een aandachtsgebied, om de
+                        specifieke bijbehorende vragen te beantwoorden kies ‘ja’”.</p>
+                     
+                     <p>De juridische bron van een activiteit of werkzaamheid zijn altijd de regeling(en)
+                        waar de definitie van de Activiteit in is benoemd.</p>
+                     
+                     </td>
                </tr>
                <tr>
                   <th>Indicatie abstract object</th>
@@ -1057,7 +806,7 @@ kunnen waarborgen.</p>
             </tbody>
          </table>
          
-         <div class="header-wrapper"><h5 id="overzicht-relaties-5">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Dekkingsgebied" aria-label="Permalink for this Section"></a></div>
+         <div class="header-wrapper"><h5 id="overzicht-relaties-0">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Uitvoeringsregel" aria-label="Permalink for this Section"></a></div>
          
          
          <table style="width: 100%;" class="simple">
@@ -1070,29 +819,43 @@ kunnen waarborgen.</p>
                </tr>
                <tr>
                   <td>
+                     Uitvoeringsregel
+                     [ 0 .. 1 ]
                      
-                     <a class="link" href="#global_class_CIMOI_Dataset">Dataset</a>
+                     <a class="link" href="#detail_association_CIMOI_Uitvoeringsregel_bevraging">bevraging: bevraging</a>
+                     
+                     
+                     <a class="external-link" href="https://geonovum.github.io/dso-cim-oi/#RegisterbevragingPlaatsgebondenRisico">Registerbevraging­Plaatsgebonden­Risico</a>
                      
                      [ 0 .. * ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Dataset_bestrijkt">bestrijkt</a>
-                     
-                     Dekkingsgebied
-                     [ 0 .. 1 ]
                      </td>
                   <td></td>
                </tr>
                <tr>
                   <td>
+                     Uitvoeringsregel
+                     [ 0 .. 1 ]
                      
-                     <a class="link" href="#global_class_CIMOI_Catalogus">Catalogus</a>
+                     <a class="link" href="#detail_association_CIMOI_Uitvoeringsregel_bevraagt">bevraagt: bevraagt</a>
+                     
+                     
+                     <a class="link" href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a>
+                     
+                     [ 1 .. * ]
+                     </td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>
+                     Uitvoeringsregel
+                     [ 0 .. 1 ]
+                     
+                     <a class="link" href="#detail_association_CIMOI_Uitvoeringsregel_registerbevraging">registerbevraging: registerbevraging</a>
+                     
+                     
+                     <a class="external-link" href="https://geonovum.github.io/dso-cim-oi/#RegisterbevragingAandachtsgebiedEV">Registerbevraging­Aandachtsgebied­EV</a>
                      
                      [ 0 .. * ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Catalogus_bestrijkt">bestrijkt</a>
-                     
-                     Dekkingsgebied
-                     [ 0 .. 1 ]
                      </td>
                   <td></td>
                </tr>
@@ -1101,8 +864,8 @@ kunnen waarborgen.</p>
          
          </section>
       
-      <section id="global_class_CIMOI_DCATConcept">
-         <div class="header-wrapper"><h4 id="x6-3-8-dcat-concept"><bdi class="secno">6.3.8 </bdi>   DCAT-Concept</h4><a class="self-link" href="#global_class_CIMOI_DCATConcept" aria-label="Permalink for Section 6.3.8"></a></div>
+      <section id="global_class_CIMOI_RelevanteAnnotaties">
+         <div class="header-wrapper"><h4 id="x6-3-3-relevante-annotaties"><bdi class="secno">6.3.3 </bdi>   Relevante­Annotaties</h4><a class="self-link" href="#global_class_CIMOI_RelevanteAnnotaties" aria-label="Permalink for Section 6.3.3"></a></div>
          
          <table style="width: 100%;" class="simple">
             <colgroup style="width: 30%;"></colgroup>
@@ -1110,15 +873,26 @@ kunnen waarborgen.</p>
             <tbody>
                <tr>
                   <th>Naam</th>
-                  <td>DCAT-Concept</td>
+                  <td>Relevante­Annotaties</td>
                </tr>
                <tr>
                   <th>Definitie</th>
                   <td>
                      
                      
-                     <p>TODO this class is a copy from the original class in DCAT. When DCAT has been added
-                        to the CIM remove this duplicate.</p>
+                     <p>Alle annotaties waarbij gegevens uit een informatieproduct een waardevolle bijdrage
+                        kunnen leveren bij de besluitvorming van een initiatiefnemer.</p>
+                     
+                     </td>
+               </tr>
+               <tr>
+                  <th>Toelichting</th>
+                  <td>
+                     
+                     
+                     <p>Object waarin alle IMOW annotaties die een relevante relatie hebben tot het informatieproduct
+                        vastgelegd worden zodat de DSO viewer deze informatie kan relateren en ophalen bij
+                        een zoekopdracht. </p>
                      
                      </td>
                </tr>
@@ -1129,7 +903,7 @@ kunnen waarborgen.</p>
             </tbody>
          </table>
          
-         <div class="header-wrapper"><h5 id="overzicht-attributen-0">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMOI_DCATConcept" aria-label="Permalink for this Section"></a></div>
+         <div class="header-wrapper"><h5 id="overzicht-attributen-0">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMOI_RelevanteAnnotaties" aria-label="Permalink for this Section"></a></div>
          
          <table style="width: 100%;" class="simple">
             <colgroup style="width: 30%;"></colgroup>
@@ -1145,39 +919,35 @@ kunnen waarborgen.</p>
                </tr>
                <tr>
                   <td>
-                     <a class="link" href="#detail_attribute_CIMOI_DCATConcept_definitie">definitie</a>
+                     <a class="link" href="#detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstActiviteiten">waardelijst activiteiten</a>
                      </td>
-                  <td></td>
                   <td>
-                     <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                     
+                     <p>Een activiteit plus een categorie, of groep, waaronder een activiteit valt. </p>
                      </td>
-                  <td>1</td>
+                  <td>
+                     <a class="external-link" href="https://geonovum.github.io/dso-cim-ow/#global_class_RegelsOpLocatie_Activiteitengroep">Activiteitengroep</a>
+                     </td>
+                  <td>0 .. *</td>
                </tr>
                <tr>
                   <td>
-                     <a class="link" href="#detail_attribute_CIMOI_DCATConcept_term">term</a>
+                     <a class="link" href="#detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstThema">waardelijst Thema</a>
                      </td>
-                  <td></td>
                   <td>
-                     <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                     
+                     <p>Kernachtige weergave van de grondgedachte achter een tekstdeel. </p>
                      </td>
-                  <td>1</td>
-               </tr>
-               <tr>
                   <td>
-                     <a class="link" href="#detail_attribute_CIMOI_DCATConcept_type">type</a>
+                     <a class="external-link" href="https://geonovum.github.io/dso-cim-ow/#global_class_Regel_Thema">Thema</a>
                      </td>
-                  <td></td>
-                  <td>
-                     <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                     </td>
-                  <td>1</td>
+                  <td>0 .. *</td>
                </tr>
             </tbody>
          </table>
          
          
-         <div class="header-wrapper"><h5 id="overzicht-relaties-6">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_DCATConcept" aria-label="Permalink for this Section"></a></div>
+         <div class="header-wrapper"><h5 id="overzicht-relaties-1">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_RelevanteAnnotaties" aria-label="Permalink for this Section"></a></div>
          
          
          <table style="width: 100%;" class="simple">
@@ -1190,123 +960,13 @@ kunnen waarborgen.</p>
                </tr>
                <tr>
                   <td>
-                     
-                     <a class="link" href="#global_class_CIMOI_Subject">Subject</a>
-                     
-                     [ 0 .. * ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Subject_verwijstNaar">verwijst naar</a>
-                     
-                     DCAT-Concept
+                     Relevante­Annotaties
                      [ 1 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-            </tbody>
-         </table>
-         
-         </section>
-      
-      <section id="global_class_CIMOI_Waarde">
-         <div class="header-wrapper"><h4 id="x6-3-9-waarde"><bdi class="secno">6.3.9 </bdi>   Waarde</h4><a class="self-link" href="#global_class_CIMOI_Waarde" aria-label="Permalink for Section 6.3.9"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Waarde</td>
-               </tr>
-               <tr>
-                  <th>Indicatie abstract object</th>
-                  <td>Nee</td>
-               </tr>
-            </tbody>
-         </table>
-         
-         <div class="header-wrapper"><h5 id="overzicht-relaties-7">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Waarde" aria-label="Permalink for this Section"></a></div>
-         
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 50%;"></colgroup>
-            <colgroup style="width: 50%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Rol naam met kardinaliteiten</th>
-                  <th>Definitie</th>
-               </tr>
-               <tr>
-                  <td>
-                     Waarde
-                     [ 1 ]
                      
-                     <a class="link" href="#detail_association_CIMOI_Waarde_isEen">is een</a>
+                     <a class="link" href="#detail_association_CIMOI_RelevanteAnnotaties_overeenkomendeActiviteit">overeenkomende activiteit</a>
                      
                      
-                     <a class="external-link" href="https://geonovum.github.io/dso-cim-tr/#Invoergegeven">Invoergegeven</a>
-                     
-                     [ 1 ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     
-                     <a class="link" href="#global_class_CIMOI_Eigenschap">Eigenschap</a>
-                     
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Eigenschap_heeft">heeft</a>
-                     
-                     Waarde
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-            </tbody>
-         </table>
-         
-         </section>
-      
-      <section id="global_class_CIMOI_Distributie">
-         <div class="header-wrapper"><h4 id="x6-3-10-distributie"><bdi class="secno">6.3.10 </bdi>   Distributie</h4><a class="self-link" href="#global_class_CIMOI_Distributie" aria-label="Permalink for Section 6.3.10"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Distributie</td>
-               </tr>
-               <tr>
-                  <th>Indicatie abstract object</th>
-                  <td>Nee</td>
-               </tr>
-            </tbody>
-         </table>
-         
-         <div class="header-wrapper"><h5 id="overzicht-relaties-8">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Distributie" aria-label="Permalink for this Section"></a></div>
-         
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 50%;"></colgroup>
-            <colgroup style="width: 50%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Rol naam met kardinaliteiten</th>
-                  <th>Definitie</th>
-               </tr>
-               <tr>
-                  <td>
-                     Distributie
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Distributie_wordtUitgedruktIn">wordt uitgedrukt in</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_Ontologie">Ontologie</a>
+                     <a class="external-link" href="https://geonovum.github.io/dso-cim-ow/#global_class_RegelsOpLocatie_Activiteit">Activiteit</a>
                      
                      [ 0 .. 1 ]
                      </td>
@@ -1314,61 +974,13 @@ kunnen waarborgen.</p>
                </tr>
                <tr>
                   <td>
-                     
-                     <a class="link" href="#global_class_CIMOI_Dataset">Dataset</a>
-                     
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Dataset_heeft">heeft</a>
-                     
-                     Distributie
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-            </tbody>
-         </table>
-         
-         </section>
-      
-      <section id="global_class_CIMOI_Catalogus">
-         <div class="header-wrapper"><h4 id="x6-3-11-catalogus"><bdi class="secno">6.3.11 </bdi>   Catalogus</h4><a class="self-link" href="#global_class_CIMOI_Catalogus" aria-label="Permalink for Section 6.3.11"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Catalogus</td>
-               </tr>
-               <tr>
-                  <th>Indicatie abstract object</th>
-                  <td>Nee</td>
-               </tr>
-            </tbody>
-         </table>
-         
-         <div class="header-wrapper"><h5 id="overzicht-relaties-9">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Catalogus" aria-label="Permalink for this Section"></a></div>
-         
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 50%;"></colgroup>
-            <colgroup style="width: 50%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Rol naam met kardinaliteiten</th>
-                  <th>Definitie</th>
-               </tr>
-               <tr>
-                  <td>
-                     Catalogus
+                     Relevante­Annotaties
                      [ 0 .. * ]
                      
-                     <a class="link" href="#detail_association_CIMOI_Catalogus_bestrijkt">bestrijkt</a>
+                     <a class="link" href="#detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMetGeluid">heeft overeenkomst met Geluid</a>
                      
                      
-                     <a class="link" href="#global_class_CIMOI_Dekkingsgebied">Dekkingsgebied</a>
+                     <a class="external-link" href="https://geonovum.github.io/dso-cim-ow/#global_class_GebiedsAanwijzing_Geluid">Geluid</a>
                      
                      [ 0 .. 1 ]
                      </td>
@@ -1376,39 +988,67 @@ kunnen waarborgen.</p>
                </tr>
                <tr>
                   <td>
-                     Catalogus
+                     Relevante­Annotaties
                      [ 1 ]
                      
-                     <a class="link" href="#detail_association_CIMOI_Catalogus_vermeldt">vermeldt</a>
+                     <a class="link" href="#detail_association_CIMOI_RelevanteAnnotaties_bevraging">bevraagt: bevraging</a>
                      
                      
-                     <a class="link" href="#global_class_CIMOI_Dataset">Dataset</a>
+                     <a class="link" href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a>
                      
-                     [ 0 .. * ]
+                     [ 1 ]
                      </td>
                   <td></td>
                </tr>
                <tr>
                   <td>
-                     
-                     <a class="link" href="#global_class_CIMOI_Verstrekker">Verstrekker</a>
-                     
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Verstrekker_publiceert">publiceert</a>
-                     
-                     Catalogus
+                     Relevante­Annotaties
                      [ 0 .. * ]
+                     
+                     <a class="link" href="#detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMetGebiedsaanwijzing">heeft overeenkomst met gebiedsaanwijzing</a>
+                     
+                     
+                     <a class="external-link" href="https://geonovum.github.io/dso-cim-ow/#global_class_GebiedsAanwijzing_Gebiedsaanwijzing">Gebiedsaanwijzing</a>
+                     
+                     [ 0 .. 1 ]
                      </td>
                   <td></td>
+               </tr>
+               <tr>
+                  <td>
+                     Relevante­Annotaties
+                     [ 0 .. * ]
+                     
+                     <a class="link" href="#detail_association_CIMOI_RelevanteAnnotaties_ev">heeft overeenkomst met EV: ev</a>
+                     
+                     
+                     <a class="external-link" href="https://geonovum.github.io/dso-cim-ow/#global_class_GebiedsAanwijzing_ExterneVeiligheid">Externe­Veiligheid</a>
+                     
+                     [ 0 .. 1 ]
+                     </td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>
+                     Relevante­Annotaties
+                     is specialisatie van
+                     
+                     <a class="link" href="#global_class_CIMOI_Omgevingsaspect">Omgevingsaspect</a>
+                     
+                     </td>
+                  <td>
+                     
+                     <p>Aspect van omgevingsinformatie dat de relatie vormt tussen extern- en intern opgeslagen
+                        informatie.</p>
+                     </td>
                </tr>
             </tbody>
          </table>
          
          </section>
       
-      <section id="global_class_CIMOI_Eigenschap">
-         <div class="header-wrapper"><h4 id="x6-3-12-eigenschap"><bdi class="secno">6.3.12 </bdi>   Eigenschap</h4><a class="self-link" href="#global_class_CIMOI_Eigenschap" aria-label="Permalink for Section 6.3.12"></a></div>
+      <section id="global_class_CIMOI_Omgevingsaspect">
+         <div class="header-wrapper"><h4 id="x6-3-4-omgevingsaspect"><bdi class="secno">6.3.4 </bdi>   Omgevingsaspect</h4><a class="self-link" href="#global_class_CIMOI_Omgevingsaspect" aria-label="Permalink for Section 6.3.4"></a></div>
          
          <table style="width: 100%;" class="simple">
             <colgroup style="width: 30%;"></colgroup>
@@ -1416,7 +1056,27 @@ kunnen waarborgen.</p>
             <tbody>
                <tr>
                   <th>Naam</th>
-                  <td>Eigenschap</td>
+                  <td>Omgevingsaspect</td>
+               </tr>
+               <tr>
+                  <th>Definitie</th>
+                  <td>
+                     
+                     
+                     <p>Aspect van omgevingsinformatie dat de relatie vormt tussen extern- en intern opgeslagen
+                        informatie.</p>
+                     
+                     </td>
+               </tr>
+               <tr>
+                  <th>Toelichting</th>
+                  <td>
+                     
+                     
+                     <p>Alle informatie die van belang is voor het semantisch koppelen van informatie uit
+                        omgevingswetbesluiten met informatie uit omgevingsproducten. </p>
+                     
+                     </td>
                </tr>
                <tr>
                   <th>Indicatie abstract object</th>
@@ -1425,7 +1085,7 @@ kunnen waarborgen.</p>
             </tbody>
          </table>
          
-         <div class="header-wrapper"><h5 id="overzicht-attributen-1">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMOI_Eigenschap" aria-label="Permalink for this Section"></a></div>
+         <div class="header-wrapper"><h5 id="overzicht-attributen-1">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMOI_Omgevingsaspect" aria-label="Permalink for this Section"></a></div>
          
          <table style="width: 100%;" class="simple">
             <colgroup style="width: 30%;"></colgroup>
@@ -1441,482 +1101,47 @@ kunnen waarborgen.</p>
                </tr>
                <tr>
                   <td>
-                     <a class="link" href="#detail_attribute_CIMOI_Eigenschap_id">id</a>
+                     <a class="link" href="#detail_attribute_CIMOI_Omgevingsaspect_naam">naam</a>
                      </td>
-                  <td></td>
                   <td>
-                     <a class="link" href="#global_class_CIMOI_Identificatie">Identificatie</a>
+                     
+                     <p>Een herkenbare naam waaronder dit omgevingsaspect bekend is en teruggevonden kan worden.
+                        </p>
                      </td>
-                  <td>1</td>
-               </tr>
-               <tr>
                   <td>
-                     <a class="link" href="#detail_attribute_CIMOI_Eigenschap_waardetype">waardetype</a>
-                     </td>
-                  <td></td>
-                  <td>
-                     <a class="link" href="#global_class_CIMOI_Waardetype">Waardetype</a>
+                     <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
                      </td>
                   <td>1</td>
                </tr>
                <tr>
                   <td>
-                     <a class="link" href="#detail_attribute_CIMOI_Eigenschap_waardegroep">waardegroep</a>
+                     <a class="link" href="#detail_attribute_CIMOI_Omgevingsaspect_identificatie">identificatie</a>
                      </td>
-                  <td></td>
                   <td>
-                     <a class="link" href="#global_class_CIMOI_Waardegroep">Waardegroep</a>
+                     
+                     <p>De unieke identificatie waaronder elk object van dit type bekend is. </p>
                      </td>
-                  <td>1</td>
-               </tr>
-               <tr>
                   <td>
-                     <a class="link" href="#detail_attribute_CIMOI_Eigenschap_nauwkeurigheid">nauwkeurigheid</a>
-                     </td>
-                  <td></td>
-                  <td>
-                     <a class="link" href="#global_class_CIMOI_Nauwkeurigheidsklasse">Nauwkeurigheidsklasse</a>
-                     </td>
-                  <td>1</td>
-               </tr>
-               <tr>
-                  <td>
-                     <a class="link" href="#detail_attribute_CIMOI_Eigenschap_eenheid">eenheid</a>
-                     </td>
-                  <td></td>
-                  <td>
-                     <a class="link" href="#global_class_CIMOI_Eenheid">Eenheid</a>
-                     </td>
-                  <td>1</td>
-               </tr>
-               <tr>
-                  <td>
-                     <a class="link" href="#detail_attribute_CIMOI_Eigenschap_grootheid">grootheid</a>
-                     </td>
-                  <td></td>
-                  <td>
-                     <a class="link" href="#global_class_CIMOI_Grootheid">Grootheid</a>
-                     </td>
-                  <td>1</td>
-               </tr>
-               <tr>
-                  <td>
-                     <a class="link" href="#detail_attribute_CIMOI_Eigenschap_norm">norm</a>
-                     </td>
-                  <td></td>
-                  <td>
-                     <a class="link" href="#global_class_CIMOI_Norm">Norm</a>
-                     </td>
-                  <td>1</td>
-               </tr>
-               <tr>
-                  <td>
-                     <a class="link" href="#detail_attribute_CIMOI_Eigenschap_doelgroep">doelgroep</a>
-                     </td>
-                  <td></td>
-                  <td>
-                     <a class="link" href="#global_class_CIMOI_Doelgroep">Doelgroep</a>
-                     </td>
-                  <td>1 .. *</td>
-               </tr>
-               <tr>
-                  <td>
-                     <a class="link" href="#detail_attribute_CIMOI_Eigenschap_toepassingsbereik">toepassingsbereik</a>
-                     </td>
-                  <td></td>
-                  <td>
-                     <a class="link" href="#global_class_CIMOI_Toepassingsbereik">Toepassingsbereik</a>
-                     </td>
-                  <td>1 .. *</td>
-               </tr>
-               <tr>
-                  <td>
-                     <a class="link" href="#detail_attribute_CIMOI_Eigenschap_bron">bron</a>
-                     </td>
-                  <td></td>
-                  <td>
-                     <a class="link" href="#global_class_CIMOI_Identificatie">Identificatie</a>
+                     <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">URI</a>
                      </td>
                   <td>1</td>
                </tr>
             </tbody>
          </table>
          
-         
-         <div class="header-wrapper"><h5 id="overzicht-relaties-10">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Eigenschap" aria-label="Permalink for this Section"></a></div>
-         
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 50%;"></colgroup>
-            <colgroup style="width: 50%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Rol naam met kardinaliteiten</th>
-                  <th>Definitie</th>
-               </tr>
-               <tr>
-                  <td>
-                     Eigenschap
-                     [ 0 .. * ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Eigenschap_betreft">betreft</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_Subject">Subject</a>
-                     
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     Eigenschap
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Eigenschap_heeft">heeft</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_Waarde">Waarde</a>
-                     
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     Eigenschap
-                     [ 0 .. * ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Eigenschap_wordtBegrenstDoor">wordt begrenst door</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_Waardebereik">Waardebereik</a>
-                     
-                     [ 1 ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     
-                     <a class="link" href="#global_class_CIMOI_Gegevensklasse">Gegevensklasse</a>
-                     
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Gegevensklasse_heeft">heeft</a>
-                     
-                     Eigenschap
-                     [ 1 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     
-                     <a class="link" href="#global_class_CIMOI_Serviceprofiel">Serviceprofiel</a>
-                     
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Serviceprofiel_definieertProjectie">definieert projectie</a>
-                     
-                     Eigenschap
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-            </tbody>
-         </table>
-         
-         </section>
-      
-      <section id="global_class_CIMOI_Subject">
-         <div class="header-wrapper"><h4 id="x6-3-13-subject"><bdi class="secno">6.3.13 </bdi>   Subject</h4><a class="self-link" href="#global_class_CIMOI_Subject" aria-label="Permalink for Section 6.3.13"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Subject</td>
-               </tr>
-               <tr>
-                  <th>Indicatie abstract object</th>
-                  <td>Nee</td>
-               </tr>
-            </tbody>
-         </table>
-         
-         <div class="header-wrapper"><h5 id="overzicht-relaties-11">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Subject" aria-label="Permalink for this Section"></a></div>
-         
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 50%;"></colgroup>
-            <colgroup style="width: 50%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Rol naam met kardinaliteiten</th>
-                  <th>Definitie</th>
-               </tr>
-               <tr>
-                  <td>
-                     Subject
-                     [ 0 .. * ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Subject_verwijstNaar">verwijst naar</a>
-                     
-                     
-                     <a class="link" href="#global_class_CIMOI_DCATConcept">DCAT-Concept</a>
-                     
-                     [ 1 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     
-                     <a class="link" href="#global_class_CIMOI_Gegevensklasse">Gegevensklasse</a>
-                     
-                     [ 0 .. * ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Gegevensklasse_betreft">betreft</a>
-                     
-                     Subject
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     
-                     <a class="link" href="#global_class_CIMOI_Ontologie">Ontologie</a>
-                     
-                     [ 0 .. * ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Ontologie_betreft">betreft</a>
-                     
-                     Subject
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     
-                     <a class="link" href="#global_class_CIMOI_Eigenschap">Eigenschap</a>
-                     
-                     [ 0 .. * ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Eigenschap_betreft">betreft</a>
-                     
-                     Subject
-                     [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-            </tbody>
-         </table>
-         
-         </section>
-      
-      <section id="global_class_CIMOI_Waardebereik">
-         <div class="header-wrapper"><h4 id="x6-3-14-waardebereik"><bdi class="secno">6.3.14 </bdi>   Waardebereik</h4><a class="self-link" href="#global_class_CIMOI_Waardebereik" aria-label="Permalink for Section 6.3.14"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Waardebereik</td>
-               </tr>
-               <tr>
-                  <th>Indicatie abstract object</th>
-                  <td>Nee</td>
-               </tr>
-            </tbody>
-         </table>
-         
-         <div class="header-wrapper"><h5 id="overzicht-relaties-12">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Waardebereik" aria-label="Permalink for this Section"></a></div>
-         
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 50%;"></colgroup>
-            <colgroup style="width: 50%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Rol naam met kardinaliteiten</th>
-                  <th>Definitie</th>
-               </tr>
-               <tr>
-                  <td>
-                     
-                     <a class="link" href="#global_class_CIMOI_Eigenschap">Eigenschap</a>
-                     
-                     [ 0 .. * ]
-                     
-                     <a class="link" href="#detail_association_CIMOI_Eigenschap_wordtBegrenstDoor">wordt begrenst door</a>
-                     
-                     Waardebereik
-                     [ 1 ]
-                     </td>
-                  <td></td>
-               </tr>
-            </tbody>
-         </table>
-         
-         </section>
-      </section>
-   <section id="primitieve-datatypen">
-      <div class="header-wrapper"><h3 id="x6-4-primitieve-datatypen"><bdi class="secno">6.4 </bdi>Primitieve datatypen   </h3><a class="self-link" href="#primitieve-datatypen" aria-label="Permalink for Section 6.4"></a></div>
-      
-      <section id="global_class_CIMOI_Waardetype">
-         <div class="header-wrapper"><h4 id="x6-4-1-primitief-datatype-waardetype"><bdi class="secno">6.4.1 </bdi>Primitief datatype   Waardetype</h4><a class="self-link" href="#global_class_CIMOI_Waardetype" aria-label="Permalink for Section 6.4.1"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Waardetype</td>
-               </tr>
-            </tbody>
-         </table>
-         </section>
-      
-      <section id="global_class_CIMOI_Doelgroep">
-         <div class="header-wrapper"><h4 id="x6-4-2-primitief-datatype-doelgroep"><bdi class="secno">6.4.2 </bdi>Primitief datatype   Doelgroep</h4><a class="self-link" href="#global_class_CIMOI_Doelgroep" aria-label="Permalink for Section 6.4.2"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Doelgroep</td>
-               </tr>
-            </tbody>
-         </table>
-         </section>
-      
-      <section id="global_class_CIMOI_Identificatie">
-         <div class="header-wrapper"><h4 id="x6-4-3-primitief-datatype-identificatie"><bdi class="secno">6.4.3 </bdi>Primitief datatype   Identificatie</h4><a class="self-link" href="#global_class_CIMOI_Identificatie" aria-label="Permalink for Section 6.4.3"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Identificatie</td>
-               </tr>
-            </tbody>
-         </table>
-         </section>
-      
-      <section id="global_class_CIMOI_Toepassingsbereik">
-         <div class="header-wrapper"><h4 id="x6-4-4-primitief-datatype-toepassingsbereik"><bdi class="secno">6.4.4 </bdi>Primitief datatype   Toepassingsbereik</h4><a class="self-link" href="#global_class_CIMOI_Toepassingsbereik" aria-label="Permalink for Section 6.4.4"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Toepassingsbereik</td>
-               </tr>
-            </tbody>
-         </table>
-         </section>
-      
-      <section id="global_class_CIMOI_Waardegroep">
-         <div class="header-wrapper"><h4 id="x6-4-5-primitief-datatype-waardegroep"><bdi class="secno">6.4.5 </bdi>Primitief datatype   Waardegroep</h4><a class="self-link" href="#global_class_CIMOI_Waardegroep" aria-label="Permalink for Section 6.4.5"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Waardegroep</td>
-               </tr>
-            </tbody>
-         </table>
-         </section>
-      
-      <section id="global_class_CIMOI_Nauwkeurigheidsklasse">
-         <div class="header-wrapper"><h4 id="x6-4-6-primitief-datatype-nauwkeurigheidsklasse"><bdi class="secno">6.4.6 </bdi>Primitief datatype   Nauwkeurigheidsklasse</h4><a class="self-link" href="#global_class_CIMOI_Nauwkeurigheidsklasse" aria-label="Permalink for Section 6.4.6"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Nauwkeurigheidsklasse</td>
-               </tr>
-            </tbody>
-         </table>
-         </section>
-      
-      <section id="global_class_CIMOI_Norm">
-         <div class="header-wrapper"><h4 id="x6-4-7-primitief-datatype-norm"><bdi class="secno">6.4.7 </bdi>Primitief datatype   Norm</h4><a class="self-link" href="#global_class_CIMOI_Norm" aria-label="Permalink for Section 6.4.7"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Norm</td>
-               </tr>
-            </tbody>
-         </table>
-         </section>
-      
-      <section id="global_class_CIMOI_Grootheid">
-         <div class="header-wrapper"><h4 id="x6-4-8-primitief-datatype-grootheid"><bdi class="secno">6.4.8 </bdi>Primitief datatype   Grootheid</h4><a class="self-link" href="#global_class_CIMOI_Grootheid" aria-label="Permalink for Section 6.4.8"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Grootheid</td>
-               </tr>
-            </tbody>
-         </table>
-         </section>
-      
-      <section id="global_class_CIMOI_Eenheid">
-         <div class="header-wrapper"><h4 id="x6-4-9-primitief-datatype-eenheid"><bdi class="secno">6.4.9 </bdi>Primitief datatype   Eenheid</h4><a class="self-link" href="#global_class_CIMOI_Eenheid" aria-label="Permalink for Section 6.4.9"></a></div>
-         
-         <table style="width: 100%;" class="simple">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Naam</th>
-                  <td>Eenheid</td>
-               </tr>
-            </tbody>
-         </table>
          </section>
       </section>
    <section id="attribuut-en-relatiesoort-details">
-      <div class="header-wrapper"><h3 id="x6-5-attribuut-en-relatiesoort-details"><bdi class="secno">6.5 </bdi>Attribuut- en relatiesoort details  </h3><a class="self-link" href="#attribuut-en-relatiesoort-details" aria-label="Permalink for Section 6.5"></a></div>
+      <div class="header-wrapper"><h3 id="x6-4-attribuut-en-relatiesoort-details"><bdi class="secno">6.4 </bdi>Attribuut- en relatiesoort details  </h3><a class="self-link" href="#attribuut-en-relatiesoort-details" aria-label="Permalink for Section 6.4"></a></div>
       
       <section id="objecttype-details">
-         <div class="header-wrapper"><h4 id="x6-5-1-objecttype-details"><bdi class="secno">6.5.1 </bdi>Objecttype details  </h4><a class="self-link" href="#objecttype-details" aria-label="Permalink for Section 6.5.1"></a></div>
+         <div class="header-wrapper"><h4 id="x6-4-1-objecttype-details"><bdi class="secno">6.4.1 </bdi>Objecttype details  </h4><a class="self-link" href="#objecttype-details" aria-label="Permalink for Section 6.4.1"></a></div>
          
-         <section id="detail_class_CIMOI_Verstrekker">
-            <div class="header-wrapper"><h5 id="x6-5-1-1-verstrekker"><bdi class="secno">6.5.1.1 </bdi>   Verstrekker</h5><a class="self-link" href="#detail_class_CIMOI_Verstrekker" aria-label="Permalink for Section 6.5.1.1"></a></div>
+         <section id="detail_class_CIMOI_Registerbevraging">
+            <div class="header-wrapper"><h5 id="x6-4-1-1-registerbevraging"><bdi class="secno">6.4.1.1 </bdi>   Registerbevraging</h5><a class="self-link" href="#detail_class_CIMOI_Registerbevraging" aria-label="Permalink for Section 6.4.1.1"></a></div>
             
-            <section id="detail_association_CIMOI_Verstrekker_publiceert">
-               <div class="header-wrapper"><h6 id="x6-5-1-1-1-relatiesoort-details-verstrekker-publiceert"><bdi class="secno">6.5.1.1.1 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Verstrekker">Verstrekker</a> publiceert</h6><a class="self-link" href="#detail_association_CIMOI_Verstrekker_publiceert" aria-label="Permalink for Section 6.5.1.1.1"></a></div>
-               
+            <section id="detail_attribute_CIMOI_Registerbevraging_profile">
+               <div class="header-wrapper"><h6 id="x6-4-1-1-1-attribuutsoort-details-registerbevraging-profile"><bdi class="secno">6.4.1.1.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a> profile</h6><a class="self-link" href="#detail_attribute_CIMOI_Registerbevraging_profile" aria-label="Permalink for Section 6.4.1.1.1"></a></div>
                
                <table style="width: 100%;" class="simple">
                   <colgroup style="width: 30%;"></colgroup>
@@ -1924,46 +1149,31 @@ kunnen waarborgen.</p>
                   <tbody>
                      <tr>
                         <th>Naam</th>
-                        <td>publiceert</td>
+                        <td>profile</td>
                      </tr>
                      <tr>
-                        <th>Gerelateerd objecttype</th>
+                        <th>Definitie</th>
                         <td>
-                           <a class="link" href="#global_class_CIMOI_Catalogus">Catalogus</a>
+                           
+                           
+                           <p>Legt vast welk API profiel er gebruikt wordt. Keuze uit ‘Oriënteren’ en ‘Aanvragen’.
+                              Voor IMOW relaties wordt enkel het ‘Oriënteren’ profiel gebruikt.</p>
+                           
                            </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>0 .. *</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            </section>
-         
-         <section id="detail_class_CIMOI_Gegevensklasse">
-            <div class="header-wrapper"><h5 id="x6-5-1-2-gegevensklasse"><bdi class="secno">6.5.1.2 </bdi>   Gegevensklasse</h5><a class="self-link" href="#detail_class_CIMOI_Gegevensklasse" aria-label="Permalink for Section 6.5.1.2"></a></div>
-            
-            <section id="detail_attribute_CIMOI_Gegevensklasse_id">
-               <div class="header-wrapper"><h6 id="x6-5-1-2-1-attribuutsoort-details-gegevensklasse-id"><bdi class="secno">6.5.1.2.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Gegevensklasse">Gegevensklasse</a> id</h6><a class="self-link" href="#detail_attribute_CIMOI_Gegevensklasse_id" aria-label="Permalink for Section 6.5.1.2.1"></a></div>
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>id</td>
                      </tr>
                      <tr>
                         <th>Formaat</th>
                         <td>
-                           <a class="link" href="#global_class_CIMOI_Identificatie">Identificatie</a>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Integer</a>
                            </td>
                      </tr>
                      <tr>
                         <th>Indicatie kardinaliteit</th>
                         <td>1</td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie classificerend</th>
+                        <td>Nee</td>
                      </tr>
                      <tr>
                         <th>Mogelijk geen waarde</th>
@@ -1977,9 +1187,8 @@ kunnen waarborgen.</p>
                </table>
                </section>
             
-            <section id="detail_association_CIMOI_Gegevensklasse_betreft">
-               <div class="header-wrapper"><h6 id="x6-5-1-2-2-relatiesoort-details-gegevensklasse-betreft"><bdi class="secno">6.5.1.2.2 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Gegevensklasse">Gegevensklasse</a> betreft</h6><a class="self-link" href="#detail_association_CIMOI_Gegevensklasse_betreft" aria-label="Permalink for Section 6.5.1.2.2"></a></div>
-               
+            <section id="detail_attribute_CIMOI_Registerbevraging_key">
+               <div class="header-wrapper"><h6 id="x6-4-1-1-2-attribuutsoort-details-registerbevraging-key"><bdi class="secno">6.4.1.1.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a> key</h6><a class="self-link" href="#detail_attribute_CIMOI_Registerbevraging_key" aria-label="Permalink for Section 6.4.1.1.2"></a></div>
                
                <table style="width: 100%;" class="simple">
                   <colgroup style="width: 30%;"></colgroup>
@@ -1987,283 +1196,17 @@ kunnen waarborgen.</p>
                   <tbody>
                      <tr>
                         <th>Naam</th>
-                        <td>betreft</td>
+                        <td>key</td>
                      </tr>
                      <tr>
-                        <th>Gerelateerd objecttype</th>
+                        <th>Definitie</th>
                         <td>
-                           <a class="link" href="#global_class_CIMOI_Subject">Subject</a>
+                           
+                           
+                           <p>Geeft aan welke waarde uit het register opgevraagd moet worden. Moet dus een gegeven
+                              bevatten dat rechtstreeks overeenkomt met een gegeven uit de informatiebron.</p>
+                           
                            </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>0 .. *</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_association_CIMOI_Gegevensklasse_heeft">
-               <div class="header-wrapper"><h6 id="x6-5-1-2-3-relatiesoort-details-gegevensklasse-heeft"><bdi class="secno">6.5.1.2.3 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Gegevensklasse">Gegevensklasse</a> heeft</h6><a class="self-link" href="#detail_association_CIMOI_Gegevensklasse_heeft" aria-label="Permalink for Section 6.5.1.2.3"></a></div>
-               
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>heeft</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Eigenschap">Eigenschap</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1 .. *</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            </section>
-         
-         <section id="detail_class_CIMOI_Dataset">
-            <div class="header-wrapper"><h5 id="x6-5-1-3-dataset"><bdi class="secno">6.5.1.3 </bdi>   Dataset</h5><a class="self-link" href="#detail_class_CIMOI_Dataset" aria-label="Permalink for Section 6.5.1.3"></a></div>
-            
-            <section id="detail_association_CIMOI_Dataset_definieert">
-               <div class="header-wrapper"><h6 id="x6-5-1-3-1-relatiesoort-details-dataset-definieert"><bdi class="secno">6.5.1.3.1 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Dataset">Dataset</a> definieert</h6><a class="self-link" href="#detail_association_CIMOI_Dataset_definieert" aria-label="Permalink for Section 6.5.1.3.1"></a></div>
-               
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>definieert</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Kwaliteiteigenschap">Kwaliteiteigenschap</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>0 .. *</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_association_CIMOI_Dataset_wordtVerstrektDoor">
-               <div class="header-wrapper"><h6 id="x6-5-1-3-2-relatiesoort-details-dataset-wordt-verstrekt-door"><bdi class="secno">6.5.1.3.2 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Dataset">Dataset</a> wordt verstrekt door</h6><a class="self-link" href="#detail_association_CIMOI_Dataset_wordtVerstrektDoor" aria-label="Permalink for Section 6.5.1.3.2"></a></div>
-               
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>wordt verstrekt door</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Verstrekker">Verstrekker</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_association_CIMOI_Dataset_heeft">
-               <div class="header-wrapper"><h6 id="x6-5-1-3-3-relatiesoort-details-dataset-heeft"><bdi class="secno">6.5.1.3.3 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Dataset">Dataset</a> heeft</h6><a class="self-link" href="#detail_association_CIMOI_Dataset_heeft" aria-label="Permalink for Section 6.5.1.3.3"></a></div>
-               
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>heeft</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Distributie">Distributie</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>0 .. *</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_association_CIMOI_Dataset_bestrijkt">
-               <div class="header-wrapper"><h6 id="x6-5-1-3-4-relatiesoort-details-dataset-bestrijkt"><bdi class="secno">6.5.1.3.4 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Dataset">Dataset</a> bestrijkt</h6><a class="self-link" href="#detail_association_CIMOI_Dataset_bestrijkt" aria-label="Permalink for Section 6.5.1.3.4"></a></div>
-               
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>bestrijkt</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Dekkingsgebied">Dekkingsgebied</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>0 .. 1</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            </section>
-         
-         <section id="detail_class_CIMOI_Ontologie">
-            <div class="header-wrapper"><h5 id="x6-5-1-4-ontologie"><bdi class="secno">6.5.1.4 </bdi>   Ontologie</h5><a class="self-link" href="#detail_class_CIMOI_Ontologie" aria-label="Permalink for Section 6.5.1.4"></a></div>
-            
-            <section id="detail_association_CIMOI_Ontologie_beschrijftSamenhang">
-               <div class="header-wrapper"><h6 id="x6-5-1-4-1-relatiesoort-details-ontologie-beschrijft-samenhang"><bdi class="secno">6.5.1.4.1 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Ontologie">Ontologie</a> beschrijft samenhang</h6><a class="self-link" href="#detail_association_CIMOI_Ontologie_beschrijftSamenhang" aria-label="Permalink for Section 6.5.1.4.1"></a></div>
-               
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>beschrijft samenhang</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Gegevensklasse">Gegevensklasse</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1 .. *</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_association_CIMOI_Ontologie_betreft">
-               <div class="header-wrapper"><h6 id="x6-5-1-4-2-relatiesoort-details-ontologie-betreft"><bdi class="secno">6.5.1.4.2 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Ontologie">Ontologie</a> betreft</h6><a class="self-link" href="#detail_association_CIMOI_Ontologie_betreft" aria-label="Permalink for Section 6.5.1.4.2"></a></div>
-               
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>betreft</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Subject">Subject</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>0 .. *</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            </section>
-         
-         <section id="detail_class_CIMOI_Serviceprofiel">
-            <div class="header-wrapper"><h5 id="x6-5-1-5-serviceprofiel"><bdi class="secno">6.5.1.5 </bdi>   Serviceprofiel</h5><a class="self-link" href="#detail_class_CIMOI_Serviceprofiel" aria-label="Permalink for Section 6.5.1.5"></a></div>
-            
-            <section id="detail_association_CIMOI_Serviceprofiel_definieertProjectie">
-               <div class="header-wrapper"><h6 id="x6-5-1-5-1-relatiesoort-details-serviceprofiel-definieert-projectie"><bdi class="secno">6.5.1.5.1 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Serviceprofiel">Serviceprofiel</a> definieert projectie</h6><a class="self-link" href="#detail_association_CIMOI_Serviceprofiel_definieertProjectie" aria-label="Permalink for Section 6.5.1.5.1"></a></div>
-               
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>definieert projectie</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Eigenschap">Eigenschap</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>0 .. *</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_association_CIMOI_Serviceprofiel_definieertZoekingang">
-               <div class="header-wrapper"><h6 id="x6-5-1-5-2-relatiesoort-details-serviceprofiel-definieert-zoekingang"><bdi class="secno">6.5.1.5.2 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Serviceprofiel">Serviceprofiel</a> definieert zoekingang</h6><a class="self-link" href="#detail_association_CIMOI_Serviceprofiel_definieertZoekingang" aria-label="Permalink for Section 6.5.1.5.2"></a></div>
-               
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>definieert zoekingang</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Gegevensklasse">Gegevensklasse</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>0 .. *</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            </section>
-         
-         
-         <section id="detail_class_CIMOI_DCATConcept">
-            <div class="header-wrapper"><h5 id="x6-5-1-6-dcat-concept"><bdi class="secno">6.5.1.6 </bdi>   DCAT-Concept</h5><a class="self-link" href="#detail_class_CIMOI_DCATConcept" aria-label="Permalink for Section 6.5.1.6"></a></div>
-            
-            <section id="detail_attribute_CIMOI_DCATConcept_definitie">
-               <div class="header-wrapper"><h6 id="x6-5-1-6-1-attribuutsoort-details-dcat-concept-definitie"><bdi class="secno">6.5.1.6.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_DCATConcept">DCAT-Concept</a> definitie</h6><a class="self-link" href="#detail_attribute_CIMOI_DCATConcept_definitie" aria-label="Permalink for Section 6.5.1.6.1"></a></div>
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>definitie</td>
                      </tr>
                      <tr>
                         <th>Formaat</th>
@@ -2276,37 +1219,8 @@ kunnen waarborgen.</p>
                         <td>1</td>
                      </tr>
                      <tr>
-                        <th>Mogelijk geen waarde</th>
+                        <th>Indicatie classificerend</th>
                         <td>Nee</td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie identificerend</th>
-                        <td>Nee</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_attribute_CIMOI_DCATConcept_term">
-               <div class="header-wrapper"><h6 id="x6-5-1-6-2-attribuutsoort-details-dcat-concept-term"><bdi class="secno">6.5.1.6.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_DCATConcept">DCAT-Concept</a> term</h6><a class="self-link" href="#detail_attribute_CIMOI_DCATConcept_term" aria-label="Permalink for Section 6.5.1.6.2"></a></div>
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>term</td>
-                     </tr>
-                     <tr>
-                        <th>Formaat</th>
-                        <td>
-                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1</td>
                      </tr>
                      <tr>
                         <th>Mogelijk geen waarde</th>
@@ -2320,8 +1234,8 @@ kunnen waarborgen.</p>
                </table>
                </section>
             
-            <section id="detail_attribute_CIMOI_DCATConcept_type">
-               <div class="header-wrapper"><h6 id="x6-5-1-6-3-attribuutsoort-details-dcat-concept-type"><bdi class="secno">6.5.1.6.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_DCATConcept">DCAT-Concept</a> type</h6><a class="self-link" href="#detail_attribute_CIMOI_DCATConcept_type" aria-label="Permalink for Section 6.5.1.6.3"></a></div>
+            <section id="detail_attribute_CIMOI_Registerbevraging_type">
+               <div class="header-wrapper"><h6 id="x6-4-1-1-3-attribuutsoort-details-registerbevraging-type"><bdi class="secno">6.4.1.1.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a> type</h6><a class="self-link" href="#detail_attribute_CIMOI_Registerbevraging_type" aria-label="Permalink for Section 6.4.1.1.3"></a></div>
                
                <table style="width: 100%;" class="simple">
                   <colgroup style="width: 30%;"></colgroup>
@@ -2332,6 +1246,17 @@ kunnen waarborgen.</p>
                         <td>type</td>
                      </tr>
                      <tr>
+                        <th>Definitie</th>
+                        <td>
+                           
+                           
+                           <p>Legt vast wat voor soort informatie opgehaald wordt en hoe deze weergegeven dient
+                              te worden. Kan bestaan uit een Geometrie of verrijkte Geometrie met gekoppelde weer
+                              te geven waarde. </p>
+                           
+                           </td>
+                     </tr>
+                     <tr>
                         <th>Formaat</th>
                         <td>
                            <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
@@ -2342,6 +1267,56 @@ kunnen waarborgen.</p>
                         <td>1</td>
                      </tr>
                      <tr>
+                        <th>Indicatie classificerend</th>
+                        <td>Nee</td>
+                     </tr>
+                     <tr>
+                        <th>Mogelijk geen waarde</th>
+                        <td>Nee</td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie identificerend</th>
+                        <td>Nee</td>
+                     </tr>
+                  </tbody>
+               </table>
+               </section>
+            
+            <section id="detail_attribute_CIMOI_Registerbevraging_value">
+               <div class="header-wrapper"><h6 id="x6-4-1-1-4-attribuutsoort-details-registerbevraging-value"><bdi class="secno">6.4.1.1.4 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a> value</h6><a class="self-link" href="#detail_attribute_CIMOI_Registerbevraging_value" aria-label="Permalink for Section 6.4.1.1.4"></a></div>
+               
+               <table style="width: 100%;" class="simple">
+                  <colgroup style="width: 30%;"></colgroup>
+                  <colgroup style="width: 70%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Naam</th>
+                        <td>value</td>
+                     </tr>
+                     <tr>
+                        <th>Definitie</th>
+                        <td>
+                           
+                           
+                           <p>Range waarbinnen de bevraging van het register moet plaatsvinden. </p>
+                           
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Formaat</th>
+                        <td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie kardinaliteit</th>
+                        <td>0 .. 1</td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie classificerend</th>
+                        <td>Nee</td>
+                     </tr>
+                     <tr>
                         <th>Mogelijk geen waarde</th>
                         <td>Nee</td>
                      </tr>
@@ -2354,11 +1329,12 @@ kunnen waarborgen.</p>
                </section>
             </section>
          
-         <section id="detail_class_CIMOI_Waarde">
-            <div class="header-wrapper"><h5 id="x6-5-1-7-waarde"><bdi class="secno">6.5.1.7 </bdi>   Waarde</h5><a class="self-link" href="#detail_class_CIMOI_Waarde" aria-label="Permalink for Section 6.5.1.7"></a></div>
+         <section id="detail_class_CIMOI_Uitvoeringsregel">
+            <div class="header-wrapper"><h5 id="x6-4-1-2-uitvoeringsregel"><bdi class="secno">6.4.1.2 </bdi>   Uitvoeringsregel</h5><a class="self-link" href="#detail_class_CIMOI_Uitvoeringsregel" aria-label="Permalink for Section 6.4.1.2"></a></div>
             
-            <section id="detail_association_CIMOI_Waarde_isEen">
-               <div class="header-wrapper"><h6 id="x6-5-1-7-1-externe-koppeling-details-waarde-is-een"><bdi class="secno">6.5.1.7.1 </bdi>Externe koppeling details  <a href="#global_class_CIMOI_Waarde">Waarde</a> is een</h6><a class="self-link" href="#detail_association_CIMOI_Waarde_isEen" aria-label="Permalink for Section 6.5.1.7.1"></a></div>
+            <section id="detail_association_CIMOI_Uitvoeringsregel_bevraging">
+               <div class="header-wrapper"><h6 id="x6-4-1-2-1-relatiesoort-details-uitvoeringsregel-bevraging"><bdi class="secno">6.4.1.2.1 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Uitvoeringsregel">Uitvoeringsregel</a> bevraging</h6><a class="self-link" href="#detail_association_CIMOI_Uitvoeringsregel_bevraging" aria-label="Permalink for Section 6.4.1.2.1"></a></div>
+               
                
                <table style="width: 100%;" class="simple">
                   <colgroup style="width: 30%;"></colgroup>
@@ -2366,24 +1342,194 @@ kunnen waarborgen.</p>
                   <tbody>
                      <tr>
                         <th>Naam</th>
-                        <td>is een</td>
+                        <td>bevraging</td>
                      </tr>
                      <tr>
                         <th>Gerelateerd objecttype</th>
                         <td>
-                           <a class="external-link" href="https://geonovum.github.io/dso-cim-tr/#Invoergegeven">Invoergegeven</a>
+                           <a class="external-link" href="https://geonovum.github.io/dso-cim-oi/#RegisterbevragingPlaatsgebondenRisico">Registerbevraging­Plaatsgebonden­Risico</a>
                            </td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie kardinaliteit</th>
+                        <td>0 .. *</td>
+                     </tr>
+                  </tbody>
+               </table>
+               </section>
+            
+            <section id="detail_association_CIMOI_Uitvoeringsregel_bevraagt">
+               <div class="header-wrapper"><h6 id="x6-4-1-2-2-relatiesoort-details-uitvoeringsregel-bevraagt"><bdi class="secno">6.4.1.2.2 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Uitvoeringsregel">Uitvoeringsregel</a> bevraagt</h6><a class="self-link" href="#detail_association_CIMOI_Uitvoeringsregel_bevraagt" aria-label="Permalink for Section 6.4.1.2.2"></a></div>
+               
+               
+               <table style="width: 100%;" class="simple">
+                  <colgroup style="width: 30%;"></colgroup>
+                  <colgroup style="width: 70%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Naam</th>
+                        <td>bevraagt</td>
+                     </tr>
+                     <tr>
+                        <th>Gerelateerd objecttype</th>
+                        <td>
+                           <a class="link" href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a>
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie kardinaliteit</th>
+                        <td>1 .. *</td>
+                     </tr>
+                  </tbody>
+               </table>
+               </section>
+            
+            <section id="detail_association_CIMOI_Uitvoeringsregel_registerbevraging">
+               <div class="header-wrapper"><h6 id="x6-4-1-2-3-relatiesoort-details-uitvoeringsregel-registerbevraging"><bdi class="secno">6.4.1.2.3 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Uitvoeringsregel">Uitvoeringsregel</a> registerbevraging</h6><a class="self-link" href="#detail_association_CIMOI_Uitvoeringsregel_registerbevraging" aria-label="Permalink for Section 6.4.1.2.3"></a></div>
+               
+               
+               <table style="width: 100%;" class="simple">
+                  <colgroup style="width: 30%;"></colgroup>
+                  <colgroup style="width: 70%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Naam</th>
+                        <td>registerbevraging</td>
+                     </tr>
+                     <tr>
+                        <th>Gerelateerd objecttype</th>
+                        <td>
+                           <a class="external-link" href="https://geonovum.github.io/dso-cim-oi/#RegisterbevragingAandachtsgebiedEV">Registerbevraging­Aandachtsgebied­EV</a>
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie kardinaliteit</th>
+                        <td>0 .. *</td>
                      </tr>
                   </tbody>
                </table>
                </section>
             </section>
          
-         <section id="detail_class_CIMOI_Distributie">
-            <div class="header-wrapper"><h5 id="x6-5-1-8-distributie"><bdi class="secno">6.5.1.8 </bdi>   Distributie</h5><a class="self-link" href="#detail_class_CIMOI_Distributie" aria-label="Permalink for Section 6.5.1.8"></a></div>
+         <section id="detail_class_CIMOI_RelevanteAnnotaties">
+            <div class="header-wrapper"><h5 id="x6-4-1-3-relevante-annotaties"><bdi class="secno">6.4.1.3 </bdi>   Relevante­Annotaties</h5><a class="self-link" href="#detail_class_CIMOI_RelevanteAnnotaties" aria-label="Permalink for Section 6.4.1.3"></a></div>
             
-            <section id="detail_association_CIMOI_Distributie_wordtUitgedruktIn">
-               <div class="header-wrapper"><h6 id="x6-5-1-8-1-relatiesoort-details-distributie-wordt-uitgedrukt-in"><bdi class="secno">6.5.1.8.1 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Distributie">Distributie</a> wordt uitgedrukt in</h6><a class="self-link" href="#detail_association_CIMOI_Distributie_wordtUitgedruktIn" aria-label="Permalink for Section 6.5.1.8.1"></a></div>
+            <section id="detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstActiviteiten">
+               <div class="header-wrapper"><h6 id="x6-4-1-3-1-attribuutsoort-details-relevante-annotaties-waardelijst-activiteiten"><bdi class="secno">6.4.1.3.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> waardelijst activiteiten</h6><a class="self-link" href="#detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstActiviteiten" aria-label="Permalink for Section 6.4.1.3.1"></a></div>
+               
+               <table style="width: 100%;" class="simple">
+                  <colgroup style="width: 30%;"></colgroup>
+                  <colgroup style="width: 70%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Naam</th>
+                        <td>waardelijst activiteiten</td>
+                     </tr>
+                     <tr>
+                        <th>Definitie</th>
+                        <td>
+                           
+                           
+                           <p>Een activiteit plus een categorie, of groep, waaronder een activiteit valt. </p>
+                           
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Formaat</th>
+                        <td>
+                           <a class="external-link" href="https://geonovum.github.io/dso-cim-ow/#global_class_RegelsOpLocatie_Activiteitengroep">Activiteitengroep</a>
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie kardinaliteit</th>
+                        <td>0 .. *</td>
+                     </tr>
+                     <tr>
+                        <th>Toelichting</th>
+                        <td>
+                           
+                           
+                           <p>Een activiteit kan gecategoriseerd worden tot een beperkte lijst van activiteitengroepen.
+                              Een groep is niet een juridische term. De groep bepaalt mede hoe een kaartbeeld (standaard)
+                              wordt opgebouwd, voor objecten van dit objecttype.</p>
+                           
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie classificerend</th>
+                        <td>Nee</td>
+                     </tr>
+                     <tr>
+                        <th>Mogelijk geen waarde</th>
+                        <td>Nee</td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie identificerend</th>
+                        <td>Nee</td>
+                     </tr>
+                  </tbody>
+               </table>
+               </section>
+            
+            <section id="detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstThema">
+               <div class="header-wrapper"><h6 id="x6-4-1-3-2-attribuutsoort-details-relevante-annotaties-waardelijst-thema"><bdi class="secno">6.4.1.3.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> waardelijst Thema</h6><a class="self-link" href="#detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstThema" aria-label="Permalink for Section 6.4.1.3.2"></a></div>
+               
+               <table style="width: 100%;" class="simple">
+                  <colgroup style="width: 30%;"></colgroup>
+                  <colgroup style="width: 70%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Naam</th>
+                        <td>waardelijst Thema</td>
+                     </tr>
+                     <tr>
+                        <th>Definitie</th>
+                        <td>
+                           
+                           
+                           <p>Kernachtige weergave van de grondgedachte achter een tekstdeel. </p>
+                           
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Formaat</th>
+                        <td>
+                           <a class="external-link" href="https://geonovum.github.io/dso-cim-ow/#global_class_Regel_Thema">Thema</a>
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie kardinaliteit</th>
+                        <td>0 .. *</td>
+                     </tr>
+                     <tr>
+                        <th>Toelichting</th>
+                        <td>
+                           
+                           
+                           <p>Het thema is een categorisering, waar een tekstdeel binnen valt. De waardelijst is
+                              dezelfde als voor Regeltekst, om thematisch informatie, over alle objecten heen, te
+                              kunnen zoeken. </p>
+                           
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie classificerend</th>
+                        <td>Nee</td>
+                     </tr>
+                     <tr>
+                        <th>Mogelijk geen waarde</th>
+                        <td>Nee</td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie identificerend</th>
+                        <td>Nee</td>
+                     </tr>
+                  </tbody>
+               </table>
+               </section>
+            
+            <section id="detail_association_CIMOI_RelevanteAnnotaties_overeenkomendeActiviteit">
+               <div class="header-wrapper"><h6 id="x6-4-1-3-3-relatiesoort-details-relevante-annotaties-overeenkomende-activiteit"><bdi class="secno">6.4.1.3.3 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> overeenkomende activiteit</h6><a class="self-link" href="#detail_association_CIMOI_RelevanteAnnotaties_overeenkomendeActiviteit" aria-label="Permalink for Section 6.4.1.3.3"></a></div>
                
                
                <table style="width: 100%;" class="simple">
@@ -2392,12 +1538,116 @@ kunnen waarborgen.</p>
                   <tbody>
                      <tr>
                         <th>Naam</th>
-                        <td>wordt uitgedrukt in</td>
+                        <td>overeenkomende activiteit</td>
                      </tr>
                      <tr>
                         <th>Gerelateerd objecttype</th>
                         <td>
-                           <a class="link" href="#global_class_CIMOI_Ontologie">Ontologie</a>
+                           <a class="external-link" href="https://geonovum.github.io/dso-cim-ow/#global_class_RegelsOpLocatie_Activiteit">Activiteit</a>
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie kardinaliteit</th>
+                        <td>0 .. 1</td>
+                     </tr>
+                  </tbody>
+               </table>
+               </section>
+            
+            <section id="detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMetGeluid">
+               <div class="header-wrapper"><h6 id="x6-4-1-3-4-relatiesoort-details-relevante-annotaties-heeft-overeenkomst-met-geluid"><bdi class="secno">6.4.1.3.4 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> heeft overeenkomst met Geluid</h6><a class="self-link" href="#detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMetGeluid" aria-label="Permalink for Section 6.4.1.3.4"></a></div>
+               
+               
+               <table style="width: 100%;" class="simple">
+                  <colgroup style="width: 30%;"></colgroup>
+                  <colgroup style="width: 70%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Naam</th>
+                        <td>heeft overeenkomst met Geluid</td>
+                     </tr>
+                     <tr>
+                        <th>Gerelateerd objecttype</th>
+                        <td>
+                           <a class="external-link" href="https://geonovum.github.io/dso-cim-ow/#global_class_GebiedsAanwijzing_Geluid">Geluid</a>
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie kardinaliteit</th>
+                        <td>0 .. 1</td>
+                     </tr>
+                  </tbody>
+               </table>
+               </section>
+            
+            <section id="detail_association_CIMOI_RelevanteAnnotaties_bevraging">
+               <div class="header-wrapper"><h6 id="x6-4-1-3-5-relatiesoort-details-relevante-annotaties-bevraagt"><bdi class="secno">6.4.1.3.5 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> bevraagt</h6><a class="self-link" href="#detail_association_CIMOI_RelevanteAnnotaties_bevraging" aria-label="Permalink for Section 6.4.1.3.5"></a></div>
+               
+               
+               <table style="width: 100%;" class="simple">
+                  <colgroup style="width: 30%;"></colgroup>
+                  <colgroup style="width: 70%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Naam</th>
+                        <td>bevraagt</td>
+                     </tr>
+                     <tr>
+                        <th>Gerelateerd objecttype</th>
+                        <td>
+                           <a class="link" href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a>
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie kardinaliteit</th>
+                        <td>1</td>
+                     </tr>
+                  </tbody>
+               </table>
+               </section>
+            
+            <section id="detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMetGebiedsaanwijzing">
+               <div class="header-wrapper"><h6 id="x6-4-1-3-6-relatiesoort-details-relevante-annotaties-heeft-overeenkomst-met-gebiedsaanwijzing"><bdi class="secno">6.4.1.3.6 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> heeft overeenkomst met gebiedsaanwijzing</h6><a class="self-link" href="#detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMetGebiedsaanwijzing" aria-label="Permalink for Section 6.4.1.3.6"></a></div>
+               
+               
+               <table style="width: 100%;" class="simple">
+                  <colgroup style="width: 30%;"></colgroup>
+                  <colgroup style="width: 70%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Naam</th>
+                        <td>heeft overeenkomst met gebiedsaanwijzing</td>
+                     </tr>
+                     <tr>
+                        <th>Gerelateerd objecttype</th>
+                        <td>
+                           <a class="external-link" href="https://geonovum.github.io/dso-cim-ow/#global_class_GebiedsAanwijzing_Gebiedsaanwijzing">Gebiedsaanwijzing</a>
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie kardinaliteit</th>
+                        <td>0 .. 1</td>
+                     </tr>
+                  </tbody>
+               </table>
+               </section>
+            
+            <section id="detail_association_CIMOI_RelevanteAnnotaties_ev">
+               <div class="header-wrapper"><h6 id="x6-4-1-3-7-relatiesoort-details-relevante-annotaties-heeft-overeenkomst-met-ev"><bdi class="secno">6.4.1.3.7 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> heeft overeenkomst met EV</h6><a class="self-link" href="#detail_association_CIMOI_RelevanteAnnotaties_ev" aria-label="Permalink for Section 6.4.1.3.7"></a></div>
+               
+               
+               <table style="width: 100%;" class="simple">
+                  <colgroup style="width: 30%;"></colgroup>
+                  <colgroup style="width: 70%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Naam</th>
+                        <td>heeft overeenkomst met EV</td>
+                     </tr>
+                     <tr>
+                        <th>Gerelateerd objecttype</th>
+                        <td>
+                           <a class="external-link" href="https://geonovum.github.io/dso-cim-ow/#global_class_GebiedsAanwijzing_ExterneVeiligheid">Externe­Veiligheid</a>
                            </td>
                      </tr>
                      <tr>
@@ -2409,12 +1659,11 @@ kunnen waarborgen.</p>
                </section>
             </section>
          
-         <section id="detail_class_CIMOI_Catalogus">
-            <div class="header-wrapper"><h5 id="x6-5-1-9-catalogus"><bdi class="secno">6.5.1.9 </bdi>   Catalogus</h5><a class="self-link" href="#detail_class_CIMOI_Catalogus" aria-label="Permalink for Section 6.5.1.9"></a></div>
+         <section id="detail_class_CIMOI_Omgevingsaspect">
+            <div class="header-wrapper"><h5 id="x6-4-1-4-omgevingsaspect"><bdi class="secno">6.4.1.4 </bdi>   Omgevingsaspect</h5><a class="self-link" href="#detail_class_CIMOI_Omgevingsaspect" aria-label="Permalink for Section 6.4.1.4"></a></div>
             
-            <section id="detail_association_CIMOI_Catalogus_bestrijkt">
-               <div class="header-wrapper"><h6 id="x6-5-1-9-1-relatiesoort-details-catalogus-bestrijkt"><bdi class="secno">6.5.1.9.1 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Catalogus">Catalogus</a> bestrijkt</h6><a class="self-link" href="#detail_association_CIMOI_Catalogus_bestrijkt" aria-label="Permalink for Section 6.5.1.9.1"></a></div>
-               
+            <section id="detail_attribute_CIMOI_Omgevingsaspect_naam">
+               <div class="header-wrapper"><h6 id="x6-4-1-4-1-attribuutsoort-details-omgevingsaspect-naam"><bdi class="secno">6.4.1.4.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Omgevingsaspect">Omgevingsaspect</a> naam</h6><a class="self-link" href="#detail_attribute_CIMOI_Omgevingsaspect_naam" aria-label="Permalink for Section 6.4.1.4.1"></a></div>
                
                <table style="width: 100%;" class="simple">
                   <colgroup style="width: 30%;"></colgroup>
@@ -2422,25 +1671,46 @@ kunnen waarborgen.</p>
                   <tbody>
                      <tr>
                         <th>Naam</th>
-                        <td>bestrijkt</td>
+                        <td>naam</td>
                      </tr>
                      <tr>
-                        <th>Gerelateerd objecttype</th>
+                        <th>Definitie</th>
                         <td>
-                           <a class="link" href="#global_class_CIMOI_Dekkingsgebied">Dekkingsgebied</a>
+                           
+                           
+                           <p>Een herkenbare naam waaronder dit omgevingsaspect bekend is en teruggevonden kan worden.
+                              </p>
+                           
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Formaat</th>
+                        <td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
                            </td>
                      </tr>
                      <tr>
                         <th>Indicatie kardinaliteit</th>
-                        <td>0 .. 1</td>
+                        <td>1</td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie classificerend</th>
+                        <td>Nee</td>
+                     </tr>
+                     <tr>
+                        <th>Mogelijk geen waarde</th>
+                        <td>Nee</td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie identificerend</th>
+                        <td>Nee</td>
                      </tr>
                   </tbody>
                </table>
                </section>
             
-            <section id="detail_association_CIMOI_Catalogus_vermeldt">
-               <div class="header-wrapper"><h6 id="x6-5-1-9-2-relatiesoort-details-catalogus-vermeldt"><bdi class="secno">6.5.1.9.2 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Catalogus">Catalogus</a> vermeldt</h6><a class="self-link" href="#detail_association_CIMOI_Catalogus_vermeldt" aria-label="Permalink for Section 6.5.1.9.2"></a></div>
-               
+            <section id="detail_attribute_CIMOI_Omgevingsaspect_identificatie">
+               <div class="header-wrapper"><h6 id="x6-4-1-4-2-attribuutsoort-details-omgevingsaspect-identificatie"><bdi class="secno">6.4.1.4.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Omgevingsaspect">Omgevingsaspect</a> identificatie</h6><a class="self-link" href="#detail_attribute_CIMOI_Omgevingsaspect_identificatie" aria-label="Permalink for Section 6.4.1.4.2"></a></div>
                
                <table style="width: 100%;" class="simple">
                   <colgroup style="width: 30%;"></colgroup>
@@ -2448,465 +1718,43 @@ kunnen waarborgen.</p>
                   <tbody>
                      <tr>
                         <th>Naam</th>
-                        <td>vermeldt</td>
+                        <td>identificatie</td>
                      </tr>
                      <tr>
-                        <th>Gerelateerd objecttype</th>
+                        <th>Definitie</th>
                         <td>
-                           <a class="link" href="#global_class_CIMOI_Dataset">Dataset</a>
+                           
+                           
+                           <p>De unieke identificatie waaronder elk object van dit type bekend is. </p>
+                           
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>Formaat</th>
+                        <td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">URI</a>
                            </td>
                      </tr>
                      <tr>
                         <th>Indicatie kardinaliteit</th>
-                        <td>0 .. *</td>
+                        <td>1</td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie classificerend</th>
+                        <td>Nee</td>
+                     </tr>
+                     <tr>
+                        <th>Mogelijk geen waarde</th>
+                        <td>Nee</td>
+                     </tr>
+                     <tr>
+                        <th>Indicatie identificerend</th>
+                        <td>Nee</td>
                      </tr>
                   </tbody>
                </table>
                </section>
             </section>
-         
-         <section id="detail_class_CIMOI_Eigenschap">
-            <div class="header-wrapper"><h5 id="x6-5-1-10-eigenschap"><bdi class="secno">6.5.1.10 </bdi>   Eigenschap</h5><a class="self-link" href="#detail_class_CIMOI_Eigenschap" aria-label="Permalink for Section 6.5.1.10"></a></div>
-            
-            <section id="detail_attribute_CIMOI_Eigenschap_id">
-               <div class="header-wrapper"><h6 id="x6-5-1-10-1-attribuutsoort-details-eigenschap-id"><bdi class="secno">6.5.1.10.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Eigenschap">Eigenschap</a> id</h6><a class="self-link" href="#detail_attribute_CIMOI_Eigenschap_id" aria-label="Permalink for Section 6.5.1.10.1"></a></div>
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>id</td>
-                     </tr>
-                     <tr>
-                        <th>Formaat</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Identificatie">Identificatie</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1</td>
-                     </tr>
-                     <tr>
-                        <th>Mogelijk geen waarde</th>
-                        <td>Nee</td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie identificerend</th>
-                        <td>Nee</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_attribute_CIMOI_Eigenschap_waardetype">
-               <div class="header-wrapper"><h6 id="x6-5-1-10-2-attribuutsoort-details-eigenschap-waardetype"><bdi class="secno">6.5.1.10.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Eigenschap">Eigenschap</a> waardetype</h6><a class="self-link" href="#detail_attribute_CIMOI_Eigenschap_waardetype" aria-label="Permalink for Section 6.5.1.10.2"></a></div>
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>waardetype</td>
-                     </tr>
-                     <tr>
-                        <th>Formaat</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Waardetype">Waardetype</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1</td>
-                     </tr>
-                     <tr>
-                        <th>Mogelijk geen waarde</th>
-                        <td>Nee</td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie identificerend</th>
-                        <td>Nee</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_attribute_CIMOI_Eigenschap_waardegroep">
-               <div class="header-wrapper"><h6 id="x6-5-1-10-3-attribuutsoort-details-eigenschap-waardegroep"><bdi class="secno">6.5.1.10.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Eigenschap">Eigenschap</a> waardegroep</h6><a class="self-link" href="#detail_attribute_CIMOI_Eigenschap_waardegroep" aria-label="Permalink for Section 6.5.1.10.3"></a></div>
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>waardegroep</td>
-                     </tr>
-                     <tr>
-                        <th>Formaat</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Waardegroep">Waardegroep</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1</td>
-                     </tr>
-                     <tr>
-                        <th>Mogelijk geen waarde</th>
-                        <td>Nee</td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie identificerend</th>
-                        <td>Nee</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_attribute_CIMOI_Eigenschap_nauwkeurigheid">
-               <div class="header-wrapper"><h6 id="x6-5-1-10-4-attribuutsoort-details-eigenschap-nauwkeurigheid"><bdi class="secno">6.5.1.10.4 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Eigenschap">Eigenschap</a> nauwkeurigheid</h6><a class="self-link" href="#detail_attribute_CIMOI_Eigenschap_nauwkeurigheid" aria-label="Permalink for Section 6.5.1.10.4"></a></div>
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>nauwkeurigheid</td>
-                     </tr>
-                     <tr>
-                        <th>Formaat</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Nauwkeurigheidsklasse">Nauwkeurigheidsklasse</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1</td>
-                     </tr>
-                     <tr>
-                        <th>Mogelijk geen waarde</th>
-                        <td>Nee</td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie identificerend</th>
-                        <td>Nee</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_attribute_CIMOI_Eigenschap_eenheid">
-               <div class="header-wrapper"><h6 id="x6-5-1-10-5-attribuutsoort-details-eigenschap-eenheid"><bdi class="secno">6.5.1.10.5 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Eigenschap">Eigenschap</a> eenheid</h6><a class="self-link" href="#detail_attribute_CIMOI_Eigenschap_eenheid" aria-label="Permalink for Section 6.5.1.10.5"></a></div>
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>eenheid</td>
-                     </tr>
-                     <tr>
-                        <th>Formaat</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Eenheid">Eenheid</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1</td>
-                     </tr>
-                     <tr>
-                        <th>Mogelijk geen waarde</th>
-                        <td>Nee</td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie identificerend</th>
-                        <td>Nee</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_attribute_CIMOI_Eigenschap_grootheid">
-               <div class="header-wrapper"><h6 id="x6-5-1-10-6-attribuutsoort-details-eigenschap-grootheid"><bdi class="secno">6.5.1.10.6 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Eigenschap">Eigenschap</a> grootheid</h6><a class="self-link" href="#detail_attribute_CIMOI_Eigenschap_grootheid" aria-label="Permalink for Section 6.5.1.10.6"></a></div>
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>grootheid</td>
-                     </tr>
-                     <tr>
-                        <th>Formaat</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Grootheid">Grootheid</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1</td>
-                     </tr>
-                     <tr>
-                        <th>Mogelijk geen waarde</th>
-                        <td>Nee</td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie identificerend</th>
-                        <td>Nee</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_attribute_CIMOI_Eigenschap_norm">
-               <div class="header-wrapper"><h6 id="x6-5-1-10-7-attribuutsoort-details-eigenschap-norm"><bdi class="secno">6.5.1.10.7 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Eigenschap">Eigenschap</a> norm</h6><a class="self-link" href="#detail_attribute_CIMOI_Eigenschap_norm" aria-label="Permalink for Section 6.5.1.10.7"></a></div>
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>norm</td>
-                     </tr>
-                     <tr>
-                        <th>Formaat</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Norm">Norm</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1</td>
-                     </tr>
-                     <tr>
-                        <th>Mogelijk geen waarde</th>
-                        <td>Nee</td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie identificerend</th>
-                        <td>Nee</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_attribute_CIMOI_Eigenschap_doelgroep">
-               <div class="header-wrapper"><h6 id="x6-5-1-10-8-attribuutsoort-details-eigenschap-doelgroep"><bdi class="secno">6.5.1.10.8 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Eigenschap">Eigenschap</a> doelgroep</h6><a class="self-link" href="#detail_attribute_CIMOI_Eigenschap_doelgroep" aria-label="Permalink for Section 6.5.1.10.8"></a></div>
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>doelgroep</td>
-                     </tr>
-                     <tr>
-                        <th>Formaat</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Doelgroep">Doelgroep</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1 .. *</td>
-                     </tr>
-                     <tr>
-                        <th>Mogelijk geen waarde</th>
-                        <td>Nee</td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie identificerend</th>
-                        <td>Nee</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_attribute_CIMOI_Eigenschap_toepassingsbereik">
-               <div class="header-wrapper"><h6 id="x6-5-1-10-9-attribuutsoort-details-eigenschap-toepassingsbereik"><bdi class="secno">6.5.1.10.9 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Eigenschap">Eigenschap</a> toepassingsbereik</h6><a class="self-link" href="#detail_attribute_CIMOI_Eigenschap_toepassingsbereik" aria-label="Permalink for Section 6.5.1.10.9"></a></div>
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>toepassingsbereik</td>
-                     </tr>
-                     <tr>
-                        <th>Formaat</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Toepassingsbereik">Toepassingsbereik</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1 .. *</td>
-                     </tr>
-                     <tr>
-                        <th>Mogelijk geen waarde</th>
-                        <td>Nee</td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie identificerend</th>
-                        <td>Nee</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_attribute_CIMOI_Eigenschap_bron">
-               <div class="header-wrapper"><h6 id="x6-5-1-10-10-attribuutsoort-details-eigenschap-bron"><bdi class="secno">6.5.1.10.10 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Eigenschap">Eigenschap</a> bron</h6><a class="self-link" href="#detail_attribute_CIMOI_Eigenschap_bron" aria-label="Permalink for Section 6.5.1.10.10"></a></div>
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>bron</td>
-                     </tr>
-                     <tr>
-                        <th>Formaat</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Identificatie">Identificatie</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1</td>
-                     </tr>
-                     <tr>
-                        <th>Mogelijk geen waarde</th>
-                        <td>Nee</td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie identificerend</th>
-                        <td>Nee</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_association_CIMOI_Eigenschap_betreft">
-               <div class="header-wrapper"><h6 id="x6-5-1-10-11-relatiesoort-details-eigenschap-betreft"><bdi class="secno">6.5.1.10.11 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Eigenschap">Eigenschap</a> betreft</h6><a class="self-link" href="#detail_association_CIMOI_Eigenschap_betreft" aria-label="Permalink for Section 6.5.1.10.11"></a></div>
-               
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>betreft</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Subject">Subject</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>0 .. *</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_association_CIMOI_Eigenschap_heeft">
-               <div class="header-wrapper"><h6 id="x6-5-1-10-12-relatiesoort-details-eigenschap-heeft"><bdi class="secno">6.5.1.10.12 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Eigenschap">Eigenschap</a> heeft</h6><a class="self-link" href="#detail_association_CIMOI_Eigenschap_heeft" aria-label="Permalink for Section 6.5.1.10.12"></a></div>
-               
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>heeft</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Waarde">Waarde</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>0 .. *</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            
-            <section id="detail_association_CIMOI_Eigenschap_wordtBegrenstDoor">
-               <div class="header-wrapper"><h6 id="x6-5-1-10-13-relatiesoort-details-eigenschap-wordt-begrenst-door"><bdi class="secno">6.5.1.10.13 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Eigenschap">Eigenschap</a> wordt begrenst door</h6><a class="self-link" href="#detail_association_CIMOI_Eigenschap_wordtBegrenstDoor" aria-label="Permalink for Section 6.5.1.10.13"></a></div>
-               
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>wordt begrenst door</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_Waardebereik">Waardebereik</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            </section>
-         
-         <section id="detail_class_CIMOI_Subject">
-            <div class="header-wrapper"><h5 id="x6-5-1-11-subject"><bdi class="secno">6.5.1.11 </bdi>   Subject</h5><a class="self-link" href="#detail_class_CIMOI_Subject" aria-label="Permalink for Section 6.5.1.11"></a></div>
-            
-            <section id="detail_association_CIMOI_Subject_verwijstNaar">
-               <div class="header-wrapper"><h6 id="x6-5-1-11-1-relatiesoort-details-subject-verwijst-naar"><bdi class="secno">6.5.1.11.1 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Subject">Subject</a> verwijst naar</h6><a class="self-link" href="#detail_association_CIMOI_Subject_verwijstNaar" aria-label="Permalink for Section 6.5.1.11.1"></a></div>
-               
-               
-               <table style="width: 100%;" class="simple">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>verwijst naar</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_CIMOI_DCATConcept">DCAT-Concept</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1 .. *</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            </section>
-         
          </section>
       
       
@@ -2985,7 +1833,7 @@ bij de volgende objecten een standaardweergave toegepast :</p>
 <td>Onderscheid semantisch en direct relateren toegevoegd, verwijzingen opgenomen naar aanvullende documentatie.</td>
 </tr>
 <tr>
-<td>TODO</td>
+<td>werkversie</td>
 <td></td>
 <td>Document ingepast in structuur van andere conceptuele informatiemodellen.</td>
 </tr>
@@ -2993,21 +1841,18 @@ bij de volgende objecten een standaardweergave toegepast :</p>
 </section>
   
   
-  <section id="index" class="appendix"><div class="header-wrapper"><h2 id="a-index"><bdi class="secno">A. </bdi>Index</h2><a class="self-link" href="#index" aria-label="Permalink for Appendix A."></a></div><section id="index-defined-here">
-    <div class="header-wrapper"><h3 id="a-1-begrippen-gedefinieerd-door-deze-specificatie"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</h3><a class="self-link" href="#index-defined-here" aria-label="Permalink for Appendix A.1"></a></div>
-    <ul class="index">
-    
-  </ul>
-  </section><section id="index-defined-elsewhere">
-    <div class="header-wrapper"><h3 id="a-2-begrippen-gedefinieerd-door-verwijzing"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</h3><a class="self-link" href="#index-defined-elsewhere" aria-label="Permalink for Appendix A.2"></a></div>
-    <ul class="index">
-    
-  </ul>
-  </section></section>
 
 
 
-<p role="navigation" id="back-to-top">
+
+<section id="references" class="appendix"><div class="header-wrapper"><h2 id="a-referenties"><bdi class="secno">A. </bdi>Referenties</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix A."></a></div><section id="informatieve-referenties">
+    <div class="header-wrapper"><h3 id="a-1-informatieve-referenties"><bdi class="secno">A.1 </bdi>Informatieve referenties</h3><a class="self-link" href="#informatieve-referenties" aria-label="Permalink for Appendix A.1"></a></div>
+    <dl class="bibliography"><dt id="bib-cimtr">[CIMTR]</dt><dd>
+      <a href="https://geonovum.github.io/dso-cim-tr"><cite>Conceptueel Informatiemodel Toepasbare Regels (CIM-TR)</cite></a>.  Geonovum. 2022-01-07. Definitief. URL: <a href="https://geonovum.github.io/dso-cim-tr">https://geonovum.github.io/dso-cim-tr</a>
+    </dd><dt id="bib-imow">[IMOW]</dt><dd>
+      <a href="https://geonovum.github.io/TPOD/CIMOW/IMOW_v2.0.2.pdf"><cite>Informatiemodel Omgevingswet (IMOW)</cite></a>.  Geonovum. 2023-01-09. Definitief. URL: <a href="https://geonovum.github.io/TPOD/CIMOW/IMOW_v2.0.2.pdf">https://geonovum.github.io/TPOD/CIMOW/IMOW_v2.0.2.pdf</a>
+    </dd></dl>
+  </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><script id="respec-dfn-panel">(() => {
 // @ts-check
