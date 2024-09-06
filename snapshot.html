@@ -1,16 +1,16 @@
 <!DOCTYPE html><html lang="nl"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<meta name="generator" content="ReSpec 34.1.4">
+<meta name="generator" content="ReSpec 35.1.1">
 <style>
 dfn{cursor:pointer}
-.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
 .dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
-.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
-.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
 .dfn-panel *{margin:0}
-.dfn-panel b{display:block;color:#000;margin-top:.25em}
-.dfn-panel ul a[href]{color:#333}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
 .dfn-panel>div{display:flex}
 .dfn-panel a.self-link{font-weight:700;margin-right:auto}
 .dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
@@ -48,8 +48,6 @@ div.imageinfo.overview img {max-width: none;}
 25%{transform:scale(1.25,1.25);opacity:.75}
 100%{transform:scale(1,1)}
 }
-:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
-dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
 a.bibref{text-decoration:none}
@@ -63,20 +61,8 @@ a.bibref{text-decoration:none}
 cite .bibref{font-style:normal}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
-.toc a,.tof a{text-decoration:none}
-a .figno,a .secno{color:#000}
 ol.tof,ul.tof{list-style:none outside none}
 .caption{margin-top:.5em;font-style:italic}
-table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
-.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
-.simple th a{color:#fff;padding:3px 5px;text-align:left}
-.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
-.simple td{padding:3px 10px;border-top:1px solid #ddd}
-.simple tr:nth-child(even){background:#f0f6ff}
-.section dd>p:first-child{margin-top:0}
-.section dd>p:last-child{margin-bottom:0}
-.section dd{margin-bottom:1em}
-.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
 #issue-summary>ul{column-count:2}
 #issue-summary li{list-style:none;display:inline-block}
 details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
@@ -315,6 +301,7 @@ DSO.">
   "title": "Conceptueel Informatiemodel Omgevingsinformatie",
   "specStatus": "wv",
   "specType": "IM",
+  "nl_organisationStylesURL": "https://tools.geostandaarden.nl/respec/style/",
   "pubDomain": "dso",
   "licence": "cc-by",
   "shortName": "dso-cim-oi",
@@ -340,7 +327,7 @@ DSO.">
     }
   ]
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css"></head>
+<link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/base.css"></head>
 
 <body class="h-entry informative toc-inline"><div class="head">
     <a class="logo" href="https://www.geonovum.nl/geo-standaarden"><img alt="Geonovum" height="67" id="Geonovum" src="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg" width="132">
@@ -349,7 +336,7 @@ DSO.">
     <h2>
       Geonovum Informatiemodel<br>
       Werkversie
-      <time class="dt-published" datetime="2024-05-06">06 mei 2024</time>
+      <time class="dt-published" datetime="2024-09-06">06 september 2024</time>
     </h2>
     <dl>
       
@@ -583,7 +570,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
       <section id="global_class_CIMOI_Registerbevraging">
          <div class="header-wrapper"><h4 id="x6-3-1-registerbevraging"><bdi class="secno">6.3.1 </bdi>   Registerbevraging</h4><a class="self-link" href="#global_class_CIMOI_Registerbevraging" aria-label="Permalink for Section 6.3.1"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -621,7 +608,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMOI_Registerbevraging" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -696,7 +683,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Registerbevraging" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -754,7 +741,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
       <section id="global_class_CIMOI_Uitvoeringsregel">
          <div class="header-wrapper"><h4 id="x6-3-2-uitvoeringsregel"><bdi class="secno">6.3.2 </bdi>   Uitvoeringsregel</h4><a class="self-link" href="#global_class_CIMOI_Uitvoeringsregel" aria-label="Permalink for Section 6.3.2"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -809,7 +796,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-0">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_Uitvoeringsregel" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -867,7 +854,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
       <section id="global_class_CIMOI_RelevanteAnnotaties">
          <div class="header-wrapper"><h4 id="x6-3-3-relevante-annotaties"><bdi class="secno">6.3.3 </bdi>   Relevante­Annotaties</h4><a class="self-link" href="#global_class_CIMOI_RelevanteAnnotaties" aria-label="Permalink for Section 6.3.3"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -905,7 +892,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-0">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMOI_RelevanteAnnotaties" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -950,7 +937,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-1">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMOI_RelevanteAnnotaties" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1050,7 +1037,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
       <section id="global_class_CIMOI_Omgevingsaspect">
          <div class="header-wrapper"><h4 id="x6-3-4-omgevingsaspect"><bdi class="secno">6.3.4 </bdi>   Omgevingsaspect</h4><a class="self-link" href="#global_class_CIMOI_Omgevingsaspect" aria-label="Permalink for Section 6.3.4"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1087,7 +1074,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-1">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMOI_Omgevingsaspect" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -1143,7 +1130,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
             <section id="detail_attribute_CIMOI_Registerbevraging_profile">
                <div class="header-wrapper"><h6 id="x6-4-1-1-1-attribuutsoort-details-registerbevraging-profile"><bdi class="secno">6.4.1.1.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a> profile</h6><a class="self-link" href="#detail_attribute_CIMOI_Registerbevraging_profile" aria-label="Permalink for Section 6.4.1.1.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1190,7 +1177,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
             <section id="detail_attribute_CIMOI_Registerbevraging_key">
                <div class="header-wrapper"><h6 id="x6-4-1-1-2-attribuutsoort-details-registerbevraging-key"><bdi class="secno">6.4.1.1.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a> key</h6><a class="self-link" href="#detail_attribute_CIMOI_Registerbevraging_key" aria-label="Permalink for Section 6.4.1.1.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1237,7 +1224,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
             <section id="detail_attribute_CIMOI_Registerbevraging_type">
                <div class="header-wrapper"><h6 id="x6-4-1-1-3-attribuutsoort-details-registerbevraging-type"><bdi class="secno">6.4.1.1.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a> type</h6><a class="self-link" href="#detail_attribute_CIMOI_Registerbevraging_type" aria-label="Permalink for Section 6.4.1.1.3"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1285,7 +1272,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
             <section id="detail_attribute_CIMOI_Registerbevraging_value">
                <div class="header-wrapper"><h6 id="x6-4-1-1-4-attribuutsoort-details-registerbevraging-value"><bdi class="secno">6.4.1.1.4 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Registerbevraging">Registerbevraging</a> value</h6><a class="self-link" href="#detail_attribute_CIMOI_Registerbevraging_value" aria-label="Permalink for Section 6.4.1.1.4"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1336,7 +1323,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
                <div class="header-wrapper"><h6 id="x6-4-1-2-1-relatiesoort-details-uitvoeringsregel-bevraging"><bdi class="secno">6.4.1.2.1 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Uitvoeringsregel">Uitvoeringsregel</a> bevraging</h6><a class="self-link" href="#detail_association_CIMOI_Uitvoeringsregel_bevraging" aria-label="Permalink for Section 6.4.1.2.1"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1362,7 +1349,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
                <div class="header-wrapper"><h6 id="x6-4-1-2-2-relatiesoort-details-uitvoeringsregel-bevraagt"><bdi class="secno">6.4.1.2.2 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Uitvoeringsregel">Uitvoeringsregel</a> bevraagt</h6><a class="self-link" href="#detail_association_CIMOI_Uitvoeringsregel_bevraagt" aria-label="Permalink for Section 6.4.1.2.2"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1388,7 +1375,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
                <div class="header-wrapper"><h6 id="x6-4-1-2-3-relatiesoort-details-uitvoeringsregel-registerbevraging"><bdi class="secno">6.4.1.2.3 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_Uitvoeringsregel">Uitvoeringsregel</a> registerbevraging</h6><a class="self-link" href="#detail_association_CIMOI_Uitvoeringsregel_registerbevraging" aria-label="Permalink for Section 6.4.1.2.3"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1417,7 +1404,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
             <section id="detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstActiviteiten">
                <div class="header-wrapper"><h6 id="x6-4-1-3-1-attribuutsoort-details-relevante-annotaties-waardelijst-activiteiten"><bdi class="secno">6.4.1.3.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> waardelijst activiteiten</h6><a class="self-link" href="#detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstActiviteiten" aria-label="Permalink for Section 6.4.1.3.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1474,7 +1461,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
             <section id="detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstThema">
                <div class="header-wrapper"><h6 id="x6-4-1-3-2-attribuutsoort-details-relevante-annotaties-waardelijst-thema"><bdi class="secno">6.4.1.3.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> waardelijst Thema</h6><a class="self-link" href="#detail_attribute_CIMOI_RelevanteAnnotaties_waardelijstThema" aria-label="Permalink for Section 6.4.1.3.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1532,7 +1519,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
                <div class="header-wrapper"><h6 id="x6-4-1-3-3-relatiesoort-details-relevante-annotaties-overeenkomende-activiteit"><bdi class="secno">6.4.1.3.3 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> overeenkomende activiteit</h6><a class="self-link" href="#detail_association_CIMOI_RelevanteAnnotaties_overeenkomendeActiviteit" aria-label="Permalink for Section 6.4.1.3.3"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1558,7 +1545,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
                <div class="header-wrapper"><h6 id="x6-4-1-3-4-relatiesoort-details-relevante-annotaties-heeft-overeenkomst-met-geluid"><bdi class="secno">6.4.1.3.4 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> heeft overeenkomst met Geluid</h6><a class="self-link" href="#detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMetGeluid" aria-label="Permalink for Section 6.4.1.3.4"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1584,7 +1571,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
                <div class="header-wrapper"><h6 id="x6-4-1-3-5-relatiesoort-details-relevante-annotaties-bevraagt"><bdi class="secno">6.4.1.3.5 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> bevraagt</h6><a class="self-link" href="#detail_association_CIMOI_RelevanteAnnotaties_bevraging" aria-label="Permalink for Section 6.4.1.3.5"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1610,7 +1597,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
                <div class="header-wrapper"><h6 id="x6-4-1-3-6-relatiesoort-details-relevante-annotaties-heeft-overeenkomst-met-gebiedsaanwijzing"><bdi class="secno">6.4.1.3.6 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> heeft overeenkomst met gebiedsaanwijzing</h6><a class="self-link" href="#detail_association_CIMOI_RelevanteAnnotaties_heeftOvereenkomstMetGebiedsaanwijzing" aria-label="Permalink for Section 6.4.1.3.6"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1636,7 +1623,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
                <div class="header-wrapper"><h6 id="x6-4-1-3-7-relatiesoort-details-relevante-annotaties-heeft-overeenkomst-met-ev"><bdi class="secno">6.4.1.3.7 </bdi>Relatiesoort details  <a href="#global_class_CIMOI_RelevanteAnnotaties">Relevante­Annotaties</a> heeft overeenkomst met EV</h6><a class="self-link" href="#detail_association_CIMOI_RelevanteAnnotaties_ev" aria-label="Permalink for Section 6.4.1.3.7"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1665,7 +1652,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
             <section id="detail_attribute_CIMOI_Omgevingsaspect_naam">
                <div class="header-wrapper"><h6 id="x6-4-1-4-1-attribuutsoort-details-omgevingsaspect-naam"><bdi class="secno">6.4.1.4.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Omgevingsaspect">Omgevingsaspect</a> naam</h6><a class="self-link" href="#detail_attribute_CIMOI_Omgevingsaspect_naam" aria-label="Permalink for Section 6.4.1.4.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1712,7 +1699,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
             <section id="detail_attribute_CIMOI_Omgevingsaspect_identificatie">
                <div class="header-wrapper"><h6 id="x6-4-1-4-2-attribuutsoort-details-omgevingsaspect-identificatie"><bdi class="secno">6.4.1.4.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMOI_Omgevingsaspect">Omgevingsaspect</a> identificatie</h6><a class="self-link" href="#detail_attribute_CIMOI_Omgevingsaspect_identificatie" aria-label="Permalink for Section 6.4.1.4.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -1767,7 +1754,7 @@ OmgevingsInformatie’ afgekort ‘CIM-OI’</p>
   <section id="aanvullende-informatie"><div class="header-wrapper"><h2 id="x7-aanvullende-informatie"><bdi class="secno">7. </bdi>Aanvullende informatie</h2><a class="self-link" href="#aanvullende-informatie" aria-label="Permalink for Section 7."></a></div>
 <p>Zoals in hoofdstuk 2.2 aangegeven is kunnen directe relaties bestaan tussen informatie die in DSO besluiten opgenomen is en informatie uit externe bronnen. </p>
 <p>Per informatiebron zal onderzocht moeten worden of- en zo ja met welke informatie een dergelijke overeenkomst bestaat. Uit de huidige onderzoeken zijn de volgende directe relaties gebleken. In lijn met de gebruikte kleuren in de modellen hebben de oranje velden betrekking op de omgevingsinformatie en de groene velden op IMOW objecten.</p>
-<table class="simple">
+<table>
 <thead>
 <tr>
 <th>Bron</th>
@@ -1814,7 +1801,7 @@ bij de volgende objecten een standaardweergave toegepast :</p>
 <p>Het uitgangspunt voor de weergave van OW-objecten is dat de waarde uit de waardelijst bepalend is voor de stijl waarmee een locatie op het kaartbeeld wordt weergegeven. Omdat CIM-OI deze reeds bestaande objecten aanvult met gegevens uit diverse registers, is het logisch dat een identieke soort van verbeelding gebruikt wordt bij het weergeven van gelijksoortige informatie.</p>
 </section>
   <section mode="appendix" id="versieoverzicht"><div class="header-wrapper"><h2 id="x9-versieoverzicht"><bdi class="secno">9. </bdi>Versieoverzicht</h2><a class="self-link" href="#versieoverzicht" aria-label="Permalink for Section 9."></a></div>
-<table class="simple">
+<table>
 <thead>
 <tr>
 <th>versienummer</th>
